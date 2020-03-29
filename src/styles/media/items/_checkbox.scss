@@ -1,0 +1,7 @@
+@include respond(768) {
+  .checkbox {
+    &__text {
+      font-size: 12px;
+    }
+  }
+}

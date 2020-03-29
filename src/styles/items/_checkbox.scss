@@ -1,0 +1,82 @@
+.checkbox {
+  $c: &;
+  position: relative;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  transition: color 0.3s;
+  cursor: pointer;
+  &:hover {
+    #{$c}__text {
+      color: #ff4b63;
+    }
+  }
+  &__box {
+    position: relative;
+    display: inline-block;
+    line-height: 30px;
+    border-radius: 4px;
+    width: 16px;
+    height: 16px;
+    background-color: $color-control-border;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+    }
+    &:before {
+      top: 1px;
+      right: 1px;
+      left: 1px;
+      bottom: 1px;
+      border-radius: 4px;
+      background-color: $bg-light-blue;
+    }
+    &:after {
+      //display: none;
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0wIDMuODEybC41OTItLjY0IDIuOSAxLjgxNyA1LTQuOTg5TDkgLjUzMiAzLjcxIDh6IiBmaWxsPSIjRDgwMDFDIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48L3N2Zz4=);
+      background-size: 100%;
+      width: 9px;
+      height: 8px;
+      top: 4px;
+      left: 3px;
+      transform: translateY(-25%) rotate(75deg) scale(0.2);
+      transform-origin: center;
+      opacity: 0;
+      transition: all 0.2s linear;
+    }
+  }
+  & input:checked ~ .checkbox__box:after {
+    transform: translateY(0) rotate(0) scale(1);
+    opacity: 1;
+  }
+  & input:checked ~ &__text {
+    color: $color-active;
+    &:hover {
+      color: #ff4b63;
+    }
+  }
+  &__control {
+    display: none;
+    position: absolute;
+    z-index: -1;
+    margin: 0;
+    opacity: 0;
+  }
+  &__text {
+    display: block;
+    margin-left: 4px;
+    color: #657d95;
+    cursor: pointer;
+  }
+  /*&.checked {
+    #{$c}__box:after {
+      display: block;
+    }
+
+    #{$c}__text {
+        color: $color-check;
+    }
+  }*/
+}

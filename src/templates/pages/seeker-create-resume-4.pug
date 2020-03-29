@@ -1,0 +1,53 @@
+extends ../layout-emp
+include ../items/input
+include ../items/checkbox
+
+block content
+    .page__content
+        .container-full.container-full--page--form
+            .wrapper
+                h1.h3.page__title.page__title--is-centered Create resume
+                .form.form--centered.form--lg.form--lg-resume.form--plain
+                    form.form__content.is-active
+                        .form__head
+                            h4.form__title.form__title--left Work Experience
+                        .form__block.form__block--has-border
+                            .form__item
+                                label.form__label(for='seek-resume-skill') City
+                                .form__control
+                                    +input('text', '', 'input--width--available', 'seek-resume-skill')
+                            .form__item
+                                label.form__label(for='seek-resume-company') Company
+                                .form__control
+                                    +input('text', '', 'input--width--available', 'seek-resume-company')
+                            .form__item
+                                label.form__label(for='seek-resume-job') Job Title
+                                .form__control
+                                    +input('text', '', 'input--width--available', 'seek-resume-job')
+                            .form__item
+                                label.form__label(for='seek-resume-duty') Duties
+                                .form__control
+                                    +input('text', '', 'input--width--available', 'seek-resume-duty')
+                            .form__item
+                                label.form__label Time Period
+                                .form__item-content
+                                    .form__select-box.form__select-box--month
+                                        select.form__select.js-select
+                                            option(value='month') Month
+                                    .form__select-box.form__select-box--year
+                                        select.form__select.js-select
+                                            option(value='year') Year
+                            .form__item.form__item--checks
+                                .form__checkboxs.form__checkboxs--no-margin
+                                    .form__checkboxs-item
+                                        +checkbox('Until now', 'work-until-now', true)
+                            
+                        .form__block.form__block--has-border.form__block--center
+                            .icon-plus
+                                .icon-plus__icon
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"><path d="M7 0v5h5v2H7v5H5V7H0V5h5V0h2z" fill="#E9001E" fill-rule="evenodd"/></svg>
+                                .icon-plus__block.text.text--link.text--big.indent-l--2xs Add experience
+                        .form__submit.form__submit--view--centered
+                            a.button.button--view--secondary(href='seeker-create-resume-1.html') Back
+                            button.button.button--view--primary.indent-l--3xs(type='submit') Next step
+                            button.form__skip Skip

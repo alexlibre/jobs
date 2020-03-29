@@ -1,0 +1,75 @@
+@include respond(1280) {
+  .pagination {
+    $p: &;
+
+    &__inner {
+      height: 70px;
+    }
+
+    &__navigation {
+      font-size: 16px;
+
+      &:first-child + #{$p}__item {
+        padding-left: 30px;
+      }
+    }
+
+    &__item {
+      font-size: 16px;
+
+      &::after {
+        width: 42px;
+        height: 42px;
+      }
+    }
+  }
+}
+
+@include respond(768) {
+  .pagination {
+    $p: &;
+
+    &__inner {
+      height: auto;
+      padding: 20px 0 55px 0;
+    }
+
+    &__navigation {
+      position: absolute;
+      bottom: 0;
+      font-size: 12px;
+
+      &:first-of-type {
+        left: 0px;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        padding: 4px 0 15px;
+      }
+      &:first-child + #{$p}__item {
+        padding-left: 0px;
+      }
+
+      &:last-of-type {
+        right: 0px;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        padding: 4px 0 15px;
+      }
+    }
+
+    &__item {
+      margin-right: 18px;
+      font-size: 12px;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    & .wrapper {
+      padding: 0 20px;
+    }
+  }
+}

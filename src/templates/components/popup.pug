@@ -1,0 +1,67 @@
+mixin popup(idx, text)
+    .popup(id= idx)
+        .popup__overlay
+        .popup__container
+            .popup__content
+                .popup__closer.js-popup-close
+                    .icon-plus
+                        .icon-plus__icon
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><path d="M9.9497 1.4645L6.4142 5l3.5355 3.5355-1.4142 1.4142L5 6.4142 1.4645 9.9497.0503 8.5355 3.5858 5 .0503 1.4645 1.4645.0503 5 3.5858 8.5355.0503l1.4142 1.4142z" fill="#C8D0D8" fill-rule="evenodd"/></svg>
+                        .icon-plus__block.indent-l--3xs
+                            p.text.text--medium.text--label Close
+                p.h5= text
+
+
+.popup#apply
+    .popup__overlay
+    .popup__container
+        .popup__content
+            .popup__closer.js-popup-close
+            .apply
+                .apply__row
+                    .apply__title Apply for job
+                .apply__row
+                    .apply__vacancy
+                        .apply__vacancy-top
+                            .apply__vacancy-img
+                            .apply__vacancy-title
+                                |Recovery Admin Support (Collection)
+                        .apply__vacancy-block 
+                            .apply__vacancy-location UOB, Phuket
+                            .apply__vacancy-work Project work
+                            .apply__vacancy-time 3 day
+                        .apply__vacancy-salary
+                            .apply__vacancy-salary-local 23 000 THb
+                            .apply__vacancy-salary-usd ~816 Usd
+                .apply__row
+                    .apply__employee
+                        .apply__employee-img       
+                        .apply__employee-info      
+                            .apply__employee-info-item
+                                .apply__employee-info-item-title Name
+                                .apply__employee-info-item-desc Kotov Ilya
+                            .apply__employee-info-item
+                                .apply__employee-info-item-title City
+                                .apply__employee-info-item-desc Saint-Petersburg, Russia
+                            .apply__employee-info-item
+                                .apply__employee-info-item-title Email
+                                .apply__employee-info-item-desc ikotov@cakelabs.ru
+                        button.apply__employee-edit Edit
+                .apply__row
+                    .apply__form
+                        .apply__form-label Cover letter
+                        textarea.apply__from-textarea 
+                        .apply__form-remove-btn Remove cover letter
+                .apply__row
+                    button.button.button--view--primary.apply__button Send request
+
+
+.popup#thanks
+    .popup__overlay
+    .popup__container
+        .popup__content
+            .popup__closer.js-popup-close
+            .thanks
+                .thanks__title Thank you!
+                .thanks__txt Your application has been sent, you can see it in your account, in the "Responses" section
+                a(href="#").thanks__button.button.button--view--primary Continue search

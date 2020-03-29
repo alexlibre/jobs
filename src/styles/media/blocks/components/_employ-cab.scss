@@ -1,0 +1,51 @@
+@include respond(1280) {
+    .employ-cab {
+        &__block {
+            width: 505px;
+        }
+        &__menu {
+            &:after {
+                top: 40px;
+                right: -100px;
+                bottom: 0;
+                height: 359px;
+            }
+        }
+    }
+}
+
+@include respond(768) {
+    .employ-cab {
+        &__block {
+            width: 100%;
+            padding-top: 130px;
+        }
+        &__menu {
+          
+            margin: 0;
+            &:after {
+                width: 217px;
+                height: 217px;
+                top: 65px;
+                right: 0;
+            }
+        }
+        &__info {
+            justify-content: space-around;
+            &-item {
+                flex-direction: column;
+                margin-right: 0;
+                &-txt {
+                    margin-right: 0;
+                    br {
+                        display: none;
+                    }
+                }
+                &-num {
+                    margin-top: 5px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

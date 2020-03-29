@@ -1,0 +1,63 @@
+extends ../layout-emp
+include ../items/cat-card
+block title
+    title Company detail vacancy all
+
+block content
+    .container-full.container-full--with-bg
+        .page__content
+            .container
+                .page__inner
+                    .company
+                        .company__header
+                            .company__logo.company__logo--left
+                                picture
+                                    source(srcset='../assets/images/content/logo@2x.png 2x, ../assets/images/content/logo.png 1x')
+                                    img(src='../assets/images/content/logo.png', alt="7-Eleven")
+                            .company__title
+                                h3.company__name 7-Eleven
+                                h6.company__vacancies-num 241 vacancies
+
+                        .company__content.company__content--vertically.company__content--without-margin
+                            a(href="#").company__link.link.link--medium Back to company page
+                            .company__vacancies
+                                .company__vacancies-item
+                                    +cat-card({
+                                        name: 'พนักงานฝ่ายผลิต',
+                                        time: '3 day',
+                                        location: 'UNIQLO, Phuket',
+                                        desc: 'Monitoring and renewal of contracts with existing customers. Identifying additional needs and advising on new Veeam products. Formation of commercial offers and ...',
+                                        salaryLocal: '26 000 THb',
+                                        salaryUsd: '816 Usd',
+                                        occup: 'Shift work'
+                                    }, 'seeker')
+                                .company__vacancies-item
+                                    +cat-card({
+                                        name: 'พนักงานฝ่ายผลิต',
+                                        time: '3 day',
+                                        location: 'UNIQLO, Phuket',
+                                        desc: 'Monitoring and renewal of contracts with existing customers. Identifying additional needs and advising on new Veeam products. Formation of commercial offers and ...',
+                                        salaryLocal: '26 000 THb',
+                                        salaryUsd: '816 Usd',
+                                        occup: 'Shift work'
+                                    }, 'seeker')
+                                .company__vacancies-item
+                                    +cat-card({
+                                        name: 'พนักงานฝ่ายผลิต',
+                                        time: '3 day',
+                                        location: 'UNIQLO, Phuket',
+                                        desc: 'Monitoring and renewal of contracts with existing customers. Identifying additional needs and advising on new Veeam products. Formation of commercial offers and ...',
+                                        salaryLocal: '26 000 THb',
+                                        salaryUsd: '816 Usd',
+                                        occup: 'Shift work'
+                                    }, 'seeker')
+                                .company__vacancies-item
+                                    +cat-card({
+                                        name: 'พนักงานฝ่ายผลิต',
+                                        time: '3 day',
+                                        location: 'UNIQLO, Phuket',
+                                        desc: 'Monitoring and renewal of contracts with existing customers. Identifying additional needs and advising on new Veeam products. Formation of commercial offers and ...',
+                                        salaryLocal: '26 000 THb',
+                                        salaryUsd: '816 Usd',
+                                        occup: 'Shift work'
+                                    }, 'seeker')

@@ -1,0 +1,101 @@
+include ../items/checkbox.pug
+
+form.filters
+    .filters__item
+        .filter
+            .filter__title Date
+            .filter__row
+                +checkbox('3 days', 'date-days', false)
+                    span.filter__value 25746
+            .filter__row
+                +checkbox('week', 'date-week', false)
+                    span.filter__value 2636
+            .filter__row
+                +checkbox('month', 'date-month', false)
+                    span.filter__value 726
+    .filters__item
+        .filter
+            .filter__title Job Type
+            .filter__row
+                +checkbox('Full-time', 'job-type-full', false)
+                    span.filter__value 25746
+            .filter__row
+                +checkbox('Permanent', 'job-type-permanent', false)
+                    span.filter__value 2636
+            .filter__row
+                +checkbox('Internship', 'job-type-internship', false)
+                    span.filter__value 726
+            .filter__collapse.js-collapse
+                .filter__row
+                    +checkbox('Contract', 'job-type-contract', false)
+                        span.filter__value 556
+                .filter__row
+                    +checkbox('Temporary', 'job-type-temp', false)
+                        span.filter__value 431
+                .filter__row
+                    +checkbox('Part-time', 'job-type-part', false)
+                        span.filter__value 398
+                .filter__row
+                    +checkbox('New-Grad', 'job-type-new', false)
+                        span.filter__value 15
+                .filter__row
+                    +checkbox('Commission', 'job-type-commission', false)
+                        span.filter__value 10
+            .filter__reveal.text.text--label.js-collapse-btn + View all
+    .filters__item
+        .filter
+            .filter__title Salary
+            .filter__row
+                +checkbox('+10 000 Thb', 'salary-1', false)
+                    span.filter__value 25746
+            .filter__row
+                +checkbox('+20 000 Thb', 'salary-2', false)
+                    span.filter__value 2636
+            .filter__row
+                +checkbox('+30 000 Thb', 'salary-3', false)
+                    span.filter__value 726
+            .filter__reveal.text.text--label.js-collapse-btn + View all
+    .filters__item
+        .filter
+            .filter__title Experience level
+            .filter__row
+                +checkbox('Entry level', 'exp-entry', false)
+                    span.filter__value 25746
+            .filter__row
+                +checkbox('Mid level', 'exp-mid', false)
+                    span.filter__value 3456
+            .filter__row
+                +checkbox('Senior level', 'exp-senior', false)
+                    span.filter__value 123
+            .filter__reveal.text.text--label.js-collapse-btn + View all
+    .filters__item
+        .filter
+            .filter__title Gender
+            .filter__row
+                +checkbox('Male', 'gender-male', false)
+            .filter__row
+                +checkbox('Female', 'gender-female', false)
+    .filters__item
+        .filter
+            .filter__row
+                +checkbox('Ready to move', 'ready-to-move', false)
+    .filters__item
+        .filter
+            .filter__title Driving license category
+            .filter__row
+                +checkbox('A', 'driving-a', false)
+                    span.filter__value 25746
+            .filter__row
+                +checkbox('B', 'driving-b', false)
+                    span.filter__value 10234
+            .filter__row
+                +checkbox('C', 'driving-c', false)
+                    span.filter__value 7654
+            .filter__reveal.text.text--label.js-collapse-btn + View all
+    //- button(type='submit').filters__btn
+    //-     .filters__btn-txt
+    //-         |Show 
+    //-         span.filters__btn-num 23
+    //-         |vacancies
+
+

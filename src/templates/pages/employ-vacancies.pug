@@ -1,0 +1,166 @@
+extends ../layout-emp
+
+block title
+
+    title Employ vacancies
+
+block content
+    .content__inner--gray
+
+        .inner-page.inner-page--no-padding
+            .inner-page__sidebar.inner-page__sidebar--lg.inner-page__sidebar--mob
+                .sidebar
+                    .sidebar__item
+                        .e-balance
+                            .e-balance__left
+                                .e-balance__num 2500
+                                .e-balance__txt Balance (Thb)
+                            .e-balance__right
+                                button.button.button--view--primary.e-balance__btn Pay
+                    .sidebar__item
+                        .sidebar__item-row
+                            .e-vacancy
+                                .e-vacancy__num 12
+                                .e-vacancy__txt Vacancies
+                                a(href="#").e-vacancy__go
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 10 17"><g><g><path fill="none" stroke="#f80021" stroke-miterlimit="50" d="M1 .5v0l7.836 7.836v0L1 16.172v0"/></g></g></svg>
+
+                        .sidebar__item-row
+                            .e-days
+                                .e-days__left
+                                    .e-days__num 23
+                                    .e-days__txt Days remained
+                                .e-days__right
+                                    button.button.button--view--ternary.e-days__btn Extend
+                    .sidebar__item
+                        include ../components/sidebar-menu
+            button.button.button--view--primary.inner-page__btn.inner-page__btn--disable.js-btn-mob Menu
+            .inner-page__content.inner-page__content--md
+                .inner-page__content-inner
+                    .inner-page__left
+                        .catalog.catalog--vacancies
+                            .catalog__btn.catalog__btn--mb
+                                button.button.button--view--primary.catalog__btn-file Create vacancy
+                            include ../items/cat-card
+                            .catalog__item.js-open-catalog-item(data-id='1')
+                                +cat-card({
+                                    name: 'Sales Support/Admin Support Staff/ เริ่มงานได้ทันที',
+                                    location: 'UNIQLO, Phuket',
+                                    vnum: '24',
+                                    resnum: '36',
+                                    rem: {
+                                        bool: false,
+                                        num: '11.04',
+                                        txt: '8 days remain'
+                                    },
+                                    id: 1
+                                }, 'employer-vacancy')
+                            .catalog__item
+                                +cat-card({
+                                    name: 'Sales Support/Admin Support Staff/ เริ่มงานได้ทันที',
+                                    location: 'UNIQLO, Phuket',
+                                    vnum: '24',
+                                    resnum: '36',
+                                    rem: {
+                                        bool: true,
+                                        num: '11.04',
+                                        txt: '2 days remain'
+                                    },
+                                    id: 2
+                                }, 'employer-vacancy')
+
+                            .catalog__item
+                                +cat-card({
+                                    name: 'Sales Support/Admin Support Staff/ เริ่มงานได้ทันที',
+                                    location: 'UNIQLO, Phuket',
+                                    vnum: '24',
+                                    resnum: '36',
+                                    rem: {
+                                        bool: false,
+                                        num: '11.04',
+                                        txt: '8 days remain'
+                                    },
+                                    id: 3
+                                }, 'employer-vacancy')
+                            .catalog__item
+                                +cat-card({
+                                    name: 'Sales Support/Admin Support Staff/ เริ่มงานได้ทันที',
+                                    location: 'UNIQLO, Phuket',
+                                    vnum: '24',
+                                    resnum: '36',
+                                    rem: {
+                                        bool: false,
+                                        num: '11.04',
+                                        txt: '8 days remain'
+                                    },
+                                    id: 4
+                                }, 'employer-vacancy')
+                    .inner-page__right
+                       .inner-page__right-content
+                            .catalog-about(id='1')
+                                .catalog-about__head
+                                    .catalog-about__title
+                                        h4 Recovery Admin Support (Collection)
+                                    .catalog-about__attr
+                                        p.text.text--label.indent-r--s UOB, Phuket
+                                        p.text.text--label.indent-r--s Project work
+                                        p.text.text--label.indent-r--s 3 day
+                                .catalog-about__block.catalog-about__block--narrow
+                                    .catalog-about__salary.indent-r--m
+                                        p.h4.catalog-about__salary-local 23 000 THb
+                                        p.h6.catalog-about__salary-usd ~816 Usd
+                                    .catalog-about__controls
+                                        .cat-card__controls
+                                            a.icon-plus.indent-r--s
+                                                .icon-plus__icon
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13"><path fill="#c8d0d8" d="M.342 4.112a.343.343 0 0 1-.243-.096A.32.32 0 0 1 0 3.782V1.664C0 .745.77 0 1.722 0h10.556c.95 0 1.721.745 1.721 1.664v2.104a.32.32 0 0 1-.093.244.343.343 0 0 1-.248.1h-.57v7.237c-.007.914-.775 1.651-1.72 1.651H2.631c-.945 0-1.714-.737-1.721-1.65V4.111zm8.21 0a.343.343 0 0 1-.242-.096.32.32 0 0 1-.099-.234C8.211 3.135 7.67 2.61 7 2.61s-1.212.524-1.212 1.17a.32.32 0 0 1-.098.235.343.343 0 0 1-.243.096H1.594v7.237c0 .266.11.522.304.71.195.188.459.294.734.294h8.735c.574 0 1.039-.45 1.039-1.004V4.112zm.31-.66h4.454V1.663c0-.554-.465-1.004-1.038-1.004H1.722C1.148.66.683 1.11.683 1.664v1.761h4.454c.167-.868.95-1.497 1.863-1.497s1.696.63 1.862 1.497z"/></svg>
+                                                .icon-plus__block.indent-l--3xs.text.text--medium.text--label Archive
+                                            a.icon-plus.indent-r--s
+                                                .icon-plus__icon
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M13.6442 6.5068l-.342-.0821c-.4654-.1096-.8485-.4521-1.0264-.8905v-.0137c-.1916-.452-.1505-.9452.0958-1.3698l.1779-.3014c.1094-.178.082-.411-.0684-.5616l-.7664-.7672c-.1505-.1506-.3831-.178-.561-.0684l-.301.178a1.5076 1.5076 0 0 1-1.3685.096h-.0137c-.4379-.1782-.78-.5617-.8894-1.0275l-.0822-.3424C8.4442 1.1507 8.2663 1 8.0474 1H6.9526c-.2052 0-.3968.1507-.4515.3562l-.0822.3424c-.1094.4658-.4515.8493-.8894 1.0274h-.0137c-.4516.1918-.9442.1507-1.3684-.0959l-.301-.178c-.178-.1096-.4106-.0822-.5611.0684l-.7664.7672c-.1505.1507-.1778.3835-.0684.5616l.178.3014a1.512 1.512 0 0 1 .0957 1.3698v.0137c-.1779.4384-.561.7809-1.0263.8905l-.3421.0821C1.1505 6.5616 1 6.7398 1 6.959v1.0822c0 .2055.1505.3973.3558.452l.342.0822c.4654.1096.8485.4521 1.0264.8905v.0137c.1916.452.1505.9452-.0958 1.3698l-.1779.3014c-.1094.178-.082.411.0684.5616l.7664.7672c.1505.1506.3831.178.561.0684l.301-.178a1.5076 1.5076 0 0 1 1.3685-.096h.0137c.4379.1782.78.5617.8894 1.0275l.0822.3424c.0547.2055.2326.3562.4515.3562h1.0948c.2052 0 .3968-.1507.4515-.3562l.0822-.3424c.1094-.4658.4515-.8493.8894-1.0274h.0137c.4516-.1918.9442-.1507 1.3684.0959l.301.178c.178.1096.4106.0822.5611-.0684l.7664-.7672c.1505-.1507.1778-.3835.0684-.5616l-.178-.3014a1.512 1.512 0 0 1-.0957-1.3698v-.0137c.1779-.4384.561-.7809 1.0263-.8905l.3421-.0821c.2053-.0548.3558-.233.3558-.4521V6.9452c0-.2055-.1505-.3973-.3558-.4384zM7.5 10C6.1228 10 5 8.8772 5 7.5S6.1228 5 7.5 5 10 6.1228 10 7.5 8.8772 10 7.5 10z" fill-rule="nonzero" stroke="#C8D0D8" fill="none"/></svg>
+                                                .icon-plus__block.indent-l--3xs.text.text--medium.text--label Edit
+                                            button.button.button--view--ternary.cat-card__btn Extend
+                                .catalog-about__text
+                                    p.text.text--medium UNIQLO is a brand of Fast Retailing Co., Ltd., a leading global Japanese retail holding company that designs, manufactures and sells clothing under seven main brands: Comptoir des Cotonniers, GU, Helmut Lang, J Brand, Princesse tam.tam, Theory, and UNIQLO. With global sales of approximately 1.14 trillion yen for the 2013 fiscal year ending August 31, 2013 (US $11.62 billion, calculated in yen using the end of August 2013 rate of $1 = 98.36 yen), Fast Retailing is one of the worldâ€™s largest apparel retail companies, and UNIQLO is Japanâ€™s leading specialty retailer.
+
+                                    p.text.text--medium UNIQLO continues to open large-scale stores in some of the world's most important cities and locations, as part of its ongoing efforts to solidify its status as a truly global brand. Today the company has a total of more than 1,200 stores in 14 markets worldwide including Japan, China, France, Hong Kong, Indonesia, Malaysia, Philippines, Russia, Singapore, South Korea, Taiwan, Thailand, U.K. and U.S. In addition, Grameen UNIQLO, a social business established in Bangladesh in September 2010, opened its two first stores in Dhaka in July 2013. UNIQLO operates an integrated business model under which it designs, manufactures, markets and sells high-quality, casual apparel. The company believes that truly great clothes should be supremely comfortable, feature universal designs, are of high quality and offer a superb fit to everyone who wears them.
+
+                                    p.text.text--medium With a corporate statement committed to changing clothes, changing conventional wisdom and change the world, Fast Retailing is dedicated to creating great clothing with new and unique value to enrich the lives of people everywhere. For more information about UNIQLO and Fast Retailing, please visit www.uniqlo.com and www.fastretailing.com.
+
+                                    p.text.text--medium If you welcome new challenges, have a drive for success, and embrace the responsibility of leadershipâ€”then you belong at UNIQLO!
+
+                                    p.text.text--medium Dynamic Sales Associates Needed for our Northshore Mall location!!
+
+                                    h6 Position Overview:
+
+                                    p.text.text--medium The Sales Associate is the customer service specialist of the store. They are responsible for exceeding customer expectations by listening to customer needs, finding products that meet their needs, providing in depth product information about the goods they are interested in and closing the sale.
+
+                                    h6 Key Responsibilities:
+                                    ul.text.text--medium.list.list--no-marked
+                                        li li Meet and exceed sales goals
+                                        li Maintain brand and operational standards (visual, cleanliness, etc.)
+                                        li Manage customer needs and exceed expectations by utilizing the UNIQLO service standard, following the UNIQLO Fundamental Principles and saying the 6 standard phrases.
+                                        li Be knowledgeable of fitting room standards and assist when needed
+                                        li Act as cashier when required by following cashier protocol
+                                        li Process shipment and ensure all merchandise is represented on the floor in full size run
+                                        li Assist management to identify and resolve issues in the store
+                                        li Provide product and brand knowledge to customers
+                                        li Follow all company policy and procedures & notify management of any infractions
+                                        li Assist with special projects as assigned by management Requirements:
+
+                                    h6 High School Diploma or GED
+                                    ul.text.text--medium.list.list--no-marked
+
+                                        li Strong communication skills
+                                        li Ability to calculate figures and amounts such as discounts and percentages
+                                        li Ability to work a flexible schedule that meets the business needs, including evenings and weekends
+                                        li As an Equal Opportunity Employer, Fast Retailing does not discriminate against applicants or employees because of race, color, creed, religion, sex, national origin, veteran status, disability, age, citizenship, marital or domestic/civil partnership status, sexual orientation, gender identity or expression or because of any other status or condition protected by applicable federal, state or local law.
+
+                                        li Posting Notes: Boston || Massachusetts (US-MA) || United States (US) || Store Staff || Store Operations || UNIQLO || EX:OUT || UNIQLO ||
+
+                                        li Strong communication skills
+                                        li Ability to calculate figures and amounts such as discounts and percentages
+                                        li Ability to work a flexible schedule that meets the business needs, including evenings and weekends
+                                        li As an Equal Opportunity Employer, Fast Retailing does not discriminate against applicants or employees because of race, color, creed, religion, sex, national origin, veteran status, disability, age, citizenship, marital or domestic/civil partnership status, sexual orientation, gender identity or expression or because of any other status or condition protected by applicable federal, state or local law.
+
+                                        li Posting Notes: Boston || Massachusetts (US-MA) || United States (US) || Store Staff || Store Operations || UNIQLO || EX:OUT || UNIQLO ||

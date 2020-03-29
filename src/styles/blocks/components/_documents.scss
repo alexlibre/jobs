@@ -1,0 +1,44 @@
+.documents {
+    padding: 30px 0 30px 30px;
+    &__row {
+        margin-bottom: 50px;
+    }
+    &__preview {}
+    &__form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 36px;
+        border-radius: 25px;
+        border: 1px dashed $color-ghost;
+        background-color: $color-white;
+    }
+}
+
+.d-preview {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    &__name {
+        order: 0;
+    }
+    &__remove {
+        order: 2;
+        border: none;
+        width: 10px;
+        height: 11px;
+        background: url(../images/static/icon-remove.svg) no-repeat center center;
+        background-size: contain;
+        cursor: pointer;
+    }
+    &__download {
+        display: inline-block;
+        margin: 3px 10px 0;
+        order: 1;
+        width: 9px;
+        height: 12px;
+        background: url(../images/static/icon-download.svg) no-repeat center center;
+        background-size: contain;
+        cursor: pointer;
+    }
+}

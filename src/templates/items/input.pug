@@ -1,0 +1,4 @@
+mixin input(type, placeholder, className, labelName, name, iClass)
+    span.input.input--view--default(class=className)
+        span.input__box
+            input.input__control(type=type placeholder=placeholder, id=labelName, name= name, class=`input__control ${iClass}`)

@@ -1,0 +1,79 @@
+extends ../layout-emp
+block title
+    title Upjob Main 
+
+block content
+    include ../blocks/hero
+    include ../blocks/descript
+    +descript('')
+    .index-popular
+        .container
+            .index-popular__inner
+                .index-popular__comp.block
+                    .block__head
+                        h5.block__title Popular Companies
+                        a.icon-plus.icon-plus--vertical-align--center.link.link--medium
+                            .icon-plus__icon.indent-r--s
+                                <svg viewBox="0 0 46 46" width="46px" height="46px" class="progress js-companies-circle">
+                                <circle r="20" cx="23" cy="23" stroke="#EDEDED" fill="transparent"></circle>
+                                <circle class="prc" r="20" cx="23" cy="23" stroke="#D9001D" fill="transparent" stroke-dashoffset="125" stroke-dasharray="125"></circle>
+                                </svg>
+                            .icon-plus__block View all
+                    .carousel.js-companies-carousel.slide.carousel-fade
+                        include ../items/card
+                        .carousel-item.active
+                            .cardlist.cardlist--1-4.animate-cards
+                                +card('', '5', 'Siam Makro PCL', '241 vacancies', 'Today, we can offer you a wide range of products from both import manufacturers and leading manufacturers in St. Petersburg…')
+                                +card('../assets/images/content/holiday@2x.png', '6', 'Holiday Inn', '241 vacancies', 'Today, we can offer you a wide range of products from both import manufacturers and leading manufacturers in St. Petersburg…')
+                                +card('../assets/images/content/seven@2x.png', '7', '7 Eleven', '241 vacancies', 'Today, we can offer you a wide range of products from both import manufacturers and leading manufacturers in St. Petersburg…')
+                                +card('../assets/images/content/mariott@2x.png', '3', 'Marriott International, Inc.', '236 vacancies', 'Today, we can offer you a wide products from both import and manufacturers in St. Petersburg…')
+                        .carousel-item
+                            .cardlist.cardlist--1-4.animate-cards
+                                +card('../assets/images/content/seven@2x.png', '7', '7 Eleven', '241 vacancies', 'Today, we can offer you a wide range of products from both import manufacturers and leading manufacturers in St. Petersburg…')
+                                +card('../assets/images/content/holiday@2x.png', '6', 'Holiday Inn', '241 vacancies', 'Today, we can offer you a wide range of products from both import manufacturers and leading manufacturers in St. Petersburg…')
+                                +card('../assets/images/content/mariott@2x.png', '3', 'Marriott International, Inc.', '236 vacancies', 'Today, we can offer you a wide products from both import and manufacturers in St. Petersburg…')
+                                +card('', '5', 'Siam Makro PCL', '241 vacancies', 'Today, we can offer you a wide range of products from both import manufacturers and leading manufacturers in St. Petersburg…')
+                .index-popular__news.news.block
+                    .block__head
+                        h5.block__title News
+                        a.link.link--medium View all
+                    .news__list
+                        .news__item
+                            p.news__item-date 5:20 – Today
+                            h4.news__item-title Achieving the impossible: Thai cave rescue a year on
+                            p.news__item-text Today, we can offer you a wide range of products from both import manufacturers and leading manufacturers in St. Petersburg…
+                        .news__item
+                            p.news__item-date 16:31 – 23 June
+                            h4.news__item-title Man admits drug charges after Thai release
+                            p.news__item-text Today, we can offer you a wide range of products from both import manufacturers and leading manufacturers in St. Petersburg…
+    .index-info
+        .container
+            .index-info__inner.block
+                .index-info__articles
+                    .block
+                        .block__head
+                            h5.block__title Articles
+                            a.icon-plus.icon-plus--vertical-align--center.link.link--medium
+                                .icon-plus__icon.indent-r--s
+                                    <svg viewBox="0 0 46 46" width="46px" height="46px" class="progress js-article-circle">
+                                    <circle r="20" cx="23" cy="23" stroke="#EDEDED" fill="transparent"></circle>
+                                    <circle class="prc" r="20" cx="23" cy="23" stroke="#D9001D" fill="transparent" stroke-dashoffset="125" stroke-dasharray="125"></circle>
+                                    </svg>
+                                .icon-plus__block View all
+                        .js-article-slider.carousel.slide
+                            .block__slide.carousel-item.active
+                                .article__image
+                                    img(src='../assets/images/content/Bitmap@2x.png')
+                                h3.article__title 3 ways your linkedin profile must differ from your resume
+                            .block__slide.carousel-item
+                                .article__image
+                                    img(src='../assets/images/content/Bitmap@2x.png')
+                                h3.article__title 3 ways your linkedin profile must differ from your resume
+                .index-info__faq.block.faq
+                    .index-info__faq-body
+                        .block__head
+                            h5.block__title Questions
+                            a.link.link--medium(href='faq.html') View all
+                        include ../components/faq
+                    .index-info__faq-footer
+                        include ../components/faq-footer

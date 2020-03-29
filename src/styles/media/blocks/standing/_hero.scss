@@ -1,0 +1,15 @@
+@include respond(1280) {
+  .hero {
+    height: 350px;
+  }
+}
+
+@include respond(768) {
+  .hero {
+    height: 218px;
+
+    &__content {
+      bottom: -94px;
+    }
+  }
+}

@@ -1,0 +1,462 @@
+@include respond(1280) {
+  .form {
+    $f: &;
+
+    &__title {
+      &:last-of-type {
+        margin-top: 0;
+      }
+    }
+
+    &--wide {
+      max-width: 665px;
+      margin: 35px auto 0 auto;
+      padding: 25px 32px 42px 45px;
+
+      #{$f}__tab {
+        margin-right: 27px;
+      }
+
+      h4 {
+        font-size: 16px;
+        line-height: 19px;
+      }
+
+      .custom-space--t-45 {
+        padding-top: 30px;
+      }
+
+      .indent-l--m {
+        margin-left: 10px;
+      }
+
+      #{$f}__block {
+        padding-bottom: 15px;
+      }
+    }
+
+    &--md {
+      #{$f}__title {
+        margin: 0 0 25px 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      #{$f}__block {
+        &:first-of-type {
+          padding-bottom: 0;
+        }
+      }
+
+      #{$f}__item {
+        &--radios {
+          margin-top: 0;
+        }
+      }
+
+      #{$f}__submit {
+        margin-top: 0;
+      }
+    }
+
+    &--narrow {
+      max-width: 490px;
+      background-color: $color-white;
+    }
+
+    &--resume {
+      padding: 30px 85px 60px;
+
+      #{$f}__block {
+        padding: 0;
+      }
+
+      #{$f}__submit {
+        margin-top: 25px;
+      }
+    }
+
+    &--lg {
+      max-width: 615px;
+
+      &-resume {
+        padding-top: 30px;
+        padding-bottom: 40px;
+
+        #{$f}__title {
+          margin: 0;
+        }
+
+        #{$f}__submit {
+          margin-top: 22px;
+        }
+
+        #{$f}__item {
+          &--checks {
+            margin-top: 25px;
+          }
+
+          &.indent-v--m {
+            margin: 25px 0;
+          }
+        }
+      }
+
+      #{$f}__block {
+        padding: 30px 60px;
+      }
+
+      #{$f}__submit {
+        margin-top: 30px;
+      }
+    }
+
+    &--card {
+      padding: 20px 30px 30px 30px;
+    }
+
+    &__head {
+      padding-top: 0;
+
+      &--pdg {
+        padding-top: 30px;
+      }
+    }
+
+    &__block {
+      &--inputs {
+        padding-left: 85px;
+        padding-right: 85px;
+      }
+    }
+
+    &__select-box {
+      &--month {
+        width: 124px;
+      }
+
+      &--lang {
+        margin-right: 13px;
+        width: 240px;
+      }
+    }
+
+    &__submit {
+      & .button {
+        & .indent-l--3xs {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    &__skip {
+      font-size: 16px;
+    }
+
+    & label,
+    & span {
+      &.form__err {
+        font-size: 12px;
+      }
+    }
+    & span {
+      &.form__err {
+        max-width: 200px;
+        top: -16px;
+      }
+    }
+
+    &__del {
+      right: -30px;
+      top: -15px;
+    }
+  }
+}
+
+@include respond(768) {
+  .form {
+    $f: &;
+    &--wide {
+      margin: -22px auto 0 auto;
+      padding: 20px 25px 25px 25px;
+
+      #{$f}__tab {
+        font-size: 12px;
+        margin-right: 15px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      #{$f}__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .custom-space--t-45 {
+        padding-top: 20px;
+      }
+
+      .indent-l--m {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+
+    &--md {
+      margin-top: -10px;
+      margin-bottom: 55px;
+      padding-bottom: 30px;
+      background-color: $color-white;
+      display: flex;
+      justify-content: center;
+
+      #{$f}__block {
+        padding: 20px 18px;
+      }
+
+      #{$f}__title {
+        &:last-of-type {
+          margin-bottom: 15px;
+        }
+      }
+
+      &__item {
+        &--checks {
+          margin-top: 10px;
+        }
+      }
+
+      //   & .button {
+      //     padding: 12px 16px;
+      //   }
+    }
+
+    &--narrow {
+      padding-top: 22px;
+      padding-bottom: 0;
+    }
+
+    &--resume {
+      padding: 20px 18px 30px;
+
+      #{$f}__head {
+        margin-bottom: 20px;
+      }
+
+      #{$f}__block {
+        padding: 0;
+      }
+    }
+
+    &--lg {
+      &-resume {
+        padding-top: 20px;
+        padding-bottom: 60px;
+
+        #{$f}__block {
+          padding: 20px 18px 25px;
+
+          &--center {
+            padding: 20px 0;
+          }
+        }
+
+        #{$f}__item {
+          &.indent-v--m {
+            margin: 20px 0;
+          }
+        }
+
+        #{$f}__title {
+          &:last-of-type {
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    &--card {
+      padding: 0 20px 30px;
+    }
+
+    &__head {
+      &--pdg {
+        padding-top: 20px;
+      }
+    }
+
+    &__title {
+      &:last-of-type {
+        margin-bottom: 25px;
+      }
+    }
+
+    &__content {
+      width: 100%;
+    }
+
+    &__block {
+      padding: 30px 0;
+
+      &--inputs {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+    }
+    &__item {
+      margin: 0 auto 8px auto;
+      margin-bottom: 8px;
+
+      &--row {
+        &-content {
+          #{$f}__control {
+            width: 150px;
+          }
+        }
+      }
+
+      &-content {
+        #{$f}__control {
+          width: 150px;
+        }
+      }
+    }
+
+    &__label {
+      padding-left: 15px;
+      margin-bottom: 0;
+      font-size: 10px;
+    }
+
+    &__textarea {
+      min-height: 85px;
+      font-size: 10px;
+    }
+
+    &__checkboxs {
+      &-col {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 50%;
+
+        &:last-child {
+          margin-top: 20px;
+        }
+      }
+
+      &-item {
+        margin-right: 26px;
+      }
+
+      & .checkbox {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__radio {
+      &-groups {
+        margin-top: 10px;
+      }
+    }
+
+    &__select-box {
+      width: 100px;
+
+      &--lg {
+        width: 100%;
+      }
+
+      &--lang {
+        width: 180px;
+      }
+    }
+
+    &__control-group {
+      flex-direction: column;
+
+      &--horizontally {
+        flex-direction: row;
+      }
+    }
+
+    &__select-group {
+      &:first-child {
+        margin-right: 0;
+        padding-bottom: 16px;
+      }
+
+      .select--year {
+        & + .select2 {
+          flex: 0 0 108px;
+        }
+      }
+    }
+
+    &__submit {
+      margin-top: 20px;
+      align-items: center;
+
+      & .button {
+        // padding: 12px 15px;
+      }
+    }
+
+    &__skip {
+      right: 14px;
+      top: auto;
+      bottom: -58px;
+      font-size: 12px;
+    }
+
+    &__social {
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 20px 25px 27px;
+    }
+
+    &__del {
+      right: 0;
+      top: 0;
+    }
+
+    & .indent-v--m {
+      margin: 15px auto;
+    }
+
+    & .button {
+      &--view--ghost {
+        margin: 0;
+
+        &:last-of-type {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    & .input__control {
+      min-width: 0;
+      width: 100%;
+    }
+
+    & label {
+      &.form__err {
+        top: -19px;
+        right: 15px;
+        font-size: 9px;
+      }
+    }
+
+    & span {
+      &.form__err {
+        top: -20px;
+        right: -32px;
+        font-size: 10px;
+      }
+    }
+  }
+}

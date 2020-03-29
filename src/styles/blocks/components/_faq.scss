@@ -1,0 +1,74 @@
+@import "../../variables/colors";
+.faq {
+  width: 880px;
+  border-radius: $border-radius-default;
+  box-shadow: $box-shadow-default, 0 30px 90px rgba(28, 44, 56, 0.1);
+  background-color: $bg-light-gray;
+  &__inner {
+    padding: 50px 0 64px;
+  }
+  &__collapse {
+    overflow: hidden;
+    //display: block;
+    &.is-collapsed {
+      overflow: hidden;
+      display: none;
+    }
+  }
+  &__body {
+    border-bottom: 1px solid $bg-bright-gray;
+    padding: 0 84px 25px;
+  }
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__item {
+    margin-bottom: 25px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  &__question {
+    font-size: 25px;
+    color: $color-base-light;
+    font-weight: 300;
+    cursor: pointer;
+    margin-left: -20px;
+    &:before {
+      opacity: 0.3;
+      content: "-";
+      text-align: center;
+      display: inline-block;
+      width: 15px;
+      margin-right: 5px;
+      color: $color-base;
+    }
+    &.is-collapsed {
+      &:before {
+        content: "+";
+      }
+    }
+  }
+  &__answer {
+    padding: 25px 0 0 0;
+  }
+  &__footer {
+    padding: 25px 80px 0;
+    display: flex;
+    justify-content: space-between;
+    & .input {
+      max-width: 350px;
+
+      &--width--available {
+        max-width: 100%;
+      }
+    }
+  }
+  &__submit {
+    display: none;
+    // opacity: 1;
+    // visibility: hidden;
+  }
+}

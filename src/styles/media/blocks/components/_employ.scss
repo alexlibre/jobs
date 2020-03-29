@@ -1,0 +1,8 @@
+@include respond(768) {
+    .employ {
+        padding: 15px 0;
+        &__title {
+            font-size: 10px;
+        }
+    }
+}

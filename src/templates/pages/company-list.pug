@@ -1,0 +1,52 @@
+extends ../layout-emp
+
+block content
+    .container-full.container-full--page--list.container-full--with-bg.container-full--with-bg--lg
+        .page__content
+            .container
+                .page__inner
+                    .form.form--centered.form--wide.form--underlined
+                        .form__head
+                            .form__tab-switch.form__tab-switch--align-left.js-form-switch
+                                h4.form__tab(data-tab='1') Find jobs
+                                h4.form__tab(data-tab='2') Find employee
+                                h4.form__tab.is-active(data-tab='3') Companies
+                        form.form__content.form__content--disactive(data-content='1')
+                            .form__block.custom-space--t-45
+                                .form__item.form__item--row
+                                    include ../items/input
+                                    +input('text', 'Keywords or company name', 'input--width--available', '')
+                                    button.button.button--view--primary.indent-l--m(type="submit") Find company
+                            .form__item
+                                    .text.text--medium.text--label 437 companies found
+                        form.form__content.form__content--disactive(data-content='2')
+                            .form__block.custom-space--t-45
+                                .form__item.form__item--row
+                                    include ../items/input
+                                    +input('text', 'Keywords or company name', 'input--width--available', '')
+                                    button.button.button--view--primary.indent-l--m(type="submit") Find company
+                            .form__item
+                                    .text.text--medium.text--label 437 companies found
+                        form.form__content.form__content--disactive.is-active(data-content='3')
+                            .form__block.custom-space--t-45
+                                .form__item.form__item--row
+                                    include ../items/input
+                                    +input('text', 'Keywords or company name', 'input--width--available', '')
+                                    button.button.button--view--primary.indent-l--m(type="submit") Find company
+                            .form__item
+                                    .text.text--medium.text--label 437 companies found
+                    .company-list.cardlist.cardlist--full.indent-t--2xl
+                        include ../items/card
+                        +card('../assets/images/content/seven@2x.png', '7', '7 Eleven', '241 vacancies', 'Today, we can offer you a wide range of products from both import manufacturers and leading manufacturers in St. Petersburg…')
+                        +card('../assets/images/content/holiday@2x.png', '6', 'Holiday Inn', '241 vacancies', 'Today, we can offer you a wide range of products from both import manufacturers and leading manufacturers in St. Petersburg…')
+                        +card('../assets/images/content/mariott@2x.png', '3', 'Marriott International, Inc.', '236 vacancies', 'Today, we can offer you a wide products from both import and manufacturers in St. Petersburg…')
+                        +card('', '5', 'Siam Makro PCL', '241 vacancies', 'Today, we can offer you a wide range of products from both import manufacturers and leading manufacturers in St. Petersburg…')
+                        +card('../assets/images/content/seven@2x.png', '3', '7 Eleven', '241 vacancies', 'Today, we can offer you a wide range of products from both import manufacturers and leading manufacturers in St. Petersburg…')
+                        +card('../assets/images/content/holiday@2x.png', '6', 'Holiday Inn', '241 vacancies', 'Today, we can offer you a wide range of products from both import manufacturers and leading manufacturers in St. Petersburg…')
+                        +card('../assets/images/content/mariott@2x.png', '3', 'Marriott International, Inc.', '236 vacancies', 'Today, we can offer you a wide products from both import and manufacturers in St. Petersburg…')
+                        +card('', '5', 'Siam Makro PCL', '241 vacancies', 'Today, we can offer you a wide range of products from both import manufacturers and leading manufacturers in St. Petersburg…')
+                        +card('../assets/images/content/seven@2x.png', '3', '7 Eleven', '241 vacancies', 'Today, we can offer you a wide range of products from both import manufacturers and leading manufacturers in St. Petersburg…')
+                        +card('../assets/images/content/holiday@2x.png', '6', 'Holiday Inn', '241 vacancies', 'Today, we can offer you a wide range of products from both import manufacturers and leading manufacturers in St. Petersburg…')
+                        +card('../assets/images/content/mariott@2x.png', '3', 'Marriott International, Inc.', '236 vacancies', 'Today, we can offer you a wide products from both import and manufacturers in St. Petersburg…')
+                        +card('', '5', 'Siam Makro PCL', '241 vacancies', 'Today, we can offer you a wide range of products from both import manufacturers and leading manufacturers in St. Petersburg…')
+

@@ -1,0 +1,22 @@
+.employ {
+    display: flex;
+    align-items: center;
+    padding: $size-s;
+    cursor: pointer;
+    &__more {
+        display: block;
+        margin-right: 7px;
+        &-icon {
+            display: flex;
+        }
+    }
+    &__title {
+        color: $color-active;
+        font-size: 14px;
+        font-weight: 400;
+        transition: color 0.3s;
+        &:hover {
+            color: #ff4b63;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+extends ../layout-emp
+include ../items/input
+include ../items/radio
+
+block title
+    title seeker resume 1
+
+block content
+    .page__content
+        .container-full.container-full--page--form
+            .wrapper
+                h1.h3.page__title.page__title--is-centered Create account
+                .form.form--centered.form--md.form--resume
+                    form.form__content.is-active
+                        .form__head
+                            h4.form__title Profile
+                        .form__block
+                            .form__item
+                                label.form__label(for='seek-resume-email') Email
+                                .form__control
+                                    +input('email', '', '', 'seek-resume-email')
+                            .form__item
+                                label.form__label(for='seek-resume-pwd') Password
+                                .form__control
+                                    +input('password', '', '', 'seek-resume-pwd')
+                            .form__item.indent-v--m
+                                label.form__label Gender
+                                .form__radio-groups
+                                    +radio('Male', 'gender', 'male', true)
+                                    +radio('Female', 'gender', 'female', false)
+                            .form__item
+                                label.form__label(for='seek-resume-city') City
+                                .form__control
+                                    +input('text', '', '', 'seek-resume-city')
+
+                            .form__item.indent-v--m
+                                label.form__label Date of birth
+                                .form__control-group.form__control-group--distribute--between.form__control-group--horizontally
+                                    select.select--day.form__select.js-select
+                                        option(value='month') Day
+                                        option(value='month') Day
+                                        option(value='month') Day
+                                        option(value='month') Day
+                                    select.select--month.form__select.js-select
+                                        option(value='month') Month
+                                        option(value='month') Month
+                                        option(value='month') Month
+                                        option(value='month') Month
+                                    select.select--year.form__select.js-select
+                                        option(value='2016') 2016
+                                        option(value='2017') 2017
+                                        option(value='2018') 2018
+                                        option(value='2019') 2019
+
+                            .form__item
+                                label.form__label(for='seek-resume-phone') Phone
+                                .form__control
+                                    +input('text', '', '', 'seek-resume-phone')
+                            .form__submit.form__submit--view--centered
+                                button.button.button--view--primary(type='submit') Next step

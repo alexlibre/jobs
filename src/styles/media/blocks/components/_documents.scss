@@ -1,0 +1,50 @@
+@include respond(1280) {
+  .documents {
+    padding: 25px 0 0;
+
+    &__row {
+      margin-bottom: 30px;
+    }
+
+    &__preview {
+      margin-left: 50px;
+    }
+
+    &__form {
+      padding: 47px;
+    }
+  }
+
+  .d-preview {
+    &__name {
+      font-size: 11px;
+    }
+
+    &__download {
+      width: 8px;
+      height: 11px;
+      margin: 0px 8px 0 20px;
+    }
+
+    &__remove {
+      width: 9px;
+      height: 10px;
+    }
+  }
+}
+
+@include respond(768) {
+  .documents {
+    padding: 35px 0 0;
+
+    &__form {
+      padding: 45px 28px;
+    }
+
+    & .dz-message {
+      &__txt {
+        font-size: 12px;
+      }
+    }
+  }
+}

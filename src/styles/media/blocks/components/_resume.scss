@@ -1,0 +1,338 @@
+@include respond(1280) {
+  .resume {
+    $r: &;
+    padding: 50px;
+
+    &--template {
+      padding: 0;
+
+      #{$r}__block {
+        margin: 0 0 30px;
+      }
+    }
+    &__block {
+      max-width: 612px;
+      margin-bottom: 30px;
+      margin: 0 auto 30px auto;
+      display: flex;
+
+      &-top {
+        margin-bottom: 10px;
+      }
+
+      &-txt {
+        padding: 30px 44px 40px 30px;
+        font-size: 12px;
+      }
+
+      &-item {
+        min-height: 210px;
+      }
+
+      &-edu {
+        &-row {
+          justify-content: space-between;
+        }
+
+        &-txt {
+          max-width: 324px;
+          margin-right: 0;
+          font-size: 16px;
+        }
+      }
+
+      &-add {
+        &-item {
+          padding: 30px 40px;
+        }
+      }
+
+      &-addicon {
+        width: 44px;
+        height: 44px;
+      }
+
+      &-form {
+        padding: 40px 60px 40px;
+
+        & .form__checkboxs {
+          margin-top: 10px;
+        }
+
+        & .input__control {
+          padding: 14px 20px 14px 20px;
+        }
+
+        &
+          .select2-container
+          .select2-selection--single
+          .select2-selection__rendered {
+          padding: 9px 30px 7px 20px;
+        }
+
+        & .indent-l--3xs {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    &__title {
+      font-size: 26px;
+    }
+
+    &__edit,
+    &__delete {
+      font-size: 12px;
+    }
+
+    &__edit {
+      &::before {
+        width: 12px;
+        height: 12px;
+      }
+
+      &-card {
+        margin-right: 0;
+      }
+    }
+
+    &__delete {
+      &::before {
+        width: 9px;
+        height: 10px;
+      }
+    }
+
+    &__form {
+      margin: 30px 30px 40px;
+    }
+  }
+}
+
+@include respond(768) {
+  .resume {
+    padding: 25px 0 45px;
+
+    &__block {
+      max-width: initial;
+      margin-bottom: 20px;
+      width: 100%;
+
+      &-item {
+        min-height: 150px;
+        padding: 40px 25px 25px;
+      }
+
+      &-profil {
+        &-img {
+          width: 57px;
+          height: 57px;
+          margin-right: 18px;
+        }
+      }
+
+      &-edu {
+        padding-top: 20px;
+        &-row {
+          flex-wrap: wrap;
+        }
+
+        &-txt {
+          margin-bottom: 18px;
+          font-size: 12px;
+        }
+      }
+
+      &-portfolio {
+        padding: 0;
+
+        &-top {
+          padding: 20px 25px;
+        }
+      }
+
+      &-add {
+        padding: 0;
+        &-item {
+          padding: 25px;
+          &:first-child {
+            padding-top: 40px;
+          }
+        }
+      }
+
+      &-row {
+        flex-wrap: wrap;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      &-card {
+        flex: 0 0 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 20px;
+        padding: 40px 25px 25px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &:nth-child(2) {
+          display: none;
+        }
+
+        &:nth-of-type(2) {
+          margin-top: 20px;
+        }
+      }
+
+      &-add-card {
+        position: absolute;
+        top: 50%;
+        right: -26px;
+        transform: translateY(-50%);
+      }
+
+      &-form {
+        padding: 20px 18px 25px;
+
+        & .input__control {
+          padding: 13px 20px 13px 20px;
+        }
+
+        &
+          .select2-container
+          .select2-selection--single
+          .select2-selection__rendered {
+          padding: 5px 30px 5px 20px;
+        }
+
+        & .form {
+          &__select-box {
+            &--lang {
+              width: 115px;
+              margin-right: 10px;
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+
+      &-txt {
+        padding: 17px 25px 25px;
+        font-size: 10px;
+        line-height: 14px;
+      }
+    }
+
+    &__title {
+      font-size: 15px;
+      line-height: 18px;
+    }
+    &__info {
+      &-item {
+        margin-bottom: 10px;
+
+        &-title,
+        &-desc {
+          font-size: 10px;
+          line-height: 13px;
+        }
+      }
+    }
+
+    &__edit,
+    &__delete {
+      font-size: 10px;
+    }
+
+    &__edit {
+      &::before {
+        position: relative;
+        top: -1px;
+        width: 11px;
+        height: 11px;
+      }
+
+      &-card {
+        &::before {
+          position: relative;
+          top: -1px;
+          width: 9px;
+          height: 9px;
+          margin-right: 4px;
+        }
+      }
+
+      &-txt {
+        font-size: 10px;
+      }
+    }
+
+    &__card {
+      &-del {
+        &::before {
+          position: relative;
+          top: -1px;
+          width: 8px;
+          height: 9px;
+        }
+      }
+    }
+
+    &__delete {
+      &::before {
+        position: relative;
+        top: -1px;
+        width: 8px;
+        height: 9px;
+        margin-right: 4px;
+      }
+    }
+
+    &__del {
+      &-txt {
+        font-size: 10px;
+      }
+    }
+
+    &__preview {
+      margin-right: 15px;
+      margin-bottom: 15px;
+      &-img {
+        width: 92px;
+        height: 54px;
+      }
+
+      &-name {
+        font-size: 10px;
+        margin-right: 0px;
+      }
+
+      &-remove {
+        width: 7px;
+        height: 8px;
+      }
+    }
+
+    &__form {
+      margin: 20px 18px 25px;
+
+      &--lg {
+        margin: 10px 20px;
+        padding: 0 10px;
+        text-align: center;
+      }
+    }
+
+    & .dz-message {
+      &__txt {
+        font-size: 10px;
+        line-height: 14px;
+      }
+    }
+  }
+}

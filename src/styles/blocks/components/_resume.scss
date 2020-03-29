@@ -1,0 +1,455 @@
+.resume {
+  $r: &;
+
+  &--template {
+    #{$r}__edit {
+      padding-right: 20px;
+      &::after {
+        display: none;
+      }
+    }
+
+    #{$r}__delete {
+      margin-right: 0;
+    }
+  }
+  &__block {
+    max-width: 620px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    &--lg {
+      max-width: 880px;
+    }
+    &-item {
+      min-height: 215px;
+      background-color: $color-white;
+      box-shadow: $box-shadow-default;
+      border-radius: 10px;
+      border: 1px solid $color-white;
+    }
+  }
+
+  &__block-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  &__title {
+    margin-right: auto;
+    font-size: 35px;
+    line-height: 42px;
+    font-weight: 300;
+  }
+
+  &__edit-card {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    color: $color-ghost;
+    font-size: 14px;
+    cursor: pointer;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 13px;
+      height: 13px;
+      margin-right: 5px;
+      background: url(../images/static/icon-settings.svg) no-repeat center
+        center;
+      background-size: cover;
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    color: $color-ghost;
+    font-size: 14px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  &__edit {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-right: 8px;
+    color: $color-ghost;
+    font-size: 14px;
+    text-decoration: none;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 13px;
+      height: 13px;
+      margin-right: 5px;
+      background: url(../images/static/icon-settings.svg) no-repeat center
+        center;
+      background-size: cover;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 1px;
+      position: absolute;
+      top: 3px;
+      right: 0;
+      bottom: 3px;
+      background-color: $color-ghost;
+    }
+  }
+
+  &__card-del {
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    color: $color-ghost;
+    font-size: 14px;
+    text-decoration: none;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 11px;
+      margin-right: 5px;
+      background: url(../images/static/icon-delete.svg) no-repeat center center;
+      background-size: cover;
+    }
+  }
+  // &__edit-txt {}
+  &__block-profil {
+    display: flex;
+    padding: 30px 40px 40px;
+    position: relative;
+  }
+  &__block-profil-img {
+    position: relative;
+    margin-right: 40px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-file {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  // &__block-profil-img-file {}
+  // &__block-profil-info {}
+  &__info {
+    display: flex;
+    flex-direction: column;
+    &--horizontally {
+      flex-direction: row;
+      max-width: 205px;
+      justify-content: space-between;
+      margin-top: 15px;
+      .resume__info-item {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__info-item {
+    margin-bottom: 15px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__info-item-title {
+    color: $color-ghost;
+    font-size: 12px;
+    font-weight: 500;
+
+    &--blue {
+      margin-bottom: 20px;
+      color: #54617a;
+      font-weight: 700;
+    }
+  }
+  &__info-item-desc {
+    // font-weight: 300;
+  }
+
+  &__block-row {
+    display: flex;
+  }
+  &__block-job {
+    display: flex;
+  }
+  &__block-job-info {
+    flex: 0 0 50%;
+    padding: 30px 40px 40px;
+    border-right: 1px solid $bg-bright-gray;
+    &:last-child {
+      border-right: 0;
+    }
+  }
+  &__block-edu,
+  &__block-form {
+    background-color: #ffffff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    visibility: visible;
+    opacity: 1;
+
+    &.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+      display: none;
+    }
+  }
+  &__block-edu-row {
+    display: flex;
+    align-items: center;
+  }
+  &__block-edu-txt {
+    margin-right: 68px;
+    color: $color-ghost;
+    font-size: 20px;
+  }
+  // &__block-edu-btn {}
+  &__block-experience {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__block-experience-info {
+    flex: 0 0 33.331%;
+    padding: 30px 40px 40px;
+    border-right: 1px solid $bg-bright-gray;
+    &:last-child {
+      border-right: 0;
+    }
+  }
+  &__block-add {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  &__block-add-item {
+    padding: 30px;
+    border-bottom: 1px solid $bg-bright-gray;
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &--no-border {
+      border-bottom: 0;
+    }
+  }
+  // &__block-add-item-inf {}
+  &__block-add-item-title {
+    font-size: 20px;
+
+  }
+  // &__info--horizontally {}
+  &__block-portfolio {
+    background-color: $color-white;
+    box-shadow: $box-shadow-default;
+    // padding-left: 40px;
+    // padding-right: 40px;
+    &-top {
+      padding: 30px 40px;
+      border-bottom: 1px solid #f1f1f1;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__pview {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__preview {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-bottom: 25px;
+    &-block {
+      padding: 5px 10px;
+    }
+    &-img {
+      height: 80px;
+      width: 136px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &-name {
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 14px;
+      font-weight: 300;
+    }
+    &-remove {
+      border: none;
+      width: 10px;
+      height: 11px;
+      background: url(../images/static/icon-remove.svg) no-repeat center center;
+      background-size: contain;
+      cursor: pointer;
+    }
+  }
+  &__show-all {
+    color: $color-ghost;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  &__form {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    border-radius: 25px;
+    border: 1px dashed #c8d0d8;
+    background-color: #fafbfb;
+    // width: 100%;
+    margin: 30px 30px 40px;
+
+    &--lg {
+      width: 100%;
+    }
+  }
+  &__block-txt {
+    padding: 38px 40px 53px;
+    box-shadow: $box-shadow-default;
+    border-radius: 10px;
+    border: 1px solid $color-white;
+    background-color: $color-white;
+  }
+  &__delete {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    color: $color-ghost;
+    font-size: 14px;
+    cursor: pointer;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 11px;
+      margin-right: 5px;
+      background: url(../images/static/icon-delete.svg) no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  &__add {
+    cursor: pointer;
+  }
+
+  &__block-row {
+    @include u-row-flex(30px);
+    position: relative;
+    transform: translateY(0);
+  }
+
+  &__block-card {
+    @include u-col(30px);
+    //@include u-size(4, 9, 30px);
+    flex: 0 1 calc((100% / 9 * 4) - 35px);
+    padding: 60px 40px 40px;
+    background-color: #fff;
+    box-shadow: 0 26px 90px rgba(51, 59, 69, 0.1);
+    border-radius: 10px;
+    border: 1px solid #fff;
+    margin-top: 30px;
+    position: relative;
+
+    &:first-of-type,
+    &:nth-of-type(2) {
+      margin-top: 0;
+    }
+
+    &:nth-of-type(n + 3) {
+      height: 0;
+      display: none;
+      opacity: 0;
+    }
+  }
+
+  &__block-add-card {
+    @include u-col(30px);
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__block-addicon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px rgba(215, 222, 227, 0.39422),
+      0px 26px 90px rgba(51, 59, 69, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &__block-form {
+    width: 100%;
+    border-radius: $border-radius-default;
+    box-shadow: $box-shadow-default;
+  }
+
+  &__block-about {
+    position: relative;
+    padding: 40px;
+
+      &-info {
+        display: flex;
+        flex-direction: column;
+      }
+  }
+
+  &__text-block {
+    margin-bottom: 25px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &-title {
+      margin-bottom: 20px;
+      color: #54617a;
+      font-size: 35px;
+      font-weight: 300;
+      line-height: 40px;
+    }
+    &-desc {
+      color: #54617a;
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}

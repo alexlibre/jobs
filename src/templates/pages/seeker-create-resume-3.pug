@@ -1,0 +1,66 @@
+extends ../layout-emp
+include ../items/input
+include ../items/radio
+
+block content
+    .page__content
+        .container-full.container-full--page--form
+            .wrapper
+                h1.h3.page__title.page__title--is-centered Create resume
+                .form.form--centered.form--lg.form--plain.form--lg-resume
+                    form.form__content.is-active
+                        .form__head
+                            h4.form__title.form__title--left Education
+                        .form__block.form__block--has-border
+                            .form__item
+                                label.form__label(for='seek-resume-degree') Degree
+                                .form__control
+                                    +input('text', 'e.g. BA, BS, JD, PhD.', 'input--width--available', 'seek-resume-degree')
+                            .form__item
+                                label.form__label(for='seek-resume-school') School
+                                .form__control
+                                    +input('text', '', 'input--width--available', 'seek-resume-school')
+                            .form__item
+                                label.form__label(for='seek-resume-study') Field of Study
+                                .form__control
+                                    +input('text', 'e.g. Biology, Computer Science', 'input--width--available', 'seek-resume-study')
+                            .form__item
+                                label.form__label(for='seek-resume-studycity') City
+                                .form__control
+                                    +input('text', '', 'input--width--available', 'seek-resume-studycity')
+                            .form__item
+                                label.form__label Time period
+                                .form__control-group.form__control-group--distribute--between
+                                    .form__select-group
+                                        select.select--month.form__select.js-select
+                                            option(value='month') Month
+                                            option(value='month') Month
+                                            option(value='month') Month
+                                            option(value='month') Month
+                                        select.select--year.form__select.js-select
+                                            option(value='month') Year
+                                            option(value='month') Year
+                                            option(value='month') Year
+                                            option(value='month') Year
+                                    .form__select-group
+                                        select.select--month.form__select.js-select
+                                            option(value='month') Month
+                                            option(value='month') Month
+                                            option(value='month') Month
+                                            option(value='month') Month
+                                        select.select--year.form__select.js-select
+                                            option(value='2016') 2016
+                                            option(value='2017') 2017
+                                            option(value='2018') 2018
+                                            option(value='2019') 2019
+                        .form__block.form__block--has-border.form__block--center
+
+                            .icon-plus
+                                .icon-plus__icon
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"><path d="M7 0v5h5v2H7v5H5V7H0V5h5V0h2z" fill="#E9001E" fill-rule="evenodd"/></svg>
+                                .icon-plus__block.text.text--link.text--big.indent-l--2xs Add education
+
+                        .form__submit.form__submit--view--centered
+                            a.button.button--view--secondary(href='seeker-create-resume-1.html') Back
+                            button.button.button--view--primary.indent-l--3xs(type='submit') Next step
+                            button.form__skip Skip

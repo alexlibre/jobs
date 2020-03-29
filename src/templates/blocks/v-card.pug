@@ -1,0 +1,21 @@
+mixin v-card(options)
+    .v-card
+        a(href="#").v-card__link
+        .v-card__top
+            .v-card__title= options.title
+        .v-card__content
+            .v-card__content-col
+                .v-card__views
+                    .v-card__views-num= options.vnum
+                    .v-card__views-txt Views
+                .v-card__respons
+                    .v-card__respons-num= options.resnum
+                    .v-card__respons-txt Responses
+            .v-card__content-col
+                .v-card__remain
+                    .v-card__remain-num= options.rem.num
+                    div(class=`v-card__remain-txt ${options.rem.bool ? 'v-card__remain-txt--red':''}`)= options.rem.txt
+            .v-card__content-col.v-card__content-col--lg
+                .v-card__controls
+                    include ../components/v-controls.pug
+                    

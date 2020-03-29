@@ -1,0 +1,22 @@
+@include respond(1280) {
+  .thanks {
+    &__title {
+      font-size: 21px;
+    }
+    &__txt {
+      font-size: 16px;
+    }
+  }
+}
+
+@include respond(1280) {
+  .thanks {
+    padding-top: 115px;
+    &__title {
+      font-size: 17px;
+    }
+    &__txt {
+      font-size: 12px;
+    }
+  }
+}

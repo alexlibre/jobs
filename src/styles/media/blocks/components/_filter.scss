@@ -1,0 +1,63 @@
+@include respond(1280) {
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__item {
+      flex: 0 0 33.333%;
+      padding: 0;
+      margin-bottom: 38px;
+
+      &::after {
+        border: 0;
+      }
+    }
+
+    &::after {
+      content: "";
+      flex: 0 0 215px;
+    }
+  }
+
+  .filter {
+    &__title {
+      font-size: 12px;
+      margin-bottom: 0;
+    }
+    &__row {
+      margin-top: 12px;
+    }
+  }
+}
+
+@include respond(768) {
+  .filters {
+    &__item {
+      flex: 0 0 100%;
+      margin-bottom: 0;
+      padding: 20px 0 20px 80px;
+
+      &:first-of-type {
+        padding-top: 20px;
+      }
+
+      &::after {
+        border-bottom: 1px solid #f1f1f1;
+      }
+    }
+  }
+
+  .filter {
+    &__title {
+      font-size: 10px;
+    }
+
+    &__value {
+      font-size: 12px;
+    }
+
+    &__reveal {
+      margin-top: 10px;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.popup {
+  position: fixed;
+  z-index: 104;
+  top: 0;
+  right: -70px;
+  bottom: 0;
+  width: 46.5%;
+  height: 100vh;
+  overflow-y: scroll;
+  box-shadow: $box-shadow-default;
+  border: 1px solid $color-white;
+  background-color: $color-white;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  padding: 100px 50px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.3s, visibility 0.3s, transform 0.5s;
+
+  &--opened {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0%);
+  }
+
+  &__overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__container {
+    position: relative;
+    padding: 100px 40px 60px;
+    background-color: #fff;
+    word-wrap: break-word;
+
+    &--full {
+      height: 100%;
+    }
+  }
+
+  &__closer {
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    z-index: 9;
+    cursor: pointer;
+  }
+}

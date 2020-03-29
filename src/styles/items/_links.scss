@@ -1,0 +1,46 @@
+.link {
+    color: $color-active;
+    text-decoration: none;
+    transition: color 0.3s;
+    &:hover {
+        color: #ff4b63;
+    }
+    &--small {
+        font-size: 12px;
+        line-height: 15px;
+    }
+    &--medium {
+        font-size: 14px;
+    }
+    &--big {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    &--text {
+        font-size: 12px;
+        line-height: 15px;
+        color: $color-base;
+        &:hover {
+            color: $color-active;
+        }
+    }
+    &--collapse {
+        color: $color-base;
+        transition: color .2s ease-in-out, border .2s ease-in-out;
+        &.is-collapsed {
+            color: $color-ghost;
+            border-bottom: 1px solid $color-ghost;
+        }
+        &.js-collapse-btn--active {
+            &:hover {
+                color: $color-base;
+            }
+        }
+    }
+    &--view--base {
+        color: $color-base
+    }
+    &[href] {
+        cursor: pointer;
+    }
+}

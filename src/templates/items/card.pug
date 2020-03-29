@@ -1,0 +1,13 @@
+mixin card(logo, rank, title, subtitle, text)
+    .card.cardlist__item
+        .card__content
+            .card__header
+                .card__logo
+                    img(src=logo)
+                .card__rank Rank&nbsp;
+                    span.card__rank-value= rank
+            h5.card__title= title
+            h6.card__subtitle= subtitle
+            p.card__text= text
+            .card__footer
+                a.link.link--small View

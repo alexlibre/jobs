@@ -1,0 +1,19 @@
+@include respond(1280) {
+  .icon-plus {
+    & .progress {
+      width: 32px;
+      height: 32px;
+    }
+    &__block {
+      font-size: 11px;
+    }
+  }
+}
+
+@include respond(1280) {
+  .icon-plus {
+    &__block {
+      font-size: 10px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+include blocks/grid-debug
+
+doctype html
+html(lang='ru')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible',content='IE=edge')
+        meta(name='viewport',content='width=device-width, initial-scale=1')
+
+        block title
+            title default title
+        link(rel='stylesheet', href='../assets/css/styles.css')
+
+    body
+        //+debug()
+        div.page
+            include blocks/header-transparent
+            div.content
+                block content
+            include blocks/footer
+            include blocks/popup
+
+        script(src='../assets/js/vendors.js')
+        script(src='../assets/js/scripts.min.js')

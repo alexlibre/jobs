@@ -1,0 +1,83 @@
+@include respond(1280) {
+  .sign-in {
+    &__popup,
+    &__recover-pwd,
+    &__recover-res {
+      width: 425px;
+      padding: 0 0 20px 0;
+    }
+    &__recover-pwd,
+    &__recover-res {
+      padding-bottom: 8px;
+    }
+    &-popup {
+      &__block {
+        padding: 30px 33px;
+      }
+      &__social {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .button {
+          margin: 0;
+          &:first-child {
+            margin-bottom: 10px;
+          }
+        }
+      }
+      &__submit {
+        margin-top: 18px;
+        .button {
+          padding: 12px 18px;
+        }
+        .text {
+          max-width: 275px;
+        }
+      }
+      &__policy {
+        max-width: 217px;
+        margin-left: 34px;
+      }
+    }
+  }
+}
+
+@include respond(768) {
+  .sign-in {
+    &__popup,
+    &__recover-pwd,
+    &__recover-res {
+      width: 270px;
+    }
+
+    &__recover-pwd,
+    &__recover-res {
+      padding-bottom: 20px;
+    }
+
+    &-popup {
+      &__block {
+        padding: 24px 22px 10px;
+
+        &:nth-child(2) {
+          padding-bottom: 20px;
+        }
+      }
+
+      &__submit {
+        margin-top: 15px;
+        .button {
+          padding: 9px 14px 11px;
+        }
+
+        .text {
+          max-width: 200px;
+        }
+      }
+
+      &__policy {
+        margin-left: 10px;
+      }
+    }
+  }
+}

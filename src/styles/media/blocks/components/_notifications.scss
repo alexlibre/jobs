@@ -1,0 +1,29 @@
+@include respond(1280) {
+  .notifications {
+    padding-top: 75px;
+    padding-left: 85px;
+  }
+
+  .notification {
+    &__text {
+      max-width: 285px;
+    }
+  }
+}
+
+@include respond(768) {
+  .notifications {
+    padding-top: 45px;
+    padding-left: 30px;
+
+    &__item {
+      margin-bottom: 35px;
+    }
+  }
+
+  .notification {
+    &__text {
+      max-width: 240px;
+    }
+  }
+}

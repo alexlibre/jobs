@@ -1,0 +1,31 @@
+@include respond(1280) {
+  .link {
+    &--text {
+      font-size: 14px;
+    }
+    &--medium {
+      font-size: 12px;
+    }
+
+    &--big {
+      padding-bottom: 2px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}
+
+@include respond(768) {
+  .link {
+    &--big {
+      font-size: 12px;
+    }
+    &--text {
+      font-size: 11px;
+    }
+
+    &--medium {
+      font-size: 10px;
+    }
+  }
+}

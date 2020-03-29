@@ -1,0 +1,78 @@
+.not-found {
+  position: relative;
+  min-height: 650px;
+  max-width: 1028px;
+  padding-top: 188px;
+  display: flex;
+  justify-content: space-between;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 158px;
+    right: 240px;
+    display: inline-block;
+    width: 360px;
+    height: 360px;
+    background: url(../images/static/dotted-pattern-animate.svg) no-repeat
+      center;
+    background-size: cover;
+    z-index: 0;
+  }
+  &__col {
+    position: relative;
+    z-index: 1;
+    &:last-child {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__num {
+    color: $color-base;
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 86px;
+  }
+  &__item {
+    position: relative;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+  }
+  &__item-title {
+    margin-bottom: 16px;
+    color: $color-base;
+    font-weight: 300;
+    font-size: 35px;
+    line-height: 34px;
+  }
+  &__item-txt {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+  &__item-link {
+    display: flex;
+    align-items: center;
+    margin-top: 90px;
+    color: $color-active;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.3s;
+    &:hover {
+      color: #ff4b63;
+      .not-found__item-icon {
+        path {
+          stroke: #ff4b63;
+        }
+      }
+    }
+  }
+  &__item-icon {
+    display: inline-block;
+    margin-left: 14px;
+    width: 21px;
+    height: 11px;
+  }
+}

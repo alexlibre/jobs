@@ -1,0 +1,112 @@
+@import "../../variables/colors";
+
+.profile-complete {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  position: relative;
+  flex-direction: column;
+  padding-left: 20px;
+
+  &__progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 90;
+    left: 8px;
+    height: 128px;
+    width: 128px;
+    overflow: visible;
+  }
+
+  &__circle {
+    width: 128px;
+    height: 128px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    cursor: pointer;
+
+    & svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 128px;
+      height: 128px;
+    }
+
+    & circle.prc {
+      transform: rotate(-90deg);
+      transform-origin: 50%;
+    }
+
+    & .h4 {
+      &::after {
+        content: "%";
+      }
+    }
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 500;
+    color: $color-ghost;
+    word-spacing: 300px;
+  }
+
+  &__progress-popup {
+    position: absolute;
+    padding: 25px 50px;
+    top: 50%;
+    right: 0;
+    transform: translate(calc(100% + 17px), -50%);
+    background-color: $color-white;
+    max-height: 86px;
+    word-spacing: normal;
+    border-radius: 100px;
+    box-shadow: $box-shadow-default;
+    width: auto;
+    text-align: left;
+    z-index: 100;
+    display: none;
+
+    &:after {
+      content: "";
+      display: block;
+      border: 22px solid transparent;
+      border-right: 22px solid $color-white;
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(-34px, -50%);
+      z-index: -1;
+    }
+  }
+
+  &__progress-popup-close {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  & .prc {
+    animation: dash 5s linear forwards;
+  }
+}
+
+// @keyframes dash {
+//   to {
+//     stroke-dashoffset: 0;
+//   }
+// }

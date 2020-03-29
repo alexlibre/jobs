@@ -1,0 +1,200 @@
+extends ../layout-emp
+include ../items/input
+include ../items/checkbox
+include ../items/radio
+
+block title
+
+    title Employ main
+
+block content
+    .content__inner--gray
+
+        .inner-page.inner-page--no-padding
+            .inner-page__sidebar.inner-page__sidebar--lg.inner-page__sidebar--mob
+                .sidebar
+                    .sidebar__item
+                        .e-balance
+                            .e-balance__left
+                                .e-balance__num 2500
+                                .e-balance__txt Balance (Thb)
+                            .e-balance__right
+                                button.button.button--view--primary.e-balance__btn Pay
+                    .sidebar__item
+                        .sidebar__item-row
+                            .e-vacancy
+                                .e-vacancy__num 12
+                                .e-vacancy__txt Vacancies
+                                a(href="#").e-vacancy__go
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 10 17"><g><g><path fill="none" stroke="#f80021" stroke-miterlimit="50" d="M1 .5v0l7.836 7.836v0L1 16.172v0"/></g></g></svg>
+
+                        .sidebar__item-row
+                            .e-days
+                                .e-days__left
+                                    .e-days__num 23
+                                    .e-days__txt Days remained
+                                .e-days__right
+                                    button.button.button--view--ternary.e-days__btn Extend
+                    .sidebar__item
+                        include ../components/sidebar-menu
+            button.button.button--view--primary.inner-page__btn.inner-page__btn--disable.js-btn-mob Menu
+            .inner-page__content.inner-page__content--md
+                .inner-page__content-inner
+                    .inner-page__left
+                        .resume
+                            .resume__block.js-resume-block.js-get-data
+                                .resume__block-top
+                                    .resume__title Profile
+                                .resume__block-profil.resume__block-item.js-resume-ready-block.js-get-data
+                                    .resume__edit-card.js-edit-card(data-id="34")
+                                        span.resume__edit-txt.resume__block-edu-btn Edit
+                                    .resume__block-profil-img
+                                        img(src='../assets/images/content/employ-img.png' alt='resume pic').resume__block-profil-img-file
+                                    .resume__block-profil-info
+                                        .resume__info
+                                            .resume__info-item
+                                                .resume__info-item-title Name
+                                                .resume__info-item-desc.js-data 7-Eleven
+                                            .resume__info-item
+                                                .resume__info-item-title City
+                                                .resume__info-item-desc.js-data Saint-Petersburg, Russia
+                                            .resume__info-item
+                                                .resume__info-item-title Email
+                                                .resume__info-item-desc.js-data ikotov@cakelabs.ru
+                                .resume__block-form.is-hidden.js-edit-form
+                                    .form
+                                        form.form__content(id="1")
+                                            .form__block.form__block--has-border.form__block--has-close.js-job-form-block
+                                                .icon-plus.js-del-new-block.form__del
+                                                    .icon-plus__icon
+                                                        svg(xmlns='http://www.w3.org/2000/svg' width='10' height='10')
+                                                            path(d='M9.9497 1.4645L6.4142 5l3.5355 3.5355-1.4142 1.4142L5 6.4142 1.4645 9.9497.0503 8.5355 3.5858 5 .0503 1.4645 1.4645.0503 5 3.5858 8.5355.0503l1.4142 1.4142z' fill='#C8D0D8' fill-rule='evenodd')
+                                                    .icon-plus__block.indent-l--3xs
+                                                        p.text.text--medium.text--label Close
+
+                                                .form__item
+                                                    label.form__label User picture
+                                                    .resume__form.resume__form--lg
+                                                        .js-dropzone
+                                                            .dz-default.dz-message
+                                                                span.dz-message__txt Drag&Drop files here or click and chose
+                                                .form__item
+                                                    label.form__label(for='seek-resume-degree') Name
+                                                    .form__control
+                                                        +input('text', '', 'input--width--available', 'seek-resume-degree', '', 'js-input-data')
+                                                .form__item
+                                                    label.form__label(for='seek-resume-degree') Name
+                                                    .form__control
+                                                        +input('text', '', 'input--width--available', 'seek-resume-degree', '', 'js-input-data')
+                                                .form__item
+                                                    label.form__label(for='seek-resume-school') Country
+                                                    .form__control-group
+                                                        select.form__select.js-select
+                                                            option(value='month') Russia
+                                                            option(value='month') Tailand
+                                                            option(value='month') Italy
+                                                .form__item
+                                                    label.form__label(for='seek-resume-school') State
+                                                    .form__control-group
+                                                        select.form__select.js-select
+                                                            option(value='month') Rusket
+                                                            option(value='month') Girssa
+                                                            option(value='month') Itaki
+                                                .form__item
+                                                    label.form__label(for='seek-resume-school') City
+                                                    .form__control-group
+                                                        select.form__select.js-select
+                                                            option(value='month') Moscow
+                                                            option(value='month') SPB
+                                                            option(value='month') Itaki
+                                                .form__item
+                                                    label.form__label(for='seek-resume-study') Email
+
+                                                    .form__control
+                                                        +input('text', 'e.g. 25 000 Thb.', 'input--width--available', 'seek-resume-study', '', 'js-input-data')
+                                        .form__submit.form__submit--view--centered
+                                            a.button.button--view--secondary.js-del-new-block Cancel
+                                            button.button.button--view--primary.indent-l--3xs.js-form-submit(type='submit') Save
+                            .resume__block.js-resume-block.js-get-data
+                                .resume__block-top
+                                    .resume__title About
+                                .resume__block-about.resume__block-item.js-resume-ready-block.js-get-data
+                                    .resume__edit-card.js-edit-card(data-id="2")
+                                        span.resume__edit-txt.resume__block-edu-btn Edit
+                                    .resume__block-about-info
+                                        .resume__text-block
+                                            .resume__text-block-title About company
+                                            .resume__text-block-desc.js-data
+                                                |UNIQLO is a brand of Fast Retailing Co., Ltd., a leading global Japanese retail holding company that designs, manufactures and sells clothing under seven main brands: Comptoir des Cotonniers, GU, Helmut Lang, J Brand, Princesse tam.tam, Theory, and UNIQLO. With global sales of approximately 1.14 trillion yen for the 2013 fiscal year ending August 31, 2013 (US $11.62 billion, calculated in yen using the end of August 2013 rate of $1 = 98.36 yen), Fast Retailing is one of the world’s largest apparel retail companies, and UNIQLO is Japan’s leading specialty retailer.
+                                                <br/>
+                                                <br/>
+                                                |UNIQLO continues to open large-scale stores in some of the world's most important cities and locations, as part of its ongoing efforts to solidify its status as a truly global brand. Today the company has a total of more than 1,200 stores in 14 markets worldwide including Japan, China, France, Hong Kong, Indonesia, Malaysia, Philippines, Russia, Singapore, South Korea, Taiwan, Thailand, U.K. and U.S. In addition, Grameen UNIQLO, a social business established in Bangladesh in September 2010, opened its two first stores in Dhaka in July 2013. UNIQLO operates an integrated business model under which it designs, manufactures, markets and sells high-quality, casual apparel. The company believes that truly great clothes should be supremely
+                                        .resume__text-block
+                                            .resume__text-block-title How much does UNIQLO pay their employees?
+                                            .resume__text-block-desc
+                                                |UNIQLO is a brand of Fast Retailing Co., Ltd., a leading global Japanese retail holding company that designs, manufactures and sells clothing under seven main brands: Comptoir des Cotonniers, GU, Helmut Lang, J Brand, Princesse tam.tam, Theory, and UNIQLO. With global sales of approximately 1.14 trillion yen for the 2013 fiscal year ending August 31, 2013 (US $11.62 billion, calculated in yen using the end of August 2013 rate of $1 = 98.36 yen), Fast Retailing is one of the world’s largest apparel retail companies, and UNIQLO is Japan’s leading specialty retailer.
+                                                <br/>
+                                                <br/>
+                                                |UNIQLO continues to open large-scale stores in some of the world's most important cities and locations, as part of its ongoing efforts to solidify its status as a truly global brand. Today the company has a total of more than 1,200 stores in 14 markets worldwide including Japan, China, France, Hong Kong, Indonesia, Malaysia, Philippines, Russia, Singapore, South Korea, Taiwan, Thailand, U.K. and U.S. In addition, Grameen UNIQLO, a social business established in Bangladesh in September 2010, opened its two first stores in Dhaka in July 2013. UNIQLO operates an integrated business model under which it designs, manufactures, markets and sells high-quality, casual apparel. The company believes that truly great clothes should be supremely
+                                .resume__block-form.is-hidden.js-edit-form
+                                    .form
+                                        form.form__content(id="2")
+                                            .form__block.form__block--has-border.form__block--has-close.js-job-form-block
+                                                .icon-plus.js-del-new-block.form__del
+                                                    .icon-plus__icon
+                                                        svg(xmlns='http://www.w3.org/2000/svg' width='10' height='10')
+                                                            path(d='M9.9497 1.4645L6.4142 5l3.5355 3.5355-1.4142 1.4142L5 6.4142 1.4645 9.9497.0503 8.5355 3.5858 5 .0503 1.4645 1.4645.0503 5 3.5858 8.5355.0503l1.4142 1.4142z' fill='#C8D0D8' fill-rule='evenodd')
+                                                    .icon-plus__block.indent-l--3xs
+                                                        p.text.text--medium.text--label Close
+                                                .form__item
+                                                    label.form__label(for='seek-resume-degree') About company
+                                                    .form__control
+                                                        .form__textarea-box
+                                                            textarea.form__textarea.js-input-data
+                                                .form__item
+                                                    label.form__label(for='seek-resume-degree') How much does UNIQLO pay their employees?
+                                                    .form__control
+                                                        .form__textarea-box
+                                                            textarea.form__textarea.js-input-data
+                                            .form__submit.form__submit--view--centered
+                                                a.button.button--view--secondary.js-del-new-block Cancel
+                                                button.button.button--view--primary.indent-l--3xs.js-form-submit(type='submit') Save
+                            .resume__block.js-resume-block.js-get-data
+                                .resume__block-top
+                                    .resume__title Additional information
+                                .resume__block-add.resume__block-item.js-resume-ready-block.js-get-data
+                                    .resume__edit-card.js-edit-card(data-id="3")
+                                        span.resume__edit-txt.resume__block-edu-btn Edit
+                                    .resume__block-add-item.resume__block-add-item--no-border
+                                        .resume__info
+                                            .resume__info-item
+                                                .resume__info-item-title.resume__info-item-title--blue Position Overview:
+                                                .resume__info-item-desc.js-data
+                                                    |The Sales Associate is the customer service specialist of the store. They are responsible for exceeding customer expectations by listening to customer needs, finding products that meet their needs, providing in depth product information about the goods they are interested in and closing the sale.
+                                            .resume__info-item
+                                                .resume__info-item-title.resume__info-item-title--blue Key Responsibilities:
+                                                .resume__info-item-desc.js-data
+                                                    |Meet and exceed sales goalsMaintain brand and operational standards (visual, cleanliness, etc.)Manage customer needs and exceed expectations by utilizing the UNIQLO service standard, following the UNIQLO Fundamental Principles and saying the 6 standard phrases.
+                                .resume__block-form.is-hidden.js-edit-form
+                                    .form
+                                        form.form__content(id="3")
+                                            .form__block.form__block--has-border.form__block--has-close.js-job-form-block
+                                                .icon-plus.js-del-new-block.form__del
+                                                    .icon-plus__icon
+                                                        svg(xmlns='http://www.w3.org/2000/svg' width='10' height='10')
+                                                            path(d='M9.9497 1.4645L6.4142 5l3.5355 3.5355-1.4142 1.4142L5 6.4142 1.4645 9.9497.0503 8.5355 3.5858 5 .0503 1.4645 1.4645.0503 5 3.5858 8.5355.0503l1.4142 1.4142z' fill='#C8D0D8' fill-rule='evenodd')
+                                                    .icon-plus__block.indent-l--3xs
+                                                        p.text.text--medium.text--label Close
+                                                .form__item
+                                                    label.form__label(for='seek-resume-degree') Position Overview:
+                                                    .form__control
+                                                        .form__textarea-box
+                                                            textarea.form__textarea.js-input-data
+                                                .form__item
+                                                    label.form__label(for='seek-resume-degree') Key Responsibilities:
+                                                    .form__control
+                                                        .form__textarea-box
+                                                            textarea.form__textarea.js-input-data
+                                            .form__submit.form__submit--view--centered
+                                                a.button.button--view--secondary.js-del-new-block Cancel
+                                                button.button.button--view--primary.indent-l--3xs.js-form-submit(type='submit') Save

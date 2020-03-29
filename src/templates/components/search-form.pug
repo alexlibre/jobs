@@ -1,0 +1,57 @@
+.search-form
+    .search-form__inner
+        .search-form__tabs
+            a.search-form__tab.is-active(data-tab='1') Find jobs
+            a.search-form__tab(data-tab='2') Find employee
+            a.search-form__tab(data-tab='3') Companies
+        .search-form__content
+            form.flex(data-content='1').is-active
+                .flex__row
+                    span.input.input--view--default.input--width--available.search-form__field.input--has-icon.input--has-icon--search
+                        span.input__box
+                            input.input__control(type='text' placeholder='Job title, keywords, or company')
+                        button(type="submit").input__btn.input__btn--search
+                    span.input.input--view--default.input--width--available.search-form__field.input--has-icon.input--has-icon--location.js-autocomplete
+                        span.input__box
+                            input.input__control(type='text' placeholder='City, state, or zip code')
+                        button(type="submit").input__btn.input__btn--location
+                    button.button.button--view--primary.search-form__submit.indent-l--m(type='submit') Find jobs
+                .flex__row.flex__row--end.search-form__add-resume
+                    a.icon-plus
+                        div.icon-plus__icon.indent-r--2xs
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"><path d="M7 0v5h5v2H7v5H5V7H0V5h5V0h2z" fill="#E9001E" fill-rule="evenodd"/></svg>
+                        div.icon-plus__block Post your resume
+
+            form.flex(data-content='2')
+                .flex__row
+                    span.input.input--view--default.input--width--available.search-form__field.input--has-icon.input--has-icon--search
+                        span.input__box
+                            input.input__control(type='text' placeholder='Job title, keywords, or company')
+                        button(type="submit").input__btn.input__btn--search
+                    span.input.input--view--default.input--width--available.search-form__field.input--has-icon.input--has-icon--location.js-autocomplete
+                        span.input__box
+                            input.input__control(type='text' placeholder='City, state, or zip code')
+                        button(type="submit").input__btn.input__btn--location
+                    button.button.button--view--primary.search-form__submit.indent-l--m(type='submit') Find jobs
+                .flex__row.flex__row--end.search-form__add-resume
+                    a.icon-plus
+                        div.icon-plus__icon.indent-r--2xs
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"><path d="M7 0v5h5v2H7v5H5V7H0V5h5V0h2z" fill="#E9001E" fill-rule="evenodd"/></svg>
+                        div.icon-plus__block Post your resume
+
+            form.flex(data-content='3')
+                .flex__row
+                    span.input.input--view--default.input--width--available.search-form__field.input--has-icon.input--has-icon--search
+                        span.input__box
+                            input.input__control(type='text' placeholder='Job title, keywords, or company')
+                        button(type="submit").input__btn.input__btn--search
+                    span.input.input--view--default.input--width--available.search-form__field.input--has-icon.input--has-icon--location.js-autocomplete
+                        span.input__box
+                            input.input__control(type='text' placeholder='City, state, or zip code')
+                        button(type="submit").input__btn.input__btn--location
+                    button.button.button--view--primary.search-form__submit.indent-l--m(type='submit') Find jobs
+                .flex__row.flex__row--end.search-form__add-resume
+                    a.icon-plus
+                        div.icon-plus__icon.indent-r--2xs
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"><path d="M7 0v5h5v2H7v5H5V7H0V5h5V0h2z" fill="#E9001E" fill-rule="evenodd"/></svg>
+                        div.icon-plus__block Post your resume

@@ -1,0 +1,77 @@
+mixin cat-card(options, type)
+    div(class=`cat-card ${options.c ? 'js-cat-card js-open-cat-item' : ''}` data-id= options.cId)
+        div(class=`cat-card__head ${options.className ? 'cat-card__head--horizantaly' : ''}`)
+            if options.name && !options.avatar
+                .cat-card__title
+                    h4.cat-card__name= options.name
+                    if options.time
+                        .cat-card__time= options.time
+                .cat-card__location.indent-t--3xs= options.location
+            if options.avatar && options.name
+                .cat-card__head-left
+                    .cat-card__img
+                        img(src='../assets/images/content/' + options.avatar + '.png')
+                    .cat-card__title
+                        .cat-card__name= options.name
+                        .cat-card__location.indent-t--3xs= options.location
+                .cat-card__head-right
+                    if options.time
+                        .cat-card__time= options.time
+        .cat-card__inner
+            if type === 'employer-vacancy'
+                if options.vnum || options.resnum
+                    .cat-card__fraction.cat-card__stats
+                        if options.vnum
+                            .cat-card__views
+                                .cat-card__views-num= options.vnum
+                                .cat-card__views-txt Views
+                        if options.resnum
+                            .cat-card__respons
+                                .cat-card__respons-num= options.resnum
+                                .cat-card__respons-txt Responses
+                if options.rem.num
+                    .cat-card__fraction.cat-card__remain
+                        .cat-card__respons
+                            .cat-card__remain-num= options.rem.num
+                            div(class=`cat-card__remain-txt ${options.rem.bool ? 'cat-card__remain-txt--red' : ''}`)= options.rem.txt
+                .cat-card__fraction.cat-card__controls
+                    a(href="#").icon-plus.indent-r--s
+                        .icon-plus__icon
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13"><path fill="#c8d0d8" d="M.342 4.112a.343.343 0 0 1-.243-.096A.32.32 0 0 1 0 3.782V1.664C0 .745.77 0 1.722 0h10.556c.95 0 1.721.745 1.721 1.664v2.104a.32.32 0 0 1-.093.244.343.343 0 0 1-.248.1h-.57v7.237c-.007.914-.775 1.651-1.72 1.651H2.631c-.945 0-1.714-.737-1.721-1.65V4.111zm8.21 0a.343.343 0 0 1-.242-.096.32.32 0 0 1-.099-.234C8.211 3.135 7.67 2.61 7 2.61s-1.212.524-1.212 1.17a.32.32 0 0 1-.098.235.343.343 0 0 1-.243.096H1.594v7.237c0 .266.11.522.304.71.195.188.459.294.734.294h8.735c.574 0 1.039-.45 1.039-1.004V4.112zm.31-.66h4.454V1.663c0-.554-.465-1.004-1.038-1.004H1.722C1.148.66.683 1.11.683 1.664v1.761h4.454c.167-.868.95-1.497 1.863-1.497s1.696.63 1.862 1.497z"/></svg>
+                        .icon-plus__block.indent-l--3xs.text.text--medium.text--label Archive
+                    a(href="#" data-id= options.id).icon-plus.indent-r--s.cat-card__edit.js-card-edit
+                        .icon-plus__icon
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M13.6442 6.5068l-.342-.0821c-.4654-.1096-.8485-.4521-1.0264-.8905v-.0137c-.1916-.452-.1505-.9452.0958-1.3698l.1779-.3014c.1094-.178.082-.411-.0684-.5616l-.7664-.7672c-.1505-.1506-.3831-.178-.561-.0684l-.301.178a1.5076 1.5076 0 0 1-1.3685.096h-.0137c-.4379-.1782-.78-.5617-.8894-1.0275l-.0822-.3424C8.4442 1.1507 8.2663 1 8.0474 1H6.9526c-.2052 0-.3968.1507-.4515.3562l-.0822.3424c-.1094.4658-.4515.8493-.8894 1.0274h-.0137c-.4516.1918-.9442.1507-1.3684-.0959l-.301-.178c-.178-.1096-.4106-.0822-.5611.0684l-.7664.7672c-.1505.1507-.1778.3835-.0684.5616l.178.3014a1.512 1.512 0 0 1 .0957 1.3698v.0137c-.1779.4384-.561.7809-1.0263.8905l-.3421.0821C1.1505 6.5616 1 6.7398 1 6.959v1.0822c0 .2055.1505.3973.3558.452l.342.0822c.4654.1096.8485.4521 1.0264.8905v.0137c.1916.452.1505.9452-.0958 1.3698l-.1779.3014c-.1094.178-.082.411.0684.5616l.7664.7672c.1505.1506.3831.178.561.0684l.301-.178a1.5076 1.5076 0 0 1 1.3685-.096h.0137c.4379.1782.78.5617.8894 1.0275l.0822.3424c.0547.2055.2326.3562.4515.3562h1.0948c.2052 0 .3968-.1507.4515-.3562l.0822-.3424c.1094-.4658.4515-.8493.8894-1.0274h.0137c.4516-.1918.9442-.1507 1.3684.0959l.301.178c.178.1096.4106.0822.5611-.0684l.7664-.7672c.1505-.1507.1778-.3835.0684-.5616l-.178-.3014a1.512 1.512 0 0 1-.0957-1.3698v-.0137c.1779-.4384.561-.7809 1.0263-.8905l.3421-.0821c.2053-.0548.3558-.233.3558-.4521V6.9452c0-.2055-.1505-.3973-.3558-.4384zM7.5 10C6.1228 10 5 8.8772 5 7.5S6.1228 5 7.5 5 10 6.1228 10 7.5 8.8772 10 7.5 10z" fill-rule="nonzero" stroke="#C8D0D8" fill="none"/></svg>
+                        .icon-plus__block.indent-l--3xs.text.text--medium.text--label Edit
+                    button.button.button--view--ternary.cat-card__btn Extend
+            if options.desc
+                .cat-card__fraction.cat-card__desc
+                    p.text.text--small= options.desc
+            if type === 'employer'
+                .cat-card__fraction.cat-card__cond
+                    .cat-card__salary-sm.indent-r--xs
+                        p.h6= options.salaryLocal
+                        p.text.text--label= options.salaryUsd
+                    .cat-card__exp-sm
+                        p.h6= options.exp
+                        p.text.text--label Experience
+                .cat-card__fraction.cat-card__actions
+                    button.button.button--view--secondary.indent-r--2xs.cat-card__request Send request
+                    .cat-card__emp-fav.js-make-fav
+                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22"><path class="cat-card__fav-icon" d="M12 21.2972c1.1275-1.1107 3.6212-3.5484 4.2353-4.1585 1.6378-1.627 2.813-2.8617 3.7957-4.0124C22.3751 10.3813 23.5 8.21 23.5 6.192 23.5 2.7656 20.9696.51 17.726.51c-2.1823 0-4.1753 1.0705-5.294 2.9898l-.4321.7413-.432-.7414C10.445 1.5718 8.4573.5 6.281.5 3.0374.5.5 2.7668.5 6.192c0 2.018 1.1249 4.1894 3.469 6.9343.9827 1.1507 2.1579 2.3854 3.7957 4.0124.6141.61 3.1078 3.0478 4.2353 4.1585z" fill-rule="nonzero" stroke="#979797" fill="none"/></svg>
+            if type === 'seeker'
+                if options.salaryLocal || options.salaryUsd
+                    .cat-card__fraction.cat-card__salary
+                        if options.salaryLocal
+                            p.h4.cat-card__salary-local= options.salaryLocal
+                        if options.salaryUsd
+                            p.h6.cat-card__salary-usd= options.salaryUsd
+                        if options.exp
+                            p.h4.cat-card__exp= options.exp
+                            p.h6 Experience
+                if options.occup
+                    .cat-card__fraction.cat-card__occup
+                        p.h6= options.occup
+                if type !== 'employeer-vacancy'
+                    .cat-card__fraction.cat-card__fav.js-make-fav(data-ipopup="signIn")
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 22"><path class="cat-card__fav-icon" d="M12 21.2972c1.1275-1.1107 3.6212-3.5484 4.2353-4.1585 1.6378-1.627 2.813-2.8617 3.7957-4.0124C22.3751 10.3813 23.5 8.21 23.5 6.192 23.5 2.7656 20.9696.51 17.726.51c-2.1823 0-4.1753 1.0705-5.294 2.9898l-.4321.7413-.432-.7414C10.445 1.5718 8.4573.5 6.281.5 3.0374.5.5 2.7668.5 6.192c0 2.018 1.1249 4.1894 3.469 6.9343.9827 1.1507 2.1579 2.3854 3.7957 4.0124.6141.61 3.1078 3.0478 4.2353 4.1585z" fill-rule="nonzero" stroke="#979797" fill="none"/></svg>

@@ -1,0 +1,35 @@
+.icon-plus {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  &--vertical-align {
+    &--bottom {
+      align-items: flex-end;
+    }
+    &--center {
+      align-items: center;
+    }
+    &--top {
+      align-items: flex-start;
+    }
+    &--baseline {
+      align-items: baseline;
+    }
+  }
+
+  &--distribute {
+    &--between {
+      justify-content: space-between;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__block {
+
+  }
+}

@@ -1,0 +1,47 @@
+extends ../layout-emp
+
+block title
+
+    title Employ document
+
+block content
+    .content__inner--gray
+
+          .inner-page.inner-page--no-padding
+              .inner-page__sidebar.inner-page__sidebar--lg.inner-page__sidebar--mob
+                  .sidebar
+                      .sidebar__item
+                          .e-balance
+                              .e-balance__left
+                                  .e-balance__num 2500
+                                  .e-balance__txt Balance (Thb)
+                              .e-balance__right
+                                  button.button.button--view--primary.e-balance__btn Pay
+                      .sidebar__item
+                          .sidebar__item-row
+                              .e-vacancy
+                                  .e-vacancy__num 12
+                                  .e-vacancy__txt Vacancies
+                                  a(href="#").e-vacancy__go
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 10 17"><g><g><path fill="none" stroke="#f80021" stroke-miterlimit="50" d="M1 .5v0l7.836 7.836v0L1 16.172v0"/></g></g></svg>
+
+                          .sidebar__item-row
+                              .e-days
+                                  .e-days__left
+                                      .e-days__num 23
+                                      .e-days__txt Days remained
+                                  .e-days__right
+                                      .button.button--view--ternary.e-days__btn Extend
+                      .sidebar__item
+                          include ../components/sidebar-menu
+              button.button.button--view--primary.inner-page__btn.inner-page__btn--menu.js-mob-menu Menu
+              .inner-page__content.inner-page__content--lg.inner-page__content--md
+                  .inner-page__content-inner
+                      .inner-page__left.inner-page__left--lg
+                          .documents
+                              .documents__row
+                                  .documents__preview
+                              .documents__row
+                                  form.documents__form.js-dropzone-document
+                                      .dz-default.dz-message
+                                          span.dz-message__txt Drag&Drop files here or click and chose

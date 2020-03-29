@@ -1,0 +1,95 @@
+extends ../layout-emp
+include ../items/input
+include ../items/checkbox
+include ../items/radio
+
+block title
+
+    title Employ add vacancy
+
+block content
+    .page__content
+        .container-full.container-full--page--form
+            .wrapper
+                h1.h3.page__title.page__title--is-centered Create vacancy
+                .form.form--centered.form--md
+                    form.form__content.is-active
+                        .form__block
+                            h4.form__title.form__title--left.form__title--left-margin Information
+
+                            .form__item
+                                label.form__label(for= 'emp-add-vac-name') Vacancy name
+                                .form__control
+                                    +input('text', '', '', 'emp-add-vac-name')
+                            .form__item
+                                label.form__label(for='emp-add-vac-city') City
+                                .form__control
+                                    +input('text', '', '', 'emp-add-vac-city')
+                            .form__item
+                                label.form__label Description
+                                .form__textarea-box
+                                    textarea.form__textarea
+                            .form__item.form__item--checks
+                                label.form__label Job Type
+                                .form__checkboxs
+                                    .form__checkboxs-col
+                                        +checkbox('Full-time')
+                                        +checkbox('Permanent', '', '', true)
+                                        +checkbox('Internship')
+                                    .form__checkboxs-col
+                                        +checkbox('Temporary')
+                                        +checkbox('Part-time')
+                                        +checkbox('New-Grad')
+                                    .form__checkboxs-col
+                                        +checkbox('Contract')
+                                        +checkbox('Commission')
+                            .form__item
+                                label.form__label(for='emp-add-vac-salary') Salary level
+                                .form__item-content
+                                    .form__control
+                                        +input('text', 'Thb', '', 'emp-add-vac-salary')
+                                    .form__select-box
+                                        select.form__select.js-select
+                                            option(value='month') Monthly
+                                            option(value='month') Monthly
+                                            option(value='month') Monthly
+                                            option(value='month') Monthly
+
+                        .form__block
+                            h4.form__title.form__title--left.form__title--left-margin   Requirements
+                            .form__item
+                                label.form__label Experience
+                                .form__select-box.form__select-box--lg
+                                    select.form__select.js-select
+                                        option(default) No
+                                        option(value='1') 1
+                                        option(value='2') 2
+                                        option(value='3') 3
+                            .form__item
+                                label.form__label Age
+                                .form__select-box.form__select-box--lg
+                                    select.form__select.js-select
+                                        option(default) Any
+                                        option(value='1') 1
+                                        option(value='2') 2
+                                        option(value='3') 3
+                            .form__item
+                                label.form__label Professional area
+                                .form__select-box.form__select-box--lg
+                                    select.form__select.js-select
+                                        option(default) Any
+                                        option(value='1') 1
+                                        option(value='2') 2
+                                        option(value='3') 3
+                            .form__item.form__item--radios
+                                label.form__label Gender
+                                .form__radio-groups
+                                    +radio('Male', 'gender', 'male')
+                                    +radio('Female', 'gender', 'female')
+                                
+                        .form__bottom.form__bottom--center
+                            .form__submit
+                                button.button.button--view--primary(type="submit") Create
+
+
+

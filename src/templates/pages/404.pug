@@ -1,0 +1,22 @@
+extends ../layout-emp
+include ../items/cat-card
+block title
+    title 404
+
+block content
+    .container-full
+        .page__content
+            .container
+                .not-found
+                    .not-found__col
+                        .not-found__num 404 error
+                    .not-found__col
+                        .not-found__item
+                            .not-found__item-title Page not found
+                            p.not-found__item-txt
+                                |If you entered a web address please check it was correct.
+                            p.not-found__item-txt
+                                |You can also search from the homepage to find the information you need.
+                            a(href="#").not-found__item-link 
+                                |Homepage
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 11" class='not-found__item-icon'><g><g transform="matrix(-1 0 0 1 20 0)"><g><path fill="none" stroke="#d8001c" stroke-miterlimit="50" d="M19.5 5.499L0 5.83"/></g><g><path fill="none" stroke="#d8001c" stroke-miterlimit="50" d="M4.731 10.462v0L0 5.732v0L4.731 1v0"/></g></g></g></svg>

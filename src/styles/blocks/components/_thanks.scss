@@ -1,0 +1,30 @@
+.thanks {
+    padding: 175px 40px 0;
+
+    &__inner {
+        max-width: 445px;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+        font-size: 25px;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    &__txt {
+        max-width: 445px;
+        margin-bottom: 30px;
+        color: $color-ghost;
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+        line-height: 24px;
+    }
+
+    &__button {
+        width: max-content;
+        display: block;
+        margin: 0 auto;
+    }
+}

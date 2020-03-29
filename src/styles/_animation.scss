@@ -1,0 +1,30 @@
+.animate-cards.cardlist {
+  .cardlist__item {
+    animation: reveal-cards 9000ms infinite ease-in-out;
+      &:nth-of-type(2) {
+        animation-delay: .1s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: .15s;
+      }
+      &:nth-of-type(4) {
+        animation-delay: .2s;
+      }
+  }
+}
+
+@keyframes reveal-cards {
+  from {
+    transform: translateY(5%);
+    opacity: 0;
+  }
+  10%, 90% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(5%);
+    opacity: 0;
+  }
+
+}

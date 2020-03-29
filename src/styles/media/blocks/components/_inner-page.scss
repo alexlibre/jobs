@@ -1,0 +1,590 @@
+@include respond(1280) {
+  .inner-page {
+    $i: &;
+    margin: 0;
+    padding-top: 0;
+
+    &__sidebar {
+      padding: 50px 0;
+      //   @include size-sm(3);
+      padding-right: 15px;
+      &--mob {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        width: 100%;
+        padding: 32px 40px 68px 78px;
+        z-index: 110;
+        overflow-y: scroll;
+        transform: translate(-100%, 0);
+        transition: transform 0.5s;
+
+        &.is-showed {
+          transform: translate(0%, 0);
+        }
+      }
+
+      &--visible {
+        position: static;
+        min-width: 200px;
+        width: auto;
+        // max-width: 200px;
+        // @include size-sm(3);
+        // margin-left: 15px;
+        // margin-right: 15px;
+        padding: 50px 0 50px 24px;
+        padding-right: 15px;
+        transform: none;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      &--lg {
+        position: static;
+        width: auto;
+        margin: 0;
+        padding: 20px 0 50px 0;
+        min-width: 252px;
+        overflow: auto;
+        transform: none;
+
+        &::after {
+          display: none;
+        }
+
+        & .sidebar {
+          &__item {
+            padding: 30px 20px 30px 25px;
+          }
+        }
+      }
+
+      &--seeker {
+        padding-top: 0;
+        min-width: 260px;
+        & .sidebar {
+          &__item {
+            padding: 30px 35px;
+
+            &:first-child {
+              padding-top: 115px;
+            }
+          }
+        }
+
+        & .notifications {
+          padding-top: 65px;
+          padding-left: 70px;
+        }
+      }
+
+      &--personal {
+        padding: 0;
+        background: #fafafa;
+
+        & .sidebar {
+          max-width: 265px;
+          background: #fff;
+          height: 100%;
+
+          &__item {
+            padding: 35px 0 0 35px;
+            &:first-child {
+              padding-left: 0;
+              padding-top: 115px;
+              padding-bottom: 35px;
+            }
+          }
+        }
+      }
+    }
+
+    &__btn {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      z-index: 999;
+      display: block;
+
+      &--disable {
+        display: none;
+      }
+    }
+
+    &__content {
+      $c: &;
+      //   width: 100%;
+      margin: 0;
+      padding: 0 24px 50px;
+
+      &--sm {
+        // @include size-sm(9);
+        padding-top: 45px;
+      }
+
+      &--employ {
+        .cat-card {
+          &__inner {
+            padding-bottom: 18px;
+          }
+        }
+      }
+
+      &--md {
+        width: 67.5%;
+        flex: 1;
+        margin: 0;
+        padding: 25px 32px 50px 25px;
+
+        #{$c}-inner {
+          margin: 0;
+        }
+
+        #{$i}__left {
+          width: 100%;
+          margin: 0;
+        }
+
+        // .catalog {
+        //   padding: 0 32px 0 20px;
+        // }
+
+        .cat-card {
+          &__head {
+            height: auto;
+          }
+
+          &__inner {
+            flex-wrap: wrap;
+          }
+
+          &__desc {
+            flex: 0 0 100%;
+            width: 100%;
+            padding: 15px 50px 10px 22px;
+          }
+
+          &__salary {
+            flex: 0 0 37.8%;
+            padding: 0 10px 0 22px;
+          }
+
+          &__occup {
+            flex: 0 0 44%;
+            padding: 0;
+          }
+
+          &__cond {
+            width: 44.9%;
+            min-width: 0;
+            justify-content: flex-start;
+            padding: 10px 22px 5px 22px;
+          }
+
+          &__fav {
+            flex: 0 0 17.6%;
+            padding: 0;
+          }
+
+          &__actions {
+            width: 55.3%;
+            padding: 10px 22px 5px 22px;
+            justify-content: flex-end;
+          }
+
+          &__request {
+            margin-right: 15px;
+          }
+        }
+      }
+
+      &--lg {
+        padding-right: 25px;
+      }
+
+      &--fav {
+        &-view {
+          padding: 10px 0 0 10px;
+        }
+
+        .cat-card {
+          &__inner {
+            padding-bottom: 15px;
+          }
+        }
+
+        #{$i}__content-inner {
+          padding-bottom: 0;
+        }
+      }
+
+      &--seeker {
+        // padding: 40px 22px 50px 30px;
+
+        & .catalog {
+          padding: 0;
+        }
+
+        & .cat-card {
+          &__inner {
+            padding-bottom: 18px;
+          }
+        }
+      }
+
+      &-inner {
+        position: relative;
+      }
+    }
+
+    &__form {
+      padding-top: 50px;
+      & .input--has-icon {
+        max-width: 280px;
+      }
+    }
+
+    &__left {
+      width: 100%;
+      margin: 0;
+      //   @include size-sm(12);
+
+      &--lg {
+        padding: 18px 0;
+      }
+    }
+
+    &__right {
+      display: none;
+
+      &.is-active {
+        position: absolute;
+        top: 48px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        width: 110%;
+        height: 102.3%;
+        margin: 0 0 0 -5%;
+        background: #f9fafb;
+        display: flex;
+        justify-content: center;
+
+        #{$i}__right-content {
+          flex: 1;
+          display: flex;
+          justify-content: center;
+        }
+
+        .inner-popup {
+          position: relative;
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &__about {
+      display: block;
+      //   margin: 0 -25px -55px -25px;
+      padding: 60px 145px 90px;
+      background-color: $color-white;
+
+      &--vacancy {
+        position: relative;
+        padding-top: 0;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 225px;
+          background-color: #f9fafb;
+        }
+
+        .catalog-about {
+          background-color: transparent;
+        }
+      }
+    }
+
+    &__faq {
+      margin: 0 0 0 -5px;
+    }
+
+    &__bottom {
+      width: 100%;
+      //   padding: 0 110px 0 120px;
+      display: flex;
+      flex-direction: column;
+
+      &-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 110px 25px 120px;
+        border-top: 1px solid #f1f1f1;
+      }
+
+      &-item {
+        display: flex;
+        align-items: center;
+
+        &-logo {
+          width: 50px;
+          height: 50px;
+          margin-right: 20px;
+        }
+      }
+
+      &-txt {
+        max-width: 305px;
+      }
+    }
+  }
+}
+
+@include respond(768) {
+  .inner-page {
+    &__sidebar {
+      //   display: none;
+      &--mob {
+        padding: 0 0 95px 0;
+      }
+
+      &--visible {
+        position: fixed;
+        width: 100%;
+        margin: 0;
+        padding: 0 0 95px 0;
+        transform: translate(-100%, 0);
+
+        &::after {
+          display: none;
+        }
+      }
+
+      &--lg {
+        position: fixed;
+        width: 100%;
+        margin: 0;
+        padding: 50px 0 95px 0;
+        max-width: 100%;
+        transform: translate(-100%, 0);
+
+        &::after {
+          display: none;
+        }
+
+        & .sidebar {
+          &__item {
+            padding: 20px 50px 20px 65px;
+          }
+        }
+
+        & .side-nav {
+          padding: 0;
+        }
+      }
+
+      &--seeker {
+        & .sidebar {
+          &__item {
+            &:first-child {
+              padding-top: 0;
+            }
+          }
+        }
+      }
+
+      &--personal {
+        padding-bottom: 0;
+        & .sidebar {
+          max-width: 100%;
+
+          &__item {
+            padding: 0;
+
+            &:first-child {
+              padding-left: 64px;
+            }
+          }
+        }
+      }
+    }
+
+    &__btn {
+      &--center {
+        right: 50%;
+        transform: translateX(50%);
+      }
+
+      &--disable {
+        display: inline-block;
+      }
+    }
+
+    &__content {
+      padding: 0 13px 40px;
+
+      &--no-margin {
+        width: 100%;
+        margin: 0;
+      }
+
+      &--md {
+        width: 100%;
+        padding: 22px 13px 40px;
+
+        & .cat-card {
+          &__inner {
+            padding: 0;
+          }
+
+          &__desc {
+            padding: 9px 20px;
+          }
+
+          &__cond {
+            width: 55%;
+            flex: 0 0 55%;
+            padding: 7px 9px 7px 20px;
+          }
+
+          &__actions {
+            width: 44.4%;
+            flex: 0 0 44%;
+            padding: 7px 9px 7px 13px;
+          }
+
+          &__request {
+            margin-right: 10px;
+          }
+
+          &__salary {
+            flex: 0 0 46.3%;
+            padding: 6px 0 5px 18px;
+          }
+
+          &__occup {
+            flex: 0 0 34%;
+          }
+
+          &__fav {
+            flex: 0 0 18.4%;
+          }
+        }
+      }
+
+      &--fav,
+      &--employ,
+      &--seeker {
+        & .cat-card {
+          &__inner {
+            padding-bottom: 15px;
+          }
+        }
+      }
+
+      &--fav {
+        &-view {
+          padding: 0;
+        }
+      }
+
+      &--seeker {
+        padding: 24px 13px 50px;
+
+        & .catalog {
+          padding: 0;
+        }
+
+        & .notifications {
+          padding-left: 18px;
+        }
+      }
+
+      &--sm {
+        padding-top: 22px;
+        padding-bottom: 60px;
+      }
+    }
+
+    &__right {
+      &.is-active {
+        top: 20px;
+        height: 108.5%;
+      }
+    }
+
+    &__left {
+      &--lg {
+        padding: 0;
+      }
+    }
+
+    &__about {
+      //   margin: 0 0px -55px 0px;
+      padding: 30px 13px 75px;
+
+      &--vacancy {
+        margin-top: 28px;
+        padding-top: 0;
+
+        &::before {
+          height: 167px;
+        }
+
+        &-adap {
+          &::before {
+            height: 177px;
+          }
+
+          & .catalog-about__title {
+            max-width: 260px;
+          }
+
+          & .catalog-about__text {
+            padding: 48px 0 0;
+          }
+        }
+      }
+    }
+
+    &__faq {
+      flex: 1;
+      margin: 0;
+    }
+
+    &__bottom {
+      &-row {
+        padding: 25px 12px;
+        flex-wrap: wrap;
+      }
+
+      &-col {
+        &:last-child {
+          flex: 0 0 100%;
+          margin-top: 20px;
+        }
+      }
+
+      &-txt {
+        font-size: 12px;
+      }
+
+      & .h6 {
+        font-size: 12px;
+      }
+    }
+  }
+}

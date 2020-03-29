@@ -1,0 +1,82 @@
+.filters {
+  position: relative;
+  &__item {
+    padding: $size-xs 0;
+    position: relative;
+    &:after {
+      content: "";
+      width: calc(100% + 35px);
+      height: 1px;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      border-bottom: 1px solid $bg-bright-gray;
+    }
+    &:first-of-type {
+      padding-top: 0;
+    }
+    &:last-of-type {
+      &:after {
+        display: none;
+      }
+    }
+  }
+  &__btn {
+    position: absolute;
+    // top: 0;
+    right: -60%;
+    transform: translate(0, -40%);
+    display: none;
+    padding: 20px;
+    box-shadow: 0 26px 90px rgba(51, 59, 69, 0.1);
+    border: 1px solid #ffffff;
+    border-radius: 50px;
+    background-color: $color-white;
+    color: $color-active;
+    font-weight: 400;
+    cursor: pointer;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -12px;
+      transform: translateY(-50%);
+      display: inline-block;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-right: 12px solid $color-white;
+    }
+    &-num {
+      padding-right: 4px;
+    }
+  }
+}
+
+.filter {
+  &__title {
+    margin-bottom: 13px;
+    color: $color-ghost;
+  }
+  &__row {
+    margin-top: 14px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  &__collapse {
+    padding-top: 14px;
+  }
+  &__value {
+    padding-left: 0.5em;
+    color: $color-ghost;
+    cursor: pointer;
+  }
+  &__reveal {
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 15px;
+  }
+  &__btn {
+  }
+}

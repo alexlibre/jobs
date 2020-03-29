@@ -1,0 +1,58 @@
+extends ../layout-emp
+include ../items/input
+include ../items/radio
+include ../items/checkbox
+
+block title
+    title Create resume
+
+block content
+    .page__content
+        .container-full.container-full--page--form
+            .wrapper
+                h1.h3.page__title.page__title--is-centered Create resume
+                .form.form--centered.form--md.form--lg-resume
+                    form.form__content.is-active
+                        .form__head
+                            h4.form__title.form__title--left Job preferences
+                        .form__block.form__block--has-border
+                            .form__item
+                                label.form__label(for='seek-resume-objective') Career objective
+                                .form__control
+                                    +input('text', '', '', 'seek-resume-objective')
+                            .form__item.form__item--checks
+                                label.form__label Job Type
+                                .form__checkboxs
+                                    .form__checkboxs-col
+                                        +checkbox('Full-time')
+                                        +checkbox('Permanent', '', '', true)
+                                        +checkbox('Internship')
+                                    .form__checkboxs-col
+                                        +checkbox('Temporary')
+                                        +checkbox('Part-time')
+                                        +checkbox('New-Grad')
+                                    .form__checkboxs-col
+                                        +checkbox('Contract')
+                                        +checkbox('Commission')
+                            .form__item.indent-v--m
+                                label.form__label(for='seek-resume-salary') Desired salary level
+                                .form__item--row-content
+                                    .form__control
+                                        +input('text', 'Thb', '', 'seek-resume-salary')
+                                    .form__select-box
+                                        select.form__select.js-select
+                                            option(value='month') Monthly
+                                            option(value='month') Monthly
+                                            option(value='month') Monthly
+                                            option(value='month') Monthly
+                            .form__item
+                                +checkbox('Ready to move', 'seek-resume-move', false)
+                        .form__block.form__block--has-border.form__block--center
+                            .icon-plus
+                                .icon-plus__icon
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"><path d="M7 0v5h5v2H7v5H5V7H0V5h5V0h2z" fill="#E9001E" fill-rule="evenodd"/></svg>
+                                .icon-plus__block.text.text--link.text--big.indent-l--2xs Add specialty
+                        .form__submit.form__submit--view--centered
+                            a.button.button--view--secondary(href='seeker-create-resume-1.html') Back
+                            button.button.button--view--primary.indent-l--3xs(type='submit') Next step
+                            button.form__skip Skip

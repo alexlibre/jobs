@@ -1,0 +1,133 @@
+@mixin font-face(
+  $name,
+  $path,
+  $weight: null,
+  $style: null,
+  $exts: eot woff2 woff ttf svg
+) {
+  $src: null;
+
+  $extmods: (
+    eot: "?",
+    svg: ""
+  );
+
+  $formats: (
+    otf: "opentype",
+    ttf: "truetype"
+  );
+
+  @each $ext in $exts {
+    $extmod: if(
+      map-has-key($extmods, $ext),
+      $ext + map-get($extmods, $ext),
+      $ext
+    );
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append(
+      $src,
+      url(quote($path + "." + $extmod)) format(quote($format)),
+      comma
+    );
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    // font-display: auto;
+    src: $src;
+  }
+}
+
+/* Миксин соотношения сторон */
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Y center
+@mixin yCenter {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* trs */
+
+@mixin trs {
+  transition: 0.3s ease-in-out;
+}
+
+@mixin hide {
+  visibility: hidden;
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+}
+
+@mixin show {
+  visibility: visible;
+  opacity: 1;
+  position: relative;
+  z-index: auto;
+}
+
+@mixin title {
+  margin-bottom: 5px;
+  color: $color-base;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+@mixin txt {
+  color: $color-ghost;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+//three dots
+@mixin multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: white) {
+  overflow: hidden;
+  position: relative;
+  line-height: $lineHeight;
+  max-height: $lineHeight * $lineCount;
+  text-align: left;
+  margin-right: -1em;
+  padding-right: 1em;
+  &:before {
+    content: "...";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: $bgColor;
+  }
+}

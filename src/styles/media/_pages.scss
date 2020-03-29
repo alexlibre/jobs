@@ -1,0 +1,31 @@
+@include respond(1280) {
+  .page {
+    &__content {
+      padding-top: 42px;
+    }
+
+    &__inner {
+      padding: 0;
+    }
+
+    &__title {
+      margin: 0 0 22px;
+      &--is-centered {
+        padding-top: 10px;
+      }
+    }
+  }
+}
+
+@include respond(768) {
+  .page {
+    &__title {
+      margin: 0 0 30px;
+      font-size: 16px;
+    }
+    &__content {
+      padding-top: 52px;
+      min-height: 100vh;
+    }
+  }
+}

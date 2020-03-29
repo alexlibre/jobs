@@ -1,0 +1,57 @@
+extends ../layout-emp
+include ../items/cat-card
+
+block title
+
+    title Employ fav view
+
+block content
+    .content__inner--gray
+
+        .inner-page.inner-page--no-padding
+            .inner-page__sidebar.inner-page__sidebar--lg.inner-page__sidebar--mob
+                .sidebar
+                    .sidebar__item
+                        .e-balance
+                            .e-balance__left
+                                .e-balance__num 2500
+                                .e-balance__txt Balance (Thb)
+                            .e-balance__right
+                                button.button.button--view--primary.e-balance__btn Pay
+                    .sidebar__item
+                        .sidebar__item-row
+                            .e-vacancy
+                                .e-vacancy__num 12
+                                .e-vacancy__txt Vacancies
+                                a(href="#").e-vacancy__go
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 10 17"><g><g><path fill="none" stroke="#f80021" stroke-miterlimit="50" d="M1 .5v0l7.836 7.836v0L1 16.172v0"/></g></g></svg>
+
+                        .sidebar__item-row
+                            .e-days
+                                .e-days__left
+                                    .e-days__num 23
+                                    .e-days__txt Days remained
+                                .e-days__right
+                                    button.button.button--view--ternary.e-days__btn Extend
+                    .sidebar__item
+                        include ../components/sidebar-menu
+            button.button.button--view--primary.inner-page__btn.inner-page__btn--disable.js-btn-mob Menu
+            .inner-page__content.inner-page__content--md.inner-page__content--fav.inner-page__content--fav-view
+                .inner-page__content-inner
+                    .catalog-about.catalog-about--not-available(id='1')
+                        .catalog-about__block.catalog-about__block--big.catalog-about__block--vertically
+                            p.text.text--big You are not available contact information of applicants, as you look in demo mode. To view the contact information you need to purchase access to the database of resumes.
+                            button.button.button--view--primary.indent-t--s Get access
+                        .catalog-about__block.catalog-about__block--big.catalog-about__block--vertically.is-disabled
+                            .catalog-about__content
+                                p.text.text--label.indent-b--2xs April 2017 - to the present
+                                h5.indent-b--2xs Management Company Agroholding-Istra LLC, First Freight Company OJSC, Mosenergosbyt OJSC, Sibur-Tyumen OJSC
+                                p.text.text--medium UNIQLO is a brand of Fast Retailing Co., Ltd., a leading global Japanese retail holding company that designs, manufactures and sells clothing under seven main brands: Comptoir des Cotonniers, GU, Helmut Lang, J Brand, Princesse tam.tam, Theory, and UNIQLO. With global sales of approximately 1.14 trillion yen for the 2013 fiscal year ending August 31, 2013 (US $11.62 billion, calculated in yen using the end of August 2013 rate of $1 = 98.36 yen), Fast Retailing is one of the world’s largest apparel retail companies, and UNIQLO is Japan’s leading specialty retailer.
+                            .catalog-about__content
+                                p.text.text--label.indent-b--2xs April 2017 - to the present
+                                h5.indent-b--2xs Management Company Agroholding-Istra LLC, First Freight Company OJSC, Mosenergosbyt OJSC, Sibur-Tyumen OJSC
+                                p.text.text--medium UNIQLO is a brand of Fast Retailing Co., Ltd., a leading global Japanese retail holding company that designs, manufactures and sells clothing under seven main brands: Comptoir des Cotonniers, GU, Helmut Lang, J Brand, Princesse tam.tam, Theory, and UNIQLO. With global sales of approximately 1.14 trillion yen for the 2013 fiscal year ending August 31, 2013 (US $11.62 billion, calculated in yen using the end of August 2013 rate of $1 = 98.36 yen), Fast Retailing is one of the world’s largest apparel retail companies, and UNIQLO is Japan’s leading specialty retailer.
+                            .catalog-about__content
+                                p.text.text--label.indent-b--2xs April 2017 - to the present
+                                h5.indent-b--2xs Management Company Agroholding-Istra LLC, First Freight Company OJSC, Mosenergosbyt OJSC, Sibur-Tyumen OJSC
+                                p.text.text--medium UNIQLO is a brand of Fast Retailing Co., Ltd., a leading global Japanese retail holding company that designs, manufactures and sells clothing under seven main brands: Comptoir des Cotonniers, GU, Helmut Lang, J Brand, Princesse tam.tam, Theory, and UNIQLO. With global sales of approximately 1.14 trillion yen for the 2013 fiscal year ending August 31, 2013 (US $11.62 billion, calculated in yen using the end of August 2013 rate of $1 = 98.36 yen), Fast Retailing is one of the world’s largest apparel retail companies, and UNIQLO is Japan’s leading specialty retailer.

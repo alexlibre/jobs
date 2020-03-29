@@ -1,0 +1,41 @@
+extends ../layout-emp
+
+block content
+    .content__inner--gray
+
+        .inner-page.inner-page--no-padding
+            aside.inner-page__sidebar.inner-page__sidebar--mob.inner-page__sidebar--visible
+                .sidebar
+                    .sidebar__item
+                        ul.side-nav
+                            li.side-nav__item
+                                a.side-nav__title.link.link--big.link--collapse.js-collapse-btn My resume
+                                ul.side-nav__collapse.js-collapse
+                                    li.side-nav__inner-item
+                                        a.side-nav__inner-link.link.link--medium Job Spotter Account
+                                    li.side-nav__inner-item
+                                        a.side-nav__inner-link.link.link--medium.is-active How to Use Job
+                                    li.side-nav__inner-item
+                                        a.side-nav__inner-link.link.link--medium Spotter
+                                    li.side-nav__inner-item
+                                        a.side-nav__inner-link.link.link--medium Job Spotter Overview
+                            li.side-nav__item
+                                a.side-nav__title.link.link--big.link--collapse.js-collapse-btn.is-collapsed My account
+                            li.side-nav__item
+                                a.side-nav__title.link.link--big.link--collapse.js-collapse-btn.is-collapsed Company Pages & Reviews
+                            li.side-nav__item
+                                a.side-nav__title.link.link--big.link--collapse.js-collapse-btn.is-collapsed Job alerts
+                            li.side-nav__item
+                                a.side-nav__title.link.link--big.link--collapse.js-collapse-btn.is-collapsed Job search tips
+                            li.side-nav__item
+                                a.side-nav__title.link.link--big.link--collapse.js-collapse-btn.is-collapsed Job resume
+            button.button.button--view--primary.inner-page__btn.inner-page__btn--disable.inner-page__btn--faq.inner-page__btn--center.js-mob-faq Menu
+            .inner-page__content.inner-page__content--sm
+                .inner-page__faq
+                    .faq
+                        .faq__inner
+                            .faq__body
+                                include ../components/faq
+                            form.faq__footer
+                                +input('text', 'Type your question', 'js-input-faq indent-r--2xs faq__search')
+                                button.faq__submit.faq__submit--no-margin.button.button--view--primary(type='submit') Send

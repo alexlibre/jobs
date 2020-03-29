@@ -1,0 +1,644 @@
+extends ../layout-emp
+include ../items/input
+include ../items/radio
+include ../items/checkbox
+
+block title
+    title Employ main
+
+block content
+    .content__inner--gray
+       
+        .inner-page.inner-page--no-padding
+            aside.inner-page__sidebar.inner-page__sidebar--mob.inner-page__sidebar--personal
+                .sidebar
+                    .sidebar__item
+                        include ../components/profile-complete
+                    .sidebar__item
+                        ul.side-nav
+                            li.side-nav__item
+                                a.side-nav__title.link.link--big.link--collapse.js-collapse-btn My resume
+                                ul.side-nav__collapse.js-collapse
+                                    li.side-nav__inner-item
+                                        a.side-nav__inner-link.link.link--medium Job Spotter Account
+                                    li.side-nav__inner-item
+                                        a.side-nav__inner-link.link.link--medium.is-active How to Use Job
+                                    li.side-nav__inner-item
+                                        a.side-nav__inner-link.link.link--medium Spotter
+                                    li.side-nav__inner-item
+                                        a.side-nav__inner-link.link.link--medium Job Spotter Overview
+                            li.side-nav__item
+                                a.side-nav__title.link.link--big.link--collapse.is-collapsed.js-collapse-btn My vacancies
+                                ul.side-nav__collapse.is-collapsed.js-collapse
+                                    li.side-nav__inner-item
+                                        a.side-nav__inner-link.link.link--medium Favorite
+                                    li.side-nav__inner-item
+                                        a.side-nav__inner-link.link.link--medium My request
+                                    li.side-nav__inner-item
+                                        a.side-nav__inner-link.link.link--medium Feedback
+                                    li.side-nav__inner-item
+                                        a.side-nav__inner-link.link.link--medium Viewed my resume
+                            li.side-nav__item
+                                a.side-nav__title.link.link--big.link--collapse.js-collapse-btn.is-collapsed Notifications
+            button.button.button--view--primary.inner-page__btn.js-btn-mob Menu
+            .inner-page__content
+                .inner-page__content-inner
+                    .inner-page__left
+                        .resume
+                            .resume__block.js-resume-block.js-get-data
+                                .resume__block-top
+                                    .resume__title Profile
+
+                                .resume__block-profil.resume__block-item.js-resume-ready-block.js-get-data
+                                    .resume__edit-card.js-edit-card(data-id="34")
+                                        span.resume__edit-txt.resume__block-edu-btn Edit
+                                    .resume__block-profil-img
+                                        img(src='../assets/images/content/r-avatar.png' alt='resume pic').resume__block-profil-img-file
+                                    .resume__block-profil-info
+
+                                        .resume__info
+                                            .resume__info-item
+                                                .resume__info-item-title Name
+                                                .resume__info-item-desc.js-data Kotov Ilya
+                                            .resume__info-item
+                                                .resume__info-item-title City
+                                                .resume__info-item-desc.js-data Saint-Petersburg, Russia
+                                            .resume__info-item
+                                                .resume__info-item-title Email
+                                                .resume__info-item-desc.js-data ikotov@cakelabs.ru
+                                .resume__block-form.is-hidden.js-edit-form
+                                    .form
+                                        form.form__content(id="1")
+                                            .form__block.form__block--has-border.form__block--has-close.js-job-form-block
+                                                .icon-plus.js-del-new-block.form__del
+                                                    .icon-plus__icon
+                                                        svg(xmlns='http://www.w3.org/2000/svg' width='10' height='10')
+                                                            path(d='M9.9497 1.4645L6.4142 5l3.5355 3.5355-1.4142 1.4142L5 6.4142 1.4645 9.9497.0503 8.5355 3.5858 5 .0503 1.4645 1.4645.0503 5 3.5858 8.5355.0503l1.4142 1.4142z' fill='#C8D0D8' fill-rule='evenodd')
+                                                    .icon-plus__block.indent-l--3xs
+                                                        p.text.text--medium.text--label Close
+                                                
+                                                .form__item
+                                                    label.form__label User picture
+                                                    .resume__form.resume__form--lg
+                                                        .js-dropzone
+                                                            .dz-default.dz-message
+                                                                span.dz-message__txt Drag&Drop files here or click and chose
+                                                .form__item
+                                                    label.form__label(for='seek-resume-degree') Name
+                                                    .form__control
+                                                        +input('text', '', 'input--width--available', 'seek-resume-degree', '', 'js-input-data')
+                                                .form__item
+                                                    label.form__label(for='seek-resume-degree') Name
+                                                    .form__control
+                                                        +input('text', '', 'input--width--available', 'seek-resume-degree', '', 'js-input-data')
+                                                .form__item
+                                                    label.form__label(for='seek-resume-school') Country
+                                                    .form__control-group
+                                                        select.form__select.js-select
+                                                            option(value='month') Russia
+                                                            option(value='month') Tailand
+                                                            option(value='month') Italy
+                                                .form__item
+                                                    label.form__label(for='seek-resume-school') State
+                                                    .form__control-group
+                                                        select.form__select.js-select
+                                                            option(value='month') Rusket
+                                                            option(value='month') Girssa
+                                                            option(value='month') Itaki
+                                                .form__item
+                                                    label.form__label(for='seek-resume-school') City
+                                                    .form__control-group
+                                                        select.form__select.js-select
+                                                            option(value='month') Moscow
+                                                            option(value='month') SPB
+                                                            option(value='month') Itaki
+                                                .form__item
+                                                    label.form__label(for='seek-resume-study') Email
+
+                                                    .form__control
+                                                        +input('text', 'e.g. 25 000 Thb.', 'input--width--available', 'seek-resume-study', '', 'js-input-data')
+
+
+
+                                            .form__submit.form__submit--view--centered
+                                                a.button.button--view--secondary.js-del-new-block Cancel
+                                                button.button.button--view--primary.indent-l--3xs.js-form-submit(type='submit') Save
+                            .resume__block.js-resume-block
+                                .resume__block-top
+                                    .resume__title Job preferences
+                                    a.resume__edit-txt.text--label.indent-r--s.js-cards-view-all + View all
+
+                                .resume__block-row.js-resume-ready-block
+
+                                    .resume__block-card.js-get-data
+                                        .resume__top
+                                            a(href="#" data-id="2").resume__edit.js-edit-card
+                                                span.resume__edit-txt.resume__block-edu-btn Edit
+                                            a(href="#" data-popup="delPopup").resume__card-del
+                                                span.resume__del-txt.resume__block-edu-btn Delete
+                                        .resume__info
+                                            .resume__info-item
+                                                .resume__info-item-title Career objective
+                                                .resume__info-item-desc.js-data CEO
+                                            .resume__info-item
+                                                .resume__info-item-title Job type
+                                                .resume__info-item-desc.js-data Full-time
+                                            .resume__info-item
+                                                .resume__info-item-title Desired salary level
+                                                .resume__info-item-desc.js-data 90 000 Thb / monthly
+                                    .resume__block-card.js-get-data
+                                        .resume__top
+                                            a(href="#" data-id="2").resume__edit.js-edit-card
+                                                span.resume__edit-txt.resume__block-edu-btn Edit
+                                            a(href="#" data-popup="delPopup").resume__card-del
+                                                span.resume__del-txt.resume__block-edu-btn Delete
+                                        .resume__info
+                                            .resume__info-item
+                                                .resume__info-item-title Career objective
+                                                .resume__info-item-desc.js-data CEO
+                                            .resume__info-item
+                                                .resume__info-item-title Job type
+                                                .resume__info-item-desc.js-data Full-time
+                                            .resume__info-item
+                                                .resume__info-item-title Desired salary level
+                                                .resume__info-item-desc.js-data 90 000 Thb / monthly
+                                    .resume__block-add-card
+                                        .resume__block-addicon.js-resume-add-card
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 0H5v5H0v2h5v5h2V7h5V5H7V0z" fill="#E9001E"/></svg>
+                                .resume__block-form.is-hidden.js-edit-form
+                                    .form
+                                        form.form__content(id="2")
+                                            .form__block.form__block--has-border.form__block--has-close.js-job-form-block
+                                                .icon-plus.js-del-new-block.form__del
+                                                    .icon-plus__icon
+                                                        svg(xmlns='http://www.w3.org/2000/svg' width='10' height='10')
+                                                            path(d='M9.9497 1.4645L6.4142 5l3.5355 3.5355-1.4142 1.4142L5 6.4142 1.4645 9.9497.0503 8.5355 3.5858 5 .0503 1.4645 1.4645.0503 5 3.5858 8.5355.0503l1.4142 1.4142z' fill='#C8D0D8' fill-rule='evenodd')
+                                                    .icon-plus__block.indent-l--3xs
+                                                        p.text.text--medium.text--label Close
+                                                .form__item
+                                                    label.form__label(for='seek-resume-school') State
+                                                    .form__control-group
+                                                        select.form__select.js-select
+                                                            option(value='month') Rusket
+                                                            option(value='month') Girssa
+                                                            option(value='month') Itaki
+                                                .form__item
+                                                    label.form__label(for='seek-resume-school') State
+                                                    .form__control-group
+                                                        select.form__select.js-select
+                                                            option(value='month') Rusket
+                                                            option(value='month') Girssa
+                                                            option(value='month') Itaki
+                                                .form__item
+                                                    label.form__label(for='seek-resume-study') Desired salary level
+                                                    .form__control-group
+                                                        select.form__select.js-select
+                                                            option(value='month') Rusket
+                                                            option(value='month') Girssa
+                                                            option(value='month') Itaki
+
+
+
+                                            .form__submit.form__submit--view--centered
+                                                a.button.button--view--secondary.js-del-new-block Cancel
+                                                button.button.button--view--primary.indent-l--3xs.js-form-submit(type='submit') Save
+                            .resume__block.js-resume-block
+                                .resume__block-top
+                                    .resume__title Education
+                                    a.resume__edit-txt.text--label.indent-r--s.js-cards-view-all + View all
+                                    //- .resume__edit.js-edit-card(data-id="34")
+                                    //-     span.resume__edit-txt.resume__block-edu-btn Edit
+                                .resume__block-edu.resume__block-item.js-resume-ready-block
+                                    .resume__block-edu-row
+                                        .resume__block-edu-txt
+                                            | You have not completed the field of education. Fill in this field to get the best deals.
+                                        .resume__block-edu-btn.js-edit-card
+                                            button.button.button--view--primary Fill education
+                                .resume__block-row.js-resume-ready-block
+                                    .resume__block-card.js-get-data
+                                        .resume__top
+                                            a(href="#" data-id="3").resume__edit.js-edit-card
+                                                span.resume__edit-txt.resume__block-edu-btn Edit
+                                            a(href="#" data-popup="delPopup").resume__card-del
+                                                span.resume__del-txt.resume__block-edu-btn Delete
+                                        .resume__info
+                                            .resume__info-item
+                                                .resume__info-item-title Degree
+                                                .resume__info-item-desc.js-data Master
+                                            .resume__info-item
+                                                .resume__info-item-title School
+                                                .resume__info-item-desc.js-data MSU
+                                            .resume__info-item
+                                                .resume__info-item-title Field of Study
+                                                .resume__info-item-desc.js-data Computer science
+                                            .resume__info-item
+                                                .resume__info-item-title City
+                                                .resume__info-item-desc.js-data Michigan
+                                            .resume__info-item
+                                                .resume__info-item-title Time period
+                                                .resume__info-item-desc.js-data 11.2014 - 07.2018
+                                    .resume__block-card.js-get-data
+                                        .resume__top
+                                            a(href="#" data-id="3").resume__edit.js-edit-card
+                                                span.resume__edit-txt.resume__block-edu-btn Edit
+                                            a(href="#" data-popup="delPopup").resume__card-del
+                                                span.resume__del-txt.resume__block-edu-btn Delete
+                                        .resume__info
+                                            .resume__info-item
+                                                .resume__info-item-title Degree
+                                                .resume__info-item-desc.js-data Master
+                                            .resume__info-item
+                                                .resume__info-item-title School
+                                                .resume__info-item-desc.js-data MSU
+                                            .resume__info-item
+                                                .resume__info-item-title Field of Study
+                                                .resume__info-item-desc.js-data Computer science
+                                            .resume__info-item
+                                                .resume__info-item-title City
+                                                .resume__info-item-desc.js-data Michigan
+                                            .resume__info-item
+                                                .resume__info-item-title Time period
+                                                .resume__info-item-desc.js-data 11.2014 - 07.2018
+                                    .resume__block-card.js-get-data
+                                        .resume__top
+                                            a(href="#" data-id="3").resume__edit.js-edit-card
+                                                span.resume__edit-txt.resume__block-edu-btn Edit
+                                            a(href="#" data-popup="delPopup").resume__card-del
+                                                span.resume__del-txt.resume__block-edu-btn Delete
+                                        .resume__info
+                                            .resume__info-item
+                                                .resume__info-item-title Degree
+                                                .resume__info-item-desc.js-data Master
+                                            .resume__info-item
+                                                .resume__info-item-title About
+                                                .resume__info-item-desc.js-data
+                                                    |Thai city on the east coast of the Gulf of Siam, known for its beaches. Back in the 1960s, it was a quiet fishing village, and now attracts thousands of tourists thanks to resort hotels, high-rise residential buildings, shopping centers, bars with pop shows and clubs open around the clock. Not far from the city on the hillside is the temple of Phra Yai with a gold statue of Buddha 18 meters high. Pattaya has several golf courses with a unique landscape, with a wonderful view of the bay.
+                                            .resume__info-item
+                                                .resume__info-item-title School
+                                                .resume__info-item-desc.js-data MSU
+                                            .resume__info-item
+                                                .resume__info-item-title Field of Study
+                                                .resume__info-item-desc.js-data Computer science
+                                            .resume__info-item
+                                                .resume__info-item-title City
+                                                .resume__info-item-desc.js-data Michigan
+                                            .resume__info-item
+                                                .resume__info-item-title Time period
+                                                .resume__info-item-desc.js-data 11.2014 - 07.2018
+                                    .resume__block-add-card
+                                        .resume__block-addicon.js-resume-add-card
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 0H5v5H0v2h5v5h2V7h5V5H7V0z" fill="#E9001E"/></svg>
+                                .resume__block-form.is-hidden.js-edit-form
+                                    .form
+                                        form.form__content(id="3")
+                                            .form__block.form__block--has-border.form__block--has-close
+                                                .icon-plus.js-del-new-block.form__del
+                                                    .icon-plus__icon
+                                                        svg(xmlns='http://www.w3.org/2000/svg' width='10' height='10')
+                                                            path(d='M9.9497 1.4645L6.4142 5l3.5355 3.5355-1.4142 1.4142L5 6.4142 1.4645 9.9497.0503 8.5355 3.5858 5 .0503 1.4645 1.4645.0503 5 3.5858 8.5355.0503l1.4142 1.4142z' fill='#C8D0D8' fill-rule='evenodd')
+                                                    .icon-plus__block.indent-l--3xs
+                                                        p.text.text--medium.text--label Close
+                                                .form__item
+                                                    label.form__label(for='seek-resume-degree') Degree
+                                                    .form__control
+                                                        +input('text', 'e.g. BA, BS, JD, PhD.', 'input--width--available', 'seek-resume-degree', '', 'js-input-data')
+                                                .form__item
+                                                    label.form__label(for='seek-resume-degree') About
+                                                    .form__control
+                                                        .form__textarea-box
+                                                            textarea.form__textarea.js-input-data
+                                                .form__item
+                                                    label.form__label(for='seek-resume-school') School
+                                                    .form__control
+                                                        +input('text', '', 'input--width--available', 'seek-resume-school', '', 'js-input-data')
+                                                .form__item
+                                                    label.form__label(for='seek-resume-study') Field of Study
+                                                    .form__control
+                                                        +input('text', 'e.g. Biology, Computer Science', 'input--width--available', 'seek-resume-study', '', 'js-input-data')
+                                                .form__item
+                                                    label.form__label(for='seek-resume-studycity') City
+                                                    .form__control
+                                                        +input('text', '', 'input--width--available', 'seek-resume-studycity', '', 'js-input-data')
+                                                .form__item
+                                                    label.form__label Time period
+                                                    .form__control-group.form__control-group--distribute--between
+                                                        select.form__select.js-select
+                                                            option(value='month') Month
+                                                            option(value='month') Month
+                                                            option(value='month') Month
+                                                            option(value='month') Month
+                                                .form__item
+                                                    label.form__label Year
+                                                    .form__control-group.form__control-group--distribute--between
+                                                        select.form__select.js-select
+                                                            option(value='month') Month
+                                                            option(value='month') Month
+                                                            option(value='month') Month
+                                                            option(value='month') Month
+                                                .form__item
+                                                    label.form__label Degree
+                                                    .form__control-group.form__control-group--distribute--between
+                                                        select.form__select.js-select
+                                                            option(value='month') Month
+                                                            option(value='month') Month
+                                                            option(value='month') Month
+                                                            option(value='month') Month
+                                                        
+
+                                            .form__submit.form__submit--view--centered
+                                                a.button.button--view--secondary.js-del-new-block Cancel
+                                                button.button.button--view--primary.indent-l--3xs.js-form-submit(type='submit') Save
+                            .resume__block.js-resume-block
+                                .resume__block-top
+                                    .resume__title Work experience
+                                    a.resume__edit-txt.text--label.indent-r--s.js-cards-view-all + View all
+
+                                .resume__block-row.js-resume-ready-block
+                                    .resume__block-card.js-get-data
+                                        .resume__edit-card.js-edit-card(data-id="34")
+                                            span.resume__edit-txt.resume__block-edu-btn Edit
+                                        .resume__info
+                                            .resume__info-item
+                                                .resume__info-item-title City
+                                                .resume__info-item-desc.js-data Saint-Petersburg
+                                            .resume__info-item
+                                                .resume__info-item-title Company
+                                                .resume__info-item-desc.js-data Cakelabs
+                                            .resume__info-item
+                                                .resume__info-item-title Job title
+                                                .resume__info-item-desc.js-data Сleaner
+                                            .resume__info-item
+                                                .resume__info-item-title Duties
+                                                .resume__info-item-desc.js-data Сlean
+                                            .resume__info-item
+                                                .resume__info-item-title Time period
+                                                .resume__info-item-desc.js-data 11.14 - Until now
+                                    .resume__block-card.js-get-data
+                                        .resume__edit-card.js-edit-card(data-id="34")
+                                            span.resume__edit-txt.resume__block-edu-btn Edit
+                                        .resume__info
+                                            .resume__info-item
+                                                .resume__info-item-title City
+                                                .resume__info-item-desc.js-data Saint-Petersburg
+                                            .resume__info-item
+                                                .resume__info-item-title Company
+                                                .resume__info-item-desc.js-data Cakelabs
+                                            .resume__info-item
+                                                .resume__info-item-title Job title
+                                                .resume__info-item-desc.js-data Сleaner
+                                            .resume__info-item
+                                                .resume__info-item-title Duties
+                                                .resume__info-item-desc.js-data Сlean
+                                            .resume__info-item
+                                                .resume__info-item-title Time period
+                                                .resume__info-item-desc.js-data 11.14 - Until now
+                                    .resume__block-card.js-get-data
+                                        .resume__edit-card.js-edit-card(data-id="34")
+                                            span.resume__edit-txt.resume__block-edu-btn Edit
+                                        .resume__info
+                                            .resume__info-item
+                                                .resume__info-item-title City
+                                                .resume__info-item-desc.js-data Saint-Petersburg
+                                            .resume__info-item
+                                                .resume__info-item-title Company
+                                                .resume__info-item-desc.js-data Cakelabs
+                                            .resume__info-item
+                                                .resume__info-item-title Job title
+                                                .resume__info-item-desc.js-data Сleaner
+                                            .resume__info-item
+                                                .resume__info-item-title Duties
+                                                .resume__info-item-desc.js-data Сlean
+                                            .resume__info-item
+                                                .resume__info-item-title Time period
+                                                .resume__info-item-desc.js-data 11.14 - Until now
+                                    .resume__block-card.js-get-data
+                                        .resume__edit-card.js-edit-card(data-id="34")
+                                            span.resume__edit-txt.resume__block-edu-btn Edit
+                                        .resume__info
+                                            .resume__info-item
+                                                .resume__info-item-title City
+                                                .resume__info-item-desc.js-data Saint-Petersburg
+                                            .resume__info-item
+                                                .resume__info-item-title Company
+                                                .resume__info-item-desc.js-data Cakelabs
+                                            .resume__info-item
+                                                .resume__info-item-title Job title
+                                                .resume__info-item-desc.js-data Сleaner
+                                            .resume__info-item
+                                                .resume__info-item-title Duties
+                                                .resume__info-item-desc.js-data Сlean
+                                            .resume__info-item
+                                                .resume__info-item-title Time period
+                                                .resume__info-item-desc.js-data 11.14 - Until now
+                                    .resume__block-card.js-get-data
+                                        .resume__edit-card.js-edit-card(data-id="34")
+                                            span.resume__edit-txt.resume__block-edu-btn Edit
+                                        .resume__info
+                                            .resume__info-item
+                                                .resume__info-item-title City
+                                                .resume__info-item-desc.js-data Saint-Petersburg
+                                            .resume__info-item
+                                                .resume__info-item-title Company
+                                                .resume__info-item-desc.js-data Cakelabs
+                                            .resume__info-item
+                                                .resume__info-item-title Job title
+                                                .resume__info-item-desc.js-data Сleaner
+                                            .resume__info-item
+                                                .resume__info-item-title Duties
+                                                .resume__info-item-desc.js-data Сlean
+                                            .resume__info-item
+                                                .resume__info-item-title Time period
+                                                .resume__info-item-desc.js-data 03.10 - 10.14
+                                    .resume__block-card.js-get-data
+                                        .resume__edit-card.js-edit-card(data-id="34")
+                                            span.resume__edit-txt.resume__block-edu-btn Edit
+                                        .resume__info
+                                            .resume__info-item
+                                                .resume__info-item-title City
+                                                .resume__info-item-desc.js-data Saint-Petersburg
+                                            .resume__info-item
+                                                .resume__info-item-title Company
+                                                .resume__info-item-desc.js-data Cakelabs
+                                            .resume__info-item
+                                                .resume__info-item-title Job title
+                                                .resume__info-item-desc.js-data Сleaner
+                                            .resume__info-item
+                                                .resume__info-item-title Duties
+                                                .resume__info-item-desc.js-data Сlean
+                                            .resume__info-item
+                                                .resume__info-item-title Time period
+                                                .resume__info-item-desc.js-data 03.10 - 10.14
+                                    .resume__block-add-card
+                                        .resume__block-addicon.js-resume-add-card
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 0H5v5H0v2h5v5h2V7h5V5H7V0z" fill="#E9001E"/></svg>
+                                .resume__block-form.is-hidden.js-edit-form
+                                    .form
+                                        form.form__content(id="4")
+                                            .form__block.form__block--has-border.form__block--has-close.js-job-form-block
+                                                .icon-plus.js-del-new-block.form__del
+                                                    .icon-plus__icon
+                                                        svg(xmlns='http://www.w3.org/2000/svg' width='10' height='10')
+                                                            path(d='M9.9497 1.4645L6.4142 5l3.5355 3.5355-1.4142 1.4142L5 6.4142 1.4645 9.9497.0503 8.5355 3.5858 5 .0503 1.4645 1.4645.0503 5 3.5858 8.5355.0503l1.4142 1.4142z' fill='#C8D0D8' fill-rule='evenodd')
+                                                    .icon-plus__block.indent-l--3xs
+                                                        p.text.text--medium.text--label Close
+                                                .form__item
+                                                    label.form__label(for='seek-resume-degree') City
+                                                    .form__control
+                                                        +input('text', '', 'input--width--available', 'seek-resume-degree', '', 'js-input-data')
+                                                .form__item
+                                                    label.form__label(for='seek-resume-school') Company
+
+                                                    .form__control
+                                                        +input('text', 'e.g. Full-time, project, etc.', 'input--width--available', 'seek-resume-school', '', 'js-input-data')
+                                                .form__item
+                                                    label.form__label(for='seek-resume-study') Job title
+
+                                                    .form__control
+                                                        +input('text', 'e.g. 25 000 Thb.', 'input--width--available', 'seek-resume-study', '', 'js-input-data')
+                                                .form__item
+                                                    label.form__label(for='seek-resume-study') Duties
+
+                                                    .form__control
+                                                        +input('text', 'e.g. 25 000 Thb.', 'input--width--available', 'seek-resume-study', '', 'js-input-data')
+                                                .form__item
+                                                    label.form__label(for='seek-resume-study') Time period
+
+                                                    .form__control
+                                                        +input('text', 'e.g. 25 000 Thb.', 'input--width--available', 'seek-resume-study', '', 'js-input-data')
+
+                                            .form__submit.form__submit--view--centered
+                                                a.button.button--view--secondary.js-del-new-block Cancel
+                                                button.button.button--view--primary.indent-l--3xs.js-form-submit(type='submit') Save
+                            .resume__block.js-resume-block.js-get-data
+                                .resume__block-top
+                                    .resume__title Additional information
+                                    
+                                .resume__block-add.resume__block-item.js-resume-ready-block
+                                    .resume__edit-card.js-edit-card(data-id="34")
+                                        span.resume__edit-txt Edit
+                                    .resume__block-add-item
+                                        .resume__block-add-item-inf
+                                            .resume__info
+                                                .resume__info-item
+                                                    .resume__info-item-title Skills
+                                                    .resume__info-item-desc.js-data Speed, clean master, silent
+                                                .resume__info-item
+                                                    .resume__info-item-title About
+                                                    .resume__info-item-desc.js-data
+                                                        |Thai city on the east coast of the Gulf of Siam, known for its beaches. Back in the 1960s, it was a quiet fishing village, and now attracts thousands of tourists thanks to resort hotels, high-rise residential buildings, shopping centers, bars with pop shows and clubs open around the clock. Not far from the city on the hillside is the temple of Phra Yai with a gold statue of Buddha 18 meters high. Pattaya has several golf courses with a unique landscape, with a wonderful view of the bay.
+                                    .resume__block-add-item
+                                        .resume__block-add-item-title Language proficiency
+                                        .resume__block-add-item-inf
+                                            .resume__info.resume__info--horizontally
+                                                .resume__info-item
+                                                    .resume__info-item-title Native
+                                                    .resume__info-item-desc.js-data Thai
+                                                .resume__info-item
+                                                    .resume__info-item-title intermediate
+                                                    .resume__info-item-desc.js-data English
+                                    .resume__block-add-item
+                                        .resume__block-add-item-inf
+                                            .resume__info
+                                                .resume__info-item
+                                                    .resume__info-item-title Drive license
+                                                    .resume__info-item-desc.js-data A, B
+                                .resume__block-form.is-hidden.js-edit-form
+                                    .form
+                                        form.form__content(id="5")
+                                            .form__block.form__block--has-border.form__block--has-close.js-job-form-block
+                                                .icon-plus.js-del-new-block.form__del
+                                                    .icon-plus__icon
+                                                        svg(xmlns='http://www.w3.org/2000/svg' width='10' height='10')
+                                                            path(d='M9.9497 1.4645L6.4142 5l3.5355 3.5355-1.4142 1.4142L5 6.4142 1.4645 9.9497.0503 8.5355 3.5858 5 .0503 1.4645 1.4645.0503 5 3.5858 8.5355.0503l1.4142 1.4142z' fill='#C8D0D8' fill-rule='evenodd')
+                                                    .icon-plus__block.indent-l--3xs
+                                                        p.text.text--medium.text--label Close
+                                                .form__item
+                                                    label.form__label(for='seek-resume-degree') Skills
+                                                    .form__control
+                                                        +input('text', '', 'input--width--available', 'seek-resume-degree', '', 'js-input-data')
+                                                .form__item
+                                                    label.form__label(for='seek-resume-degree') About
+                                                    .form__control
+                                                        .form__textarea-box
+                                                            textarea.form__textarea.js-input-data
+                                                .form__item
+                                                    label.form__label(for='seek-resume-school') Language proficiency
+                                                    .form__item-content
+                                                        .form__select-box.form__select-box--lang
+                                                            select.form__select.js-select
+                                                                option(value='lang') Thai
+                                                                option(value='lang') Italian
+                                                                option(value='lang') English
+                                                        .form__select-box.form__select-box--lang
+                                                            select.form__select.js-select
+                                                                option(value='lang') Thai
+                                                                option(value='lang') Italian
+                                                                option(value='lang') English
+                                                        //- .form__select-add.js-add-select
+                                                        //-     .icon-plus.icon-plus--vertical-align--center
+                                                        //-         .icon-plus__icon
+                                                        //-             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"><path d="M7 0v5h5v2H7v5H5V7H0V5h5V0h2z" fill="#E9001E" fill-rule="evenodd"/></svg>
+                                                        //-         .icon-plus__block.text.text--link.text--big.indent-l--2xs Add 
+                                                        
+                                                            
+                                                .form__item
+                                                    label.form__label(for='seek-resume-study') Drive license
+                                                    .form__checkboxs
+                                                        .form__checkboxs-row
+                                                            .form__checkboxs-item
+                                                                +checkbox('A')
+                                                            .form__checkboxs-item
+                                                                +checkbox('B')
+                                                            .form__checkboxs-item
+                                                                +checkbox('C')
+                                                            .form__checkboxs-item
+                                                                +checkbox('D')
+                                                            .form__checkboxs-item
+                                                                +checkbox('E')
+                                                            .form__checkboxs-item
+                                                                +checkbox('BE')
+                                                            .form__checkboxs-item
+                                                                +checkbox('CE')
+
+                                            .form__submit.form__submit--view--centered
+                                                a.button.button--view--secondary.js-del-new-block Cancel
+                                                button.button.button--view--primary.indent-l--3xs.js-form-submit(type='submit') Save
+                            .resume__block
+                                .resume__block-top
+                                    .resume__title Sertificates/portfolio
+                                    //- .resume__edit
+                                    //-     span.resume__edit-txt Edit
+                                .resume__block-portfolio.resume__block-item
+                                    .resume__block-portfolio-top
+                                        .resume__block-portfolio-top-row
+                                            .resume__pview
+                                                .resume__preview
+                                                    .resume__preview-img
+                                                        img(src="../assets/images/content/pre.png", alt="alt")
+                                                    .resume__preview-block
+                                                        span.resume__preview-name per.png
+                                                        button.resume__preview-remove
+                                                .resume__preview
+                                                    .resume__preview-img
+                                                        img(src="../assets/images/content/pre.png", alt="alt")
+                                                    .resume__preview-block
+                                                        span.resume__preview-name per.png
+                                                        button.resume__preview-remove
+                                                .resume__preview
+                                                    .resume__preview-img
+                                                        img(src="../assets/images/content/pre.png", alt="alt")
+                                                    .resume__preview-block
+                                                        span.resume__preview-name per.png
+                                                        button.resume__preview-remove
+                                                .resume__preview
+                                                    .resume__preview-img
+                                                        img(src="../assets/images/content/pre.png", alt="alt")
+                                                    .resume__preview-block
+                                                        span.resume__preview-name per.png
+                                                        button.resume__preview-remove
+                                        .resume__block-portfolio-top-row
+                                            a(href='#').resume__show-all + View all
+                                    form.resume__form.js-dropzone
+                                        .dz-default.dz-message
+                                            span.dz-message__txt Drag&Drop files here or click and chose
+

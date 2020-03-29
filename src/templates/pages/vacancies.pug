@@ -1,0 +1,495 @@
+extends ../layout-emp
+include ../items/checkbox
+include ../items/cat-card
+
+block title
+    title Vacancies page
+
+block content
+    .content__inner--gray
+        .inner-page
+            aside.inner-page__sidebar.inner-page__sidebar--mob
+                .sidebar
+                    .sidebar__item
+                        include ../blocks/filters
+            button.button.button--view--primary.inner-page__btn.inner-page__btn--filter.inner-page__btn--center.js-mob-filter Filters
+            .inner-page__content
+                .inner-page__content-inner.inner-page__content-inner--vertically
+                    .inner-page__form
+                        form.flex
+                            .flex__row.flex__row--centered
+                                span.input.input--view--default.search-form__field.input--has-icon.input--has-icon--search
+                                    span.input__box
+                                        input.input__control(type='text' placeholder='Job title, keywords, or company')
+                                    button(type="submit").input__btn.input__btn--search
+                                span.input.input--view--default.search-form__field.input--has-icon.input--has-icon--location.js-autocomplete
+                                    span.input__box
+                                        input.input__control(type='text' placeholder='City, state, or zip code')
+                                    button(type="submit").input__btn.input__btn--location
+                                p.text.text--label.indent-l--xl 2 437 catalog found
+                    .inner-page__inner
+                        .inner-page__left
+                            .catalog
+                                .catalog__item.js-open-catalog-item(data-id='1')
+                                    +cat-card({
+                                        className: true,
+                                        avatar: 'uni',
+                                        name: 'พนักงานฝ่ายผลิต',
+                                        time: '3 days',
+                                        location: 'UNIQLO, Phuket',
+                                        desc: 'Monitoring and renewal of contracts with existing customers. Identifying additional needs and advising on new Veeam products. Formation of commercial offers and ...',
+                                        salaryLocal: '26 000 THb',
+                                        salaryUsd: '816 ~Usd',
+                                        occup: 'Shift work'}, 'seeker')
+                                .catalog__item.js-open-catalog-item(data-id='2')
+                                    +cat-card({
+                                        className: true,
+                                        avatar: 'uni',
+                                        name: 'Recovery Admin Support (Collection)',
+                                        time: '3 day',
+                                        location: 'UNIQLO, Phuket',
+                                        desc: 'Monitoring and renewal of contracts with existing customers. Identifying additional needs and advising on new Veeam products. Formation of commercial offers and ...',
+                                        salaryLocal: '26 000 THb',
+                                        salaryUsd: '816 ~Usd',
+                                        occup: 'Shift work'
+                                    }, 'seeker')
+                                .catalog__item.js-open-catalog-item(data-id='3')
+                                    +cat-card({
+                                        className: true,
+                                        avatar: 'uni',
+                                        name: 'พนักงานฝ่ายผลิต',
+                                        time: '3 day',
+                                        location: 'UNIQLO, Phuket',
+                                        desc: 'Monitoring and renewal of contracts with existing customers. Identifying additional needs and advising on new Veeam products. Formation of commercial offers and ...',
+                                        salaryLocal: '26 000 THb',
+                                        salaryUsd: '816 ~Usd',
+                                        occup: 'Shift work'
+                                    }, 'seeker')
+                                .catalog__item.js-open-catalog-item(data-id='4')
+                                    +cat-card({
+                                        className: true,
+                                        avatar: 'uni',
+                                        name: 'Sales Support/Admin Support Staff/ เริ่มงานได้ทันที',
+                                        time: '3 day',
+                                        location: 'UNIQLO, Phuket',
+                                        desc: 'Monitoring and renewal of contracts with existing customers. Identifying additional needs and advising on new Veeam products. Formation of commercial offers and ...',
+                                        salaryLocal: '26 000 THb',
+                                        salaryUsd: '816 ~Usd',
+                                        occup: 'Shift work'
+                                    }, 'seeker')
+                                .catalog__item.js-open-catalog-item(data-id='2')
+                                    +cat-card({
+                                        className: true,
+                                        avatar: 'uni',
+                                        name: 'Recovery Admin Support (Collection)',
+                                        time: '3 day',
+                                        location: 'UNIQLO, Phuket',
+                                        desc: 'Monitoring and renewal of contracts with existing customers. Identifying additional needs and advising on new Veeam products. Formation of commercial offers and ...',
+                                        salaryLocal: '26 000 THb',
+                                        salaryUsd: '816 ~Usd',
+                                        occup: 'Shift work'
+                                    }, 'seeker')
+                                .catalog__item.js-open-catalog-item(data-id='2')
+                                    +cat-card({
+                                        className: true,
+                                        avatar: 'uni',
+                                        name: 'Recovery Admin Support (Collection)',
+                                        time: '3 day',
+                                        location: 'UNIQLO, Phuket',
+                                        desc: 'Monitoring and renewal of contracts with existing customers. Identifying additional needs and advising on new Veeam products. Formation of commercial offers and ...',
+                                        salaryLocal: '26 000 THb',
+                                        salaryUsd: '816 ~Usd',
+                                        occup: 'Shift work'
+                                    }, 'seeker')
+                                .catalog__item.js-open-catalog-item(data-id='2')
+                                    +cat-card({
+                                        className: true,
+                                        avatar: 'uni',
+                                        name: 'Recovery Admin Support (Collection)',
+                                        time: '3 day',
+                                        location: 'UNIQLO, Phuket',
+                                        desc: 'Monitoring and renewal of contracts with existing customers. Identifying additional needs and advising on new Veeam products. Formation of commercial offers and ...',
+                                        salaryLocal: '26 000 THb',
+                                        salaryUsd: '816 ~Usd',
+                                        occup: 'Shift work'
+                                    }, 'seeker')
+                                .catalog__item.js-open-catalog-item(data-id='2')
+                                    +cat-card({
+                                        className: true,
+                                        avatar: 'uni',
+                                        name: 'Recovery Admin Support (Collection)',
+                                        time: '3 day',
+                                        location: 'UNIQLO, Phuket',
+                                        desc: 'Monitoring and renewal of contracts with existing customers. Identifying additional needs and advising on new Veeam products. Formation of commercial offers and ...',
+                                        salaryLocal: '26 000 THb',
+                                        salaryUsd: '816 ~Usd',
+                                        occup: 'Shift work'
+                                    }, 'seeker')
+                                .catalog__item.js-open-catalog-item(data-id='2')
+                                    +cat-card({
+                                        className: true,
+                                        avatar: 'uni',
+                                        name: 'Recovery Admin Support (Collection)',
+                                        time: '3 day',
+                                        location: 'UNIQLO, Phuket',
+                                        desc: 'Monitoring and renewal of contracts with existing customers. Identifying additional needs and advising on new Veeam products. Formation of commercial offers and ...',
+                                        salaryLocal: '26 000 THb',
+                                        salaryUsd: '816 ~Usd',
+                                        occup: 'Shift work'
+                                    }, 'seeker')
+
+                        .inner-page__right
+                            .inner-page__right-content
+                                .catalog-about(id='1')
+                                    .catalog-about__head
+                                        .catalog-about__title
+                                            .catalog-about__logo
+                                                img(src='../assets/images/content/uni@2x.png')
+                                            h4 Recovery Admin Support (Collection)
+                                        .catalog-about__attr
+                                            p.text.text--label.indent-r--s UOB, Phuket
+                                            p.text.text--label.indent-r--s Project work
+                                            p.text.text--label.indent-r--s 3 day
+                                    .catalog-about__block.catalog-about__block--narrow
+                                        .catalog-about__salary.indent-r--m
+                                            p.h4.catalog-about__salary-local 23 000 THb
+                                            p.h6.catalog-about__salary-usd ~816 Usd
+                                        .button.button--view--primary.indent-r--m(data-ipopup='signIn') Send request
+                                        .catalog-about__fav.js-make-fav
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22"><path class="catalog__fav-icon" d="M12 21.2972c1.1275-1.1107 3.6212-3.5484 4.2353-4.1585 1.6378-1.627 2.813-2.8617 3.7957-4.0124C22.3751 10.3813 23.5 8.21 23.5 6.192 23.5 2.7656 20.9696.51 17.726.51c-2.1823 0-4.1753 1.0705-5.294 2.9898l-.4321.7413-.432-.7414C10.445 1.5718 8.4573.5 6.281.5 3.0374.5.5 2.7668.5 6.192c0 2.018 1.1249 4.1894 3.469 6.9343.9827 1.1507 2.1579 2.3854 3.7957 4.0124.6141.61 3.1078 3.0478 4.2353 4.1585z" fill-rule="nonzero" stroke="#979797" fill="none"/></svg>
+                                    .catalog-about__text
+                                        p.text.text--medium UNIQLO is a brand of Fast Retailing Co., Ltd., a leading global Japanese retail holding company that designs, manufactures and sells clothing under seven main brands: Comptoir des Cotonniers, GU, Helmut Lang, J Brand, Princesse tam.tam, Theory, and UNIQLO. With global sales of approximately 1.14 trillion yen for the 2013 fiscal year ending August 31, 2013 (US $11.62 billion, calculated in yen using the end of August 2013 rate of $1 = 98.36 yen), Fast Retailing is one of the world’s largest apparel retail companies, and UNIQLO is Japan’s leading specialty retailer.
+
+                                        p.text.text--medium UNIQLO continues to open large-scale stores in some of the world's most important cities and locations, as part of its ongoing efforts to solidify its status as a truly global brand. Today the company has a total of more than 1,200 stores in 14 markets worldwide including Japan, China, France, Hong Kong, Indonesia, Malaysia, Philippines, Russia, Singapore, South Korea, Taiwan, Thailand, U.K. and U.S. In addition, Grameen UNIQLO, a social business established in Bangladesh in September 2010, opened its two first stores in Dhaka in July 2013. UNIQLO operates an integrated business model under which it designs, manufactures, markets and sells high-quality, casual apparel. The company believes that truly great clothes should be supremely comfortable, feature universal designs, are of high quality and offer a superb fit to everyone who wears them.
+
+                                        p.text.text--medium With a corporate statement committed to changing clothes, changing conventional wisdom and change the world, Fast Retailing is dedicated to creating great clothing with new and unique value to enrich the lives of people everywhere. For more information about UNIQLO and Fast Retailing, please visit www.uniqlo.com and www.fastretailing.com.
+
+                                        p.text.text--medium If you welcome new challenges, have a drive for success, and embrace the responsibility of leadership—then you belong at UNIQLO!
+
+                                        p.text.text--medium Dynamic Sales Associates Needed for our Northshore Mall location!!
+
+                                        h6 Position Overview:
+
+                                        p.text.text--medium The Sales Associate is the customer service specialist of the store. They are responsible for exceeding customer expectations by listening to customer needs, finding products that meet their needs, providing in depth product information about the goods they are interested in and closing the sale.
+
+                                        h6 Key Responsibilities:
+                                        ul.text.text--medium.list.list--no-marked
+                                            li li Meet and exceed sales goals
+                                            li Maintain brand and operational standards (visual, cleanliness, etc.)
+                                            li Manage customer needs and exceed expectations by utilizing the UNIQLO service standard, following the UNIQLO Fundamental Principles and saying the 6 standard phrases.
+                                            li Be knowledgeable of fitting room standards and assist when needed
+                                            li Act as cashier when required by following cashier protocol
+                                            li Process shipment and ensure all merchandise is represented on the floor in full size run
+                                            li Assist management to identify and resolve issues in the store
+                                            li Provide product and brand knowledge to customers
+                                            li Follow all company policy and procedures & notify management of any infractions
+                                            li Assist with special projects as assigned by management Requirements:
+
+                                        h6 High School Diploma or GED
+                                        ul.text.text--medium.list.list--no-marked
+
+                                            li Strong communication skills
+                                            li Ability to calculate figures and amounts such as discounts and percentages
+                                            li Ability to work a flexible schedule that meets the business needs, including evenings and weekends
+                                            li As an Equal Opportunity Employer, Fast Retailing does not discriminate against applicants or employees because of race, color, creed, religion, sex, national origin, veteran status, disability, age, citizenship, marital or domestic/civil partnership status, sexual orientation, gender identity or expression or because of any other status or condition protected by applicable federal, state or local law.
+
+                                            li Posting Notes: Boston || Massachusetts (US-MA) || United States (US) || Store Staff || Store Operations || UNIQLO || EX:OUT || UNIQLO ||
+
+                                            li Strong communication skills
+                                            li Ability to calculate figures and amounts such as discounts and percentages
+                                            li Ability to work a flexible schedule that meets the business needs, including evenings and weekends
+                                            li As an Equal Opportunity Employer, Fast Retailing does not discriminate against applicants or employees because of race, color, creed, religion, sex, national origin, veteran status, disability, age, citizenship, marital or domestic/civil partnership status, sexual orientation, gender identity or expression or because of any other status or condition protected by applicable federal, state or local law.
+
+                                            li Posting Notes: Boston || Massachusetts (US-MA) || United States (US) || Store Staff || Store Operations || UNIQLO || EX:OUT || UNIQLO ||
+                                .catalog-about(id='2')
+                                    .catalog-about__head
+                                        .catalog-about__title
+                                            .catalog-about__logo
+                                                img(src='../assets/images/content/uni@2x.png')
+                                            h4 Recovery Admin Support (Collection)
+                                        .catalog-about__attr
+                                            p.text.text--label.indent-r--s UOB, Phuket
+                                            p.text.text--label.indent-r--s Project work
+                                            p.text.text--label.indent-r--s 3 day
+                                    .catalog-about__block.catalog-about__block--narrow
+                                        .catalog-about__salary.indent-r--m
+                                            p.h4.catalog-about__salary-local 23 000 THb
+                                            p.h6.catalog-about__salary-usd ~816 Usd
+                                        .button.button--view--primary.indent-r--m(data-ipopup='signIn') Send request
+                                        .catalog-about__fav.js-make-fav
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22"><path class="catalog__fav-icon" d="M12 21.2972c1.1275-1.1107 3.6212-3.5484 4.2353-4.1585 1.6378-1.627 2.813-2.8617 3.7957-4.0124C22.3751 10.3813 23.5 8.21 23.5 6.192 23.5 2.7656 20.9696.51 17.726.51c-2.1823 0-4.1753 1.0705-5.294 2.9898l-.4321.7413-.432-.7414C10.445 1.5718 8.4573.5 6.281.5 3.0374.5.5 2.7668.5 6.192c0 2.018 1.1249 4.1894 3.469 6.9343.9827 1.1507 2.1579 2.3854 3.7957 4.0124.6141.61 3.1078 3.0478 4.2353 4.1585z" fill-rule="nonzero" stroke="#979797" fill="none"/></svg>
+                                    .catalog-about__text
+                                        p.text.text--medium UNIQLO is a brand of Fast Retailing Co., Ltd., a leading global Japanese retail holding company that designs, manufactures and sells clothing under seven main brands: Comptoir des Cotonniers, GU, Helmut Lang, J Brand, Princesse tam.tam, Theory, and UNIQLO. With global sales of approximately 1.14 trillion yen for the 2013 fiscal year ending August 31, 2013 (US $11.62 billion, calculated in yen using the end of August 2013 rate of $1 = 98.36 yen), Fast Retailing is one of the world’s largest apparel retail companies, and UNIQLO is Japan’s leading specialty retailer.
+
+                                        p.text.text--medium UNIQLO continues to open large-scale stores in some of the world's most important cities and locations, as part of its ongoing efforts to solidify its status as a truly global brand. Today the company has a total of more than 1,200 stores in 14 markets worldwide including Japan, China, France, Hong Kong, Indonesia, Malaysia, Philippines, Russia, Singapore, South Korea, Taiwan, Thailand, U.K. and U.S. In addition, Grameen UNIQLO, a social business established in Bangladesh in September 2010, opened its two first stores in Dhaka in July 2013. UNIQLO operates an integrated business model under which it designs, manufactures, markets and sells high-quality, casual apparel. The company believes that truly great clothes should be supremely comfortable, feature universal designs, are of high quality and offer a superb fit to everyone who wears them.
+
+                                        p.text.text--medium With a corporate statement committed to changing clothes, changing conventional wisdom and change the world, Fast Retailing is dedicated to creating great clothing with new and unique value to enrich the lives of people everywhere. For more information about UNIQLO and Fast Retailing, please visit www.uniqlo.com and www.fastretailing.com.
+
+                                        p.text.text--medium If you welcome new challenges, have a drive for success, and embrace the responsibility of leadership—then you belong at UNIQLO!
+
+                                        p.text.text--medium Dynamic Sales Associates Needed for our Northshore Mall location!!
+
+                                        h6 Position Overview:
+
+                                        p.text.text--medium The Sales Associate is the customer service specialist of the store. They are responsible for exceeding customer expectations by listening to customer needs, finding products that meet their needs, providing in depth product information about the goods they are interested in and closing the sale.
+
+                                        h6 Key Responsibilities:
+                                        ul.text.text--medium.list.list--no-marked
+                                            li li Meet and exceed sales goals
+                                            li Maintain brand and operational standards (visual, cleanliness, etc.)
+                                            li Manage customer needs and exceed expectations by utilizing the UNIQLO service standard, following the UNIQLO Fundamental Principles and saying the 6 standard phrases.
+                                            li Be knowledgeable of fitting room standards and assist when needed
+                                            li Act as cashier when required by following cashier protocol
+                                            li Process shipment and ensure all merchandise is represented on the floor in full size run
+                                            li Assist management to identify and resolve issues in the store
+                                            li Provide product and brand knowledge to customers
+                                            li Follow all company policy and procedures & notify management of any infractions
+                                            li Assist with special projects as assigned by management Requirements:
+
+                                        h6 High School Diploma or GED
+                                        ul.text.text--medium.list.list--no-marked
+
+                                            li Strong communication skills
+                                            li Ability to calculate figures and amounts such as discounts and percentages
+                                            li Ability to work a flexible schedule that meets the business needs, including evenings and weekends
+                                            li As an Equal Opportunity Employer, Fast Retailing does not discriminate against applicants or employees because of race, color, creed, religion, sex, national origin, veteran status, disability, age, citizenship, marital or domestic/civil partnership status, sexual orientation, gender identity or expression or because of any other status or condition protected by applicable federal, state or local law.
+
+                                            li Posting Notes: Boston || Massachusetts (US-MA) || United States (US) || Store Staff || Store Operations || UNIQLO || EX:OUT || UNIQLO ||
+
+                                            li Strong communication skills
+                                            li Ability to calculate figures and amounts such as discounts and percentages
+                                            li Ability to work a flexible schedule that meets the business needs, including evenings and weekends
+                                            li As an Equal Opportunity Employer, Fast Retailing does not discriminate against applicants or employees because of race, color, creed, religion, sex, national origin, veteran status, disability, age, citizenship, marital or domestic/civil partnership status, sexual orientation, gender identity or expression or because of any other status or condition protected by applicable federal, state or local law.
+
+                                            li Posting Notes: Boston || Massachusetts (US-MA) || United States (US) || Store Staff || Store Operations || UNIQLO || EX:OUT || UNIQLO ||
+                                .catalog-about(id='3')
+                                    .catalog-about__head
+                                        .catalog-about__title
+                                            .catalog-about__logo
+                                                img(src='../assets/images/content/uni@2x.png')
+                                            h4 Recovery Admin Support (Collection)
+                                        .catalog-about__attr
+                                            p.text.text--label.indent-r--s UOB, Phuket
+                                            p.text.text--label.indent-r--s Project work
+                                            p.text.text--label.indent-r--s 3 day
+                                    .catalog-about__block.catalog-about__block--narrow
+                                        .catalog-about__salary.indent-r--m
+                                            p.h4.catalog-about__salary-local 23 000 THb
+                                            p.h6.catalog-about__salary-usd ~816 Usd
+                                        .button.button--view--primary.indent-r--m(data-ipopup='signIn') Send request
+                                        .catalog-about__fav.js-make-fav
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22"><path class="catalog__fav-icon" d="M12 21.2972c1.1275-1.1107 3.6212-3.5484 4.2353-4.1585 1.6378-1.627 2.813-2.8617 3.7957-4.0124C22.3751 10.3813 23.5 8.21 23.5 6.192 23.5 2.7656 20.9696.51 17.726.51c-2.1823 0-4.1753 1.0705-5.294 2.9898l-.4321.7413-.432-.7414C10.445 1.5718 8.4573.5 6.281.5 3.0374.5.5 2.7668.5 6.192c0 2.018 1.1249 4.1894 3.469 6.9343.9827 1.1507 2.1579 2.3854 3.7957 4.0124.6141.61 3.1078 3.0478 4.2353 4.1585z" fill-rule="nonzero" stroke="#979797" fill="none"/></svg>
+                                    .catalog-about__text
+                                        p.text.text--medium UNIQLO is a brand of Fast Retailing Co., Ltd., a leading global Japanese retail holding company that designs, manufactures and sells clothing under seven main brands: Comptoir des Cotonniers, GU, Helmut Lang, J Brand, Princesse tam.tam, Theory, and UNIQLO. With global sales of approximately 1.14 trillion yen for the 2013 fiscal year ending August 31, 2013 (US $11.62 billion, calculated in yen using the end of August 2013 rate of $1 = 98.36 yen), Fast Retailing is one of the world’s largest apparel retail companies, and UNIQLO is Japan’s leading specialty retailer.
+
+                                        p.text.text--medium UNIQLO continues to open large-scale stores in some of the world's most important cities and locations, as part of its ongoing efforts to solidify its status as a truly global brand. Today the company has a total of more than 1,200 stores in 14 markets worldwide including Japan, China, France, Hong Kong, Indonesia, Malaysia, Philippines, Russia, Singapore, South Korea, Taiwan, Thailand, U.K. and U.S. In addition, Grameen UNIQLO, a social business established in Bangladesh in September 2010, opened its two first stores in Dhaka in July 2013. UNIQLO operates an integrated business model under which it designs, manufactures, markets and sells high-quality, casual apparel. The company believes that truly great clothes should be supremely comfortable, feature universal designs, are of high quality and offer a superb fit to everyone who wears them.
+
+                                        p.text.text--medium With a corporate statement committed to changing clothes, changing conventional wisdom and change the world, Fast Retailing is dedicated to creating great clothing with new and unique value to enrich the lives of people everywhere. For more information about UNIQLO and Fast Retailing, please visit www.uniqlo.com and www.fastretailing.com.
+
+                                        p.text.text--medium If you welcome new challenges, have a drive for success, and embrace the responsibility of leadership—then you belong at UNIQLO!
+
+                                        p.text.text--medium Dynamic Sales Associates Needed for our Northshore Mall location!!
+
+                                        h6 Position Overview:
+
+                                        p.text.text--medium The Sales Associate is the customer service specialist of the store. They are responsible for exceeding customer expectations by listening to customer needs, finding products that meet their needs, providing in depth product information about the goods they are interested in and closing the sale.
+
+                                        h6 Key Responsibilities:
+                                        ul.text.text--medium.list.list--no-marked
+                                            li li Meet and exceed sales goals
+                                            li Maintain brand and operational standards (visual, cleanliness, etc.)
+                                            li Manage customer needs and exceed expectations by utilizing the UNIQLO service standard, following the UNIQLO Fundamental Principles and saying the 6 standard phrases.
+                                            li Be knowledgeable of fitting room standards and assist when needed
+                                            li Act as cashier when required by following cashier protocol
+                                            li Process shipment and ensure all merchandise is represented on the floor in full size run
+                                            li Assist management to identify and resolve issues in the store
+                                            li Provide product and brand knowledge to customers
+                                            li Follow all company policy and procedures & notify management of any infractions
+                                            li Assist with special projects as assigned by management Requirements:
+
+                                        h6 High School Diploma or GED
+                                        ul.text.text--medium.list.list--no-marked
+
+                                            li Strong communication skills
+                                            li Ability to calculate figures and amounts such as discounts and percentages
+                                            li Ability to work a flexible schedule that meets the business needs, including evenings and weekends
+                                            li As an Equal Opportunity Employer, Fast Retailing does not discriminate against applicants or employees because of race, color, creed, religion, sex, national origin, veteran status, disability, age, citizenship, marital or domestic/civil partnership status, sexual orientation, gender identity or expression or because of any other status or condition protected by applicable federal, state or local law.
+
+                                            li Posting Notes: Boston || Massachusetts (US-MA) || United States (US) || Store Staff || Store Operations || UNIQLO || EX:OUT || UNIQLO ||
+
+                                            li Strong communication skills
+                                            li Ability to calculate figures and amounts such as discounts and percentages
+                                            li Ability to work a flexible schedule that meets the business needs, including evenings and weekends
+                                            li As an Equal Opportunity Employer, Fast Retailing does not discriminate against applicants or employees because of race, color, creed, religion, sex, national origin, veteran status, disability, age, citizenship, marital or domestic/civil partnership status, sexual orientation, gender identity or expression or because of any other status or condition protected by applicable federal, state or local law.
+
+                                            li Posting Notes: Boston || Massachusetts (US-MA) || United States (US) || Store Staff || Store Operations || UNIQLO || EX:OUT || UNIQLO ||
+
+                                .catalog-about(id='4')
+                                    .catalog-about__head
+                                        .catalog-about__title
+                                            .catalog-about__logo
+                                                img(src='../assets/images/content/uni@2x.png')
+                                            h4 Recovery Admin Support (Collection)
+                                        .catalog-about__attr
+                                            p.text.text--label.indent-r--s UOB, Phuket
+                                            p.text.text--label.indent-r--s Project work
+                                            p.text.text--label.indent-r--s 3 day
+                                    .catalog-about__block.catalog-about__block--narrow
+                                        .catalog-about__salary.indent-r--m
+                                            p.h4.catalog-about__salary-local 23 000 THb
+                                            p.h6.catalog-about__salary-usd ~816 Usd
+                                        .button.button--view--primary.indent-r--m(data-ipopup='signIn') Send request
+                                        .catalog-about__fav.js-make-fav
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22"><path class="catalog__fav-icon" d="M12 21.2972c1.1275-1.1107 3.6212-3.5484 4.2353-4.1585 1.6378-1.627 2.813-2.8617 3.7957-4.0124C22.3751 10.3813 23.5 8.21 23.5 6.192 23.5 2.7656 20.9696.51 17.726.51c-2.1823 0-4.1753 1.0705-5.294 2.9898l-.4321.7413-.432-.7414C10.445 1.5718 8.4573.5 6.281.5 3.0374.5.5 2.7668.5 6.192c0 2.018 1.1249 4.1894 3.469 6.9343.9827 1.1507 2.1579 2.3854 3.7957 4.0124.6141.61 3.1078 3.0478 4.2353 4.1585z" fill-rule="nonzero" stroke="#979797" fill="none"/></svg>
+                                    .catalog-about__text
+                                        p.text.text--medium UNIQLO is a brand of Fast Retailing Co., Ltd., a leading global Japanese retail holding company that designs, manufactures and sells clothing under seven main brands: Comptoir des Cotonniers, GU, Helmut Lang, J Brand, Princesse tam.tam, Theory, and UNIQLO. With global sales of approximately 1.14 trillion yen for the 2013 fiscal year ending August 31, 2013 (US $11.62 billion, calculated in yen using the end of August 2013 rate of $1 = 98.36 yen), Fast Retailing is one of the world’s largest apparel retail companies, and UNIQLO is Japan’s leading specialty retailer.
+
+                                        p.text.text--medium UNIQLO continues to open large-scale stores in some of the world's most important cities and locations, as part of its ongoing efforts to solidify its status as a truly global brand. Today the company has a total of more than 1,200 stores in 14 markets worldwide including Japan, China, France, Hong Kong, Indonesia, Malaysia, Philippines, Russia, Singapore, South Korea, Taiwan, Thailand, U.K. and U.S. In addition, Grameen UNIQLO, a social business established in Bangladesh in September 2010, opened its two first stores in Dhaka in July 2013. UNIQLO operates an integrated business model under which it designs, manufactures, markets and sells high-quality, casual apparel. The company believes that truly great clothes should be supremely comfortable, feature universal designs, are of high quality and offer a superb fit to everyone who wears them.
+
+                                        p.text.text--medium With a corporate statement committed to changing clothes, changing conventional wisdom and change the world, Fast Retailing is dedicated to creating great clothing with new and unique value to enrich the lives of people everywhere. For more information about UNIQLO and Fast Retailing, please visit www.uniqlo.com and www.fastretailing.com.
+
+                                        p.text.text--medium If you welcome new challenges, have a drive for success, and embrace the responsibility of leadership—then you belong at UNIQLO!
+
+                                        p.text.text--medium Dynamic Sales Associates Needed for our Northshore Mall location!!
+
+                                        h6 Position Overview:
+
+                                        p.text.text--medium The Sales Associate is the customer service specialist of the store. They are responsible for exceeding customer expectations by listening to customer needs, finding products that meet their needs, providing in depth product information about the goods they are interested in and closing the sale.
+
+                                        h6 Key Responsibilities:
+                                        ul.text.text--medium.list.list--no-marked
+                                            li li Meet and exceed sales goals
+                                            li Maintain brand and operational standards (visual, cleanliness, etc.)
+                                            li Manage customer needs and exceed expectations by utilizing the UNIQLO service standard, following the UNIQLO Fundamental Principles and saying the 6 standard phrases.
+                                            li Be knowledgeable of fitting room standards and assist when needed
+                                            li Act as cashier when required by following cashier protocol
+                                            li Process shipment and ensure all merchandise is represented on the floor in full size run
+                                            li Assist management to identify and resolve issues in the store
+                                            li Provide product and brand knowledge to customers
+                                            li Follow all company policy and procedures & notify management of any infractions
+                                            li Assist with special projects as assigned by management Requirements:
+
+                                        h6 High School Diploma or GED
+                                        ul.text.text--medium.list.list--no-marked
+
+                                            li Strong communication skills
+                                            li Ability to calculate figures and amounts such as discounts and percentages
+                                            li Ability to work a flexible schedule that meets the business needs, including evenings and weekends
+                                            li As an Equal Opportunity Employer, Fast Retailing does not discriminate against applicants or employees because of race, color, creed, religion, sex, national origin, veteran status, disability, age, citizenship, marital or domestic/civil partnership status, sexual orientation, gender identity or expression or because of any other status or condition protected by applicable federal, state or local law.
+
+                                            li Posting Notes: Boston || Massachusetts (US-MA) || United States (US) || Store Staff || Store Operations || UNIQLO || EX:OUT || UNIQLO ||
+
+                                            li Strong communication skills
+                                            li Ability to calculate figures and amounts such as discounts and percentages
+                                            li Ability to work a flexible schedule that meets the business needs, including evenings and weekends
+                                            li As an Equal Opportunity Employer, Fast Retailing does not discriminate against applicants or employees because of race, color, creed, religion, sex, national origin, veteran status, disability, age, citizenship, marital or domestic/civil partnership status, sexual orientation, gender identity or expression or because of any other status or condition protected by applicable federal, state or local law.
+
+                                            li Posting Notes: Boston || Massachusetts (US-MA) || United States (US) || Store Staff || Store Operations || UNIQLO || EX:OUT || UNIQLO ||
+                                .inner-popup#apply
+                                    .inner-popup__overlay
+                                    .inner-popup__container
+                                        .inner-popup__content
+                                            .inner-popup__closer.js-ipopup-close
+                                                .icon-plus
+                                                    .icon-plus__icon
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><path d="M9.9497 1.4645L6.4142 5l3.5355 3.5355-1.4142 1.4142L5 6.4142 1.4645 9.9497.0503 8.5355 3.5858 5 .0503 1.4645 1.4645.0503 5 3.5858 8.5355.0503l1.4142 1.4142z" fill="#C8D0D8" fill-rule="evenodd"/></svg>
+                                                    .icon-plus__block.indent-l--3xs
+                                                        p.text.text--medium.text--label Close
+                                            .apply
+                                                .apply__row
+                                                    .apply__title Apply for job
+                                                .apply__row
+                                                    .apply__vacancy
+                                                        .apply__vacancy-top
+                                                            .apply__vacancy-img
+                                                            .apply__vacancy-title
+                                                                |Recovery Admin Support (Collection)
+                                                        .apply__vacancy-block
+                                                            .apply__vacancy-location UOB, Phuket
+                                                            .apply__vacancy-work Project work
+                                                            .apply__vacancy-time 3 day
+                                                        .apply__vacancy-salary
+                                                            .apply__vacancy-salary-local 23 000 THb
+                                                            .apply__vacancy-salary-usd ~816 Usd
+                                                .apply__row
+                                                    .apply__employee
+                                                        .apply__employee-img
+                                                        .apply__employee-info
+                                                            .apply__employee-info-item
+                                                                .apply__employee-info-item-title Name
+                                                                .apply__employee-info-item-desc Kotov Ilya
+                                                            .apply__employee-info-item
+                                                                .apply__employee-info-item-title City
+                                                                .apply__employee-info-item-desc Saint-Petersburg, Russia
+                                                            .apply__employee-info-item
+                                                                .apply__employee-info-item-title Email
+                                                                .apply__employee-info-item-desc ikotov@cakelabs.ru
+                                                        a.icon-plus.indent-r--s.apply__employee-edit
+                                                            .icon-plus__icon
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"><path d="M13.6442 6.5068l-.342-.0821c-.4654-.1096-.8485-.4521-1.0264-.8905v-.0137c-.1916-.452-.1505-.9452.0958-1.3698l.1779-.3014c.1094-.178.082-.411-.0684-.5616l-.7664-.7672c-.1505-.1506-.3831-.178-.561-.0684l-.301.178a1.5076 1.5076 0 0 1-1.3685.096h-.0137c-.4379-.1782-.78-.5617-.8894-1.0275l-.0822-.3424C8.4442 1.1507 8.2663 1 8.0474 1H6.9526c-.2052 0-.3968.1507-.4515.3562l-.0822.3424c-.1094.4658-.4515.8493-.8894 1.0274h-.0137c-.4516.1918-.9442.1507-1.3684-.0959l-.301-.178c-.178-.1096-.4106-.0822-.5611.0684l-.7664.7672c-.1505.1507-.1778.3835-.0684.5616l.178.3014a1.512 1.512 0 0 1 .0957 1.3698v.0137c-.1779.4384-.561.7809-1.0263.8905l-.3421.0821C1.1505 6.5616 1 6.7398 1 6.959v1.0822c0 .2055.1505.3973.3558.452l.342.0822c.4654.1096.8485.4521 1.0264.8905v.0137c.1916.452.1505.9452-.0958 1.3698l-.1779.3014c-.1094.178-.082.411.0684.5616l.7664.7672c.1505.1506.3831.178.561.0684l.301-.178a1.5076 1.5076 0 0 1 1.3685-.096h.0137c.4379.1782.78.5617.8894 1.0275l.0822.3424c.0547.2055.2326.3562.4515.3562h1.0948c.2052 0 .3968-.1507.4515-.3562l.0822-.3424c.1094-.4658.4515-.8493.8894-1.0274h.0137c.4516-.1918.9442-.1507 1.3684.0959l.301.178c.178.1096.4106.0822.5611-.0684l.7664-.7672c.1505-.1507.1778-.3835.0684-.5616l-.178-.3014a1.512 1.512 0 0 1-.0957-1.3698v-.0137c.1779-.4384.561-.7809 1.0263-.8905l.3421-.0821c.2053-.0548.3558-.233.3558-.4521V6.9452c0-.2055-.1505-.3973-.3558-.4384zM7.5 10C6.1228 10 5 8.8772 5 7.5S6.1228 5 7.5 5 10 6.1228 10 7.5 8.8772 10 7.5 10z" fill-rule="nonzero" stroke="#C8D0D8" fill="none"/></svg>
+                                                            .icon-plus__block.indent-l--3xs.text.text--medium.text--label Edit
+                                                .apply__row
+                                                    .apply__form
+                                                        .apply__form-label Cover letter
+                                                        textarea.apply__form-textarea
+                                                    .apply__btn-wrap
+                                                        a(href="#").apply__btn + Add a cover letter
+                                                .apply__row
+                                                    button.button.button--view--primary.apply__request(data-ipopup='thanks') Send request
+                                .inner-popup#thanks
+                                    .inner-popup__overlay
+                                    .inner-popup__container
+                                        .inner-popup__content
+                                            .inner-popup__closer.js-ipopup-close
+                                                .icon-plus
+                                                    .icon-plus__icon
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><path d="M9.9497 1.4645L6.4142 5l3.5355 3.5355-1.4142 1.4142L5 6.4142 1.4645 9.9497.0503 8.5355 3.5858 5 .0503 1.4645 1.4645.0503 5 3.5858 8.5355.0503l1.4142 1.4142z" fill="#C8D0D8" fill-rule="evenodd"/></svg>
+                                                    .icon-plus__block.indent-l--3xs
+                                                        p.text.text--medium.text--label Close
+                                            .thanks
+                                                .thanks__inner
+                                                    .thanks__title Thank you!
+                                                    .thanks__txt Your application has been sent, you can see it in your account, in the "Responses" section
+                                                    a(href="#").thanks__button.button.button--view--primary Continue search
+                                .inner-popup#signIn
+                                    .inner-popup__overlay
+                                    .inner-popup__container
+                                        .inner-popup__content
+                                            .sign-in-popup
+                                                form.form.js-validate.js-form
+                                                    .sign-in-popup__block.sign-in-popup__block--has-border
+                                                        .form__item
+                                                            label.form__label(for='sign-in-email')
+                                                                span Email
+                                                                span.form__err.js-err Вашие данные не правильно! Вводите правильные данные
+                                                            include ../items/input
+                                                            +input('email', '', 'input--width--available', 'sign-in-email', 'email')
+                                                        .form__item
+                                                            label.form__label(for='sign-in-pwd')
+                                                                span Password
+                                                                //- span.form__err.is-visible#sign-in-pwd-err Password error
+                                                            include ../items/input
+                                                            +input('password', '', 'input--width--available', 'sign-in-pwd', 'password')
+                                                        .sign-in-popup__submit
+                                                            button.button.button--view--primary(type='submit') Sign in
+                                                            p.text.text--small.sign-in-popup__policy By clicking Login, you confirm that you have read and agree to the Terms of Service, and our Cookie Policy and Privacy Policy
+                                                    .sign-in-popup__block.sign-in-popup__block--has-border
+                                                        .sign-in-popup__social
+                                                            button.button.button--view--secondary.indent-r--2xs
+                                                                .icon-plus.icon-plus--vertical-align--center
+                                                                    .icon-plus__block Sign in with Google
+                                                                    .icon-plus__icon.indent-l--2xs
+                                                                        <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g fill-rule="nonzero" fill="none"><path d="M3.9892 10.8776l-.6266 2.339-2.29.0485C.3882 11.9957 0 10.5434 0 9c0-1.4924.363-2.8998 1.0063-4.139h.0005l2.0388.3738.8931 2.0265A5.3498 5.3498 0 0 0 3.6499 9a5.327 5.327 0 0 0 .3393 1.8776z" fill="#FBBB00"/><path d="M17.8427 7.3187A9.0097 9.0097 0 0 1 18 9a9.0169 9.0169 0 0 1-.1968 1.8791c-.4381 2.0631-1.583 3.8646-3.1688 5.1394l-.0005-.0005-2.568-.131-.3634-2.2688c1.0523-.6171 1.8747-1.583 2.3079-2.739H9.1979V7.3186h8.6448z" fill="#518EF8"/><path d="M14.6339 16.018l.0005.0005C13.092 17.2582 11.1328 18 9 18c-3.4274 0-6.4073-1.9157-7.9274-4.7349l2.9166-2.3874C4.7492 12.906 6.706 14.35 9 14.35c.986 0 1.9098-.2666 2.7025-.7319l2.9314 2.3998z" fill="#28B446"/><path d="M14.7447 2.072L11.829 4.459C11.0087 3.946 10.0389 3.65 9 3.65c-2.346 0-4.3393 1.5101-5.0613 3.6113L1.0068 4.861h-.0005C2.5042 1.973 5.5216 0 9 0c2.1837 0 4.186.7779 5.7447 2.072z" fill="#F14336"/></g></svg>
+        .pagination
+            .wrapper
+                ul.pagination__inner
+                    li.pagination__navigation.is-inactive First
+                    li.pagination__item 14
+                    li.pagination__item 15
+                    li.pagination__item.is-active 16
+                    li.pagination__item 17
+                    li.pagination__item 18
+                    li.pagination__item 19
+                    li.pagination__item 20
+                    li.pagination__item 21-35
+                    li.pagination__navigation Next

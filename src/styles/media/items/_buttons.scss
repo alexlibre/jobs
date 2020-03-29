@@ -1,0 +1,51 @@
+@include respond(1280) {
+  .button {
+    &--view--primary {
+      padding: 15px 18px 14px;
+      font-size: 12px;
+      line-height: 14px;
+    }
+    &--view--secondary {
+      padding: 15px 18px 14px;
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    &--view--ternary {
+      font-size: 12px;
+      padding: 14px 18px 13px 17px;
+    }
+
+    &--view--link {
+      padding: 15px;
+    }
+  }
+}
+
+@include respond(768) {
+  .button {
+    &--view--primary {
+      padding: 13px 15px 12px;
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+    &--view--secondary {
+      font-size: 11px;
+      padding: 12px 15px 11px 16px;
+    }
+
+    &--view--ternary {
+      font-size: 10px;
+      padding: 12px 15px;
+    }
+
+    &--view--link {
+      font-size: 10px;
+    }
+
+    &--view--ghost {
+      padding: 10px 15px;
+    }
+  }
+}

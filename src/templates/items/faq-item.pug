@@ -1,0 +1,5 @@
+mixin faq-item(question, answer, collapse)
+    li.faq__item
+        a.faq__question.js-collapse-btn(class={'is-collapsed': collapse === true})= question
+        .faq__collapse.js-collapse(class={'is-collapsed': collapse === true})
+            p.faq__answer.text.text--medium= answer

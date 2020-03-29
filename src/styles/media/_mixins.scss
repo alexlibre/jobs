@@ -1,0 +1,17 @@
+@mixin respond($size) {
+	@media screen and (max-width: $size - 1px) {
+		@content;
+	}
+}
+
+@mixin respond-min($size) {
+	@media screen and (min-width: $size) {
+		@content;
+	}
+}
+
+@mixin respond-h($size) {
+	@media screen and (max-height: $size) {
+		@content;
+	}
+}

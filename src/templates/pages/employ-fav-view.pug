@@ -1,0 +1,168 @@
+extends ../layout-emp
+include ../items/cat-card
+
+block title
+
+    title Employ fav view
+
+block content
+    .content__inner--gray
+
+        .inner-page.inner-page--no-padding
+            .inner-page__sidebar.inner-page__sidebar--lg.inner-page__sidebar--mob
+                .sidebar
+                    .sidebar__item
+                        .e-balance
+                            .e-balance__left
+                                .e-balance__num 2500
+                                .e-balance__txt Balance (Thb)
+                            .e-balance__right
+                                button.button.button--view--primary.e-balance__btn Pay
+                    .sidebar__item
+                        .sidebar__item-row
+                            .e-vacancy
+                                .e-vacancy__num 12
+                                .e-vacancy__txt Vacancies
+                                a(href="#").e-vacancy__go
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 10 17"><g><g><path fill="none" stroke="#f80021" stroke-miterlimit="50" d="M1 .5v0l7.836 7.836v0L1 16.172v0"/></g></g></svg>
+
+                        .sidebar__item-row
+                            .e-days
+                                .e-days__left
+                                    .e-days__num 23
+                                    .e-days__txt Days remained
+                                .e-days__right
+                                    button.button.button--view--ternary.e-days__btn Extend
+                    .sidebar__item
+                        include ../components/sidebar-menu
+            button.button.button--view--primary.inner-page__btn.inner-page__btn--disable.js-btn-mob Menu
+            .inner-page__content.inner-page__content--md.inner-page__content--fav.inner-page__content--fav-view
+                .inner-page__content-inner
+                    .catalog-about(id='1').catalog-about--fav-view
+                        .catalog-about__head
+                            .catalog-about__title.catalog-about__title--horizontally
+                                | Chief executive officer
+                                .catalog-about__time.text.text--small.text--label 3 day
+                            .catalog-about__location.text--small.text--label UOB, Phuket
+
+                        .catalog-about__block.catalog-about__block--horizontally.catalog-about__block--big
+                            .catalog-about__row.catalog-about__row--align--center
+                                .catalog-about__salary
+                                    p.h6 23 000 THb
+                                    p.text.text--label ~816 Usd
+                                .catalog-about__experience
+                                    p.h6 33ye, 11 mth
+                                    p.text.text--label Experience
+                                button.button--view--secondary.indent-r--2xs.catalog-about__request.cat-card__request Send request
+                        .catalog-about__block.catalog-about__block--big.catalog-about__block--vertically
+                            .catalog-about__profile
+                                .catalog-about__img
+                                    img(src="../assets/images/content/employee-avatar.png", alt="alt").catalog-about__img-file
+                                .catalog-about__info.indent-l--2xs
+                                    .catalog-about__title Kauns Saninking On Ayutthaya
+                                    .catalog-about__row
+                                        .catalog-about__block-top-block-item
+                                            p.h6 23 years
+                                            p.text.text--label 8 june 1996
+                                        .catalog-about__block-top-block-item
+                                            p.h6 A, B, C
+                                            p.text.text--label Drive license
+                                    .catalog-about__row
+                                        .catalog-about__block-top-block-item
+                                            p.text.text--label Female
+                                        .catalog-about__block-top-block-item
+                                            p.text.text--label Tailand, Pattaya
+                            .catalog-about__row.indent-t--m
+                                p.h6.catalog-about__mobile +66 38 654-321
+                                p.h6.catalog-about__mail kasem1996@gmail.com
+                        .catalog-about__block.catalog-about__block--vertically.catalog-about__block--big
+                            .catalog-about__title.catalog-about__title--mb Skills
+                            p.catalog-about__txt
+                                |Highly motivated individual with extensive business management background, Skilled in developing and executing networking strategies, promotional and advertisement work, computer and spread sheet, multi tasking and client relationships. I am looking to be a team player in a fast paced environment where I can utilize the skillsI have.
+                        .catalog-about__block.catalog-about__block--big.catalog-about__block--vertically
+                            .catalog-about__title.catalog-about__title--mb About
+                            p.catalog-about__txt
+                                |Public Speaking (Less than 1 year), Management (Less than 1 year), Fundraising (Less than 1 year), Operations (Less than 1 year), Strategic Planning (Less than 1 year), Team Building (Less than 1 year), budget (Less than 1 year), Regulatory (Less than 1 year)
+                        .catalog-about__block.catalog-about__block--big.catalog-about__block--vertically
+                            .catalog-about__title.catalog-about__title--mb Language proficiency
+                            .catalog-about__row
+                                .catalog-about__lang
+                                    p.text.text--small Native
+                                    p.h5 Thai
+                                .catalog-about__lang
+                                    p.text.text--small Intermediate
+                                    p.h5 English
+                        .catalog-about__block.catalog-about__block--big.catalog-about__block--vertically
+                            .catalog-about__title.catalog-about__title--mb Education
+                            .catalog-about__content
+                                .catalog-about__block-date
+                                    p.text.text--small January 2010
+                                    p.text.text--small - January 2013
+                                h5.h5
+                                    |Associate in Business Management
+                                .catalog-about__block-location
+                                    p.h6 Brunswick, GA
+
+                        .catalog-about__block.catalog-about__block--big.catalog-about__block--vertically
+                            .catalog-about__title.catalog-about__title--mb Experience
+                            .catalog-about__content
+                                .catalog-about__block-date
+                                    p.text.text--small April 2017
+                                    p.text.text--label.text--label-sm - to the present
+                                h5.h5
+                                    |Management Company Agroholding-Istra LLC, First Freight Company OJSC
+                                .catalog-about__block-location
+                                    p.h6 Brunswick, GA
+                                p.catalog-about__txt
+                                    |UNIQLO is a brand of Fast Retailing Co., Ltd., a leading global Japanese retail holding company that designs, manufactures and sells clothing under seven main brands: Comptoir des Cotonniers, GU, Helmut Lang, J Brand, Princesse tam.tam, Theory, and UNIQLO. With global sales of approximately 1.14 trillion yen for the 2013 fiscal year ending August 31, 2013 (US $11.62 billion, calculated in yen using the end of August 2013 rate of $1 = 98.36 yen), Fast Retailing is one of the world’s largest apparel retail companies, and UNIQLO is Japan’s leading specialty retailer.
+                            .catalog-about__content
+                                .catalog-about__block-date
+                                    p.text.text--small May 2014
+                                    p.text.text--label.text--label-sm - April 2017
+                                h5.h5
+                                    |Management Company Agroholding-Istra LLC, First Freight Company OJSC
+                                .catalog-about__block-location
+                                    p.h6 Brunswick, GA
+                                p.catalog-about__txt
+                                    |UNIQLO is a brand of Fast Retailing Co., Ltd., a leading global Japanese retail holding company that designs, manufactures and sells clothing under seven main brands: Comptoir des Cotonniers, GU, Helmut Lang, J Brand, Princesse tam.tam, Theory, and UNIQLO. With global sales of approximately 1.14 trillion yen for the 2013 fiscal year ending August 31, 2013 (US $11.62 billion, calculated in yen using the end of August 2013 rate of $1 = 98.36 yen), Fast Retailing is one of the world’s largest apparel retail companies, and UNIQLO is Japan’s leading specialty retailer.
+                            .catalog-about__content
+                                .catalog-about__block-date
+                                    p.text.text--small October 2007
+                                    p.text.text--label.text--label-sm - May 2014
+                                h5.h5
+                                    |Management Company Agroholding-Istra LLC, First Freight Company OJSC
+                                .catalog-about__block-location
+                                    p.h6 Brunswick, GA
+                                p.catalog-about__txt
+                                    |UNIQLO is a brand of Fast Retailing Co., Ltd., a leading global Japanese retail holding company that designs, manufactures and sells clothing under seven main brands: Comptoir des Cotonniers, GU, Helmut Lang, J Brand, Princesse tam.tam, Theory, and UNIQLO. With global sales of approximately 1.14 trillion yen for the 2013 fiscal year ending August 31, 2013 (US $11.62 billion, calculated in yen using the end of August 2013 rate of $1 = 98.36 yen), Fast Retailing is one of the world’s largest apparel retail companies, and UNIQLO is Japan’s leading specialty retailer.
+                        .catalog-about__block.catalog-about__block--big.catalog-about__block--vertically
+                            .catalog-about__title.catalog-about__title--mb Sertificates/portfolio
+                            .catalog-about__portfolio
+                                .catalog-about__portfolio-item
+                                    .catalog-about__portfolio-item-img
+                                        img(src="../assets/images/content/p-1.png", alt="alt")
+                                    .catalog-about__portfolio-item-img-name
+                                        |cow.jpg
+                                .catalog-about__portfolio-item
+                                    .catalog-about__portfolio-item-img
+                                        img(src="../assets/images/content/p-2.png", alt="alt")
+                                    .catalog-about__portfolio-item-img-name
+                                        |table.pdf
+                                .catalog-about__portfolio-item
+                                    .catalog-about__portfolio-item-img
+                                        img(src="../assets/images/content/p-2.png", alt="alt")
+                                    .catalog-about__portfolio-item-img-name
+                                        |table.pdf
+                                .catalog-about__portfolio-item
+                                    .catalog-about__portfolio-item-img
+                                        img(src="../assets/images/content/p-2.png", alt="alt")
+                                    .catalog-about__portfolio-item-img-name
+                                        |table.pdf
+                                .catalog-about__portfolio-item
+                                    .catalog-about__portfolio-item-img
+                                        img(src="../assets/images/content/p-2.png", alt="alt")
+                                    .catalog-about__portfolio-item-img-name
+                                        |table.pdf
+                            a(href="#").catalog-about__show-all.js-view-all
+                                |+ View all
+                                span.catalog-about__portfolio-count (23)

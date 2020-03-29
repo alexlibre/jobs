@@ -1,0 +1,17 @@
+.e-vacancy {
+    position: relative;
+
+    &__num {
+        @include title;
+    }
+
+    &__txt {
+        @include txt;
+    }
+
+    &__go {
+        position: absolute;
+        bottom: 0;
+        left: 82px;
+    }
+}

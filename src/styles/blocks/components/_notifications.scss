@@ -1,0 +1,17 @@
+.notifications {
+    padding-left: 160px;
+    &__item {
+        margin-bottom: 50px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.notification {
+    &__text {
+        max-width: 335px;
+        padding-left: 18px;
+        margin-top: $size-2xs;
+    }
+}

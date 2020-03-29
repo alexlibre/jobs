@@ -1,0 +1,53 @@
+extends ../layout-emp
+include ../items/cat-card
+include ../items/checkbox
+
+block title
+    title seeker notification
+
+block content
+    .content__inner--gray
+        .inner-page.inner-page--no-padding
+            aside.inner-page__sidebar.inner-page__sidebar--lg.inner-page__sidebar--mob.inner-page__sidebar--seeker
+                .sidebar
+                    .sidebar__item
+                        include ../components/profile-complete
+                    .sidebar__item
+                        ul.side-nav
+                            li.side-nav__item
+                                a.side-nav__title.link.link--big.link--collapse.is-collapsed.js-collapse-btn My resume
+                                ul.side-nav__collapse.js-collapse.is-collapsed
+                                    li.side-nav__inner-item
+                                        a.side-nav__inner-link.link.link--medium Job Spotter Account
+                                    li.side-nav__inner-item
+                                        a.side-nav__inner-link.link.link--medium.is-active How to Use Job
+                                    li.side-nav__inner-item
+                                        a.side-nav__inner-link.link.link--medium Spotter
+                                    li.side-nav__inner-item
+                                        a.side-nav__inner-link.link.link--medium Job Spotter Overview
+                            li.side-nav__item
+                                a.side-nav__title.link.link--big.link--collapse.is-collapsed.js-collapse-btn My vacancies
+                                ul.side-nav__collapse.is-collapsed.js-collapse
+                                    li.side-nav__inner-item
+                                        a.side-nav__inner-link.link.link--medium Favorite
+                                    li.side-nav__inner-item
+                                        a.side-nav__inner-link.link.link--medium My request
+                                    li.side-nav__inner-item
+                                        a.side-nav__inner-link.link.link--medium Feedback
+                                    li.side-nav__inner-item
+                                        a.side-nav__inner-link.link.link--medium Viewed my resume
+                            li.side-nav__item
+                                a.side-nav__title.link.link--big.link--collapse.js-collapse-btn.is-collapsed Notifications
+            button.button.button--view--primary.inner-page__btn.inner-page__btn--disable.js-btn-mob Menu
+            .inner-page__content.inner-page__content--md.inner-page__content--seeker
+                .inner-page__content-inner
+                    .inner-page__left
+                        .notifications
+                            .notifications__item
+                                .notification
+                                    +checkbox('Email notifications', 'notify-email', false)
+                                    p.notification__text.text.text--medium Monitoring and renewal of contracts with existing customers. Identifying additional needs and advising on new Veeam products. Formation of commercial offers and ...
+                            .notifications__item
+                                .notification
+                                    +checkbox('Phone notifications', 'notify-phone', false)
+                                    p.notification__text.text.text--medium Monitoring and renewal of contracts with existing customers. Identifying additional needs and advising on new Veeam products. Formation of commercial offers and ...

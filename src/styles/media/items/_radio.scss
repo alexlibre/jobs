@@ -1,0 +1,8 @@
+@include respond(768) {
+  .radio {
+    &__label {
+      font-size: 11px;
+      line-height: 14px;
+    }
+  }
+}

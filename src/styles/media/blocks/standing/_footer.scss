@@ -1,0 +1,91 @@
+@include respond(1280) {
+    .footer {
+        &__inner {
+            margin: 0;
+            padding: 50px 0;
+        }
+        &__subscription {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border: none;
+            &-form {
+                margin-top: 30px;
+            }
+        }
+        &__links {
+            width: 100%;
+            margin: 86px 0 0 0;
+            padding: 0;
+        }
+        &__menu {
+            margin-bottom: 20px;
+        }
+        & .subscription {
+            &__submit {
+                margin-left: 8px;
+            }
+            .input {
+                max-width: 255px;
+                &__control {
+                    min-width: 255px;
+                }
+            }
+        }
+    }
+}
+
+@include respond(768) {
+    .footer {
+        &__inner {
+            padding: 40px 0 25px;
+        }
+        &__subscription {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &-form {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 25px;
+            }
+        }
+        &__links {
+            margin: 54px 0 0 0;
+        }
+        &__menu {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+            .link {
+                margin-bottom: 12px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &__copyrights {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__made-by {
+            order: -1;
+            margin-bottom: 15px;
+        }
+        &__copy {
+            font-size: 11px;
+        }
+        h2 {
+            text-align: center;
+        }
+        & .subscription {
+            &__submit {
+                margin-top: 10px;
+                margin-left: 0;
+            }
+            & .input__control {
+                min-width: 230px;
+            }
+        }
+    }
+}

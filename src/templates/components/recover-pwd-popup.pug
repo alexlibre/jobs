@@ -1,0 +1,12 @@
+.sign-in-popup
+    form.form
+        .sign-in-popup__block.sign-in-popup__block--has-border
+            .form__item
+                label.form__label(for='recover-email') Email
+                include ../items/input
+                +input('email', '', 'input--width--available', 'recover-email')
+            .sign-in-popup__submit
+                button.button.button--view--primary.js-send-recovery(type="submit") Send
+                p.text.text--small.sign-in-popup__policy We'll send you a link to change your password. If you still need help, visit our <a class="link link--small">Help Center</>
+        .sign-in-popup__block
+            a.link.link--medium.indent-r-15.js-back-to-sign-in ← Back to sign in

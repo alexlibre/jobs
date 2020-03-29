@@ -1,0 +1,18 @@
+@include respond(1280) {
+  .popup {
+    width: 505px;
+  }
+}
+
+@include respond(768) {
+  .popup {
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 100px 30px;
+
+    &__container {
+      padding: 0;
+    }
+  }
+}

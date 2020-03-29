@@ -1,0 +1,65 @@
+@include respond(1280) {
+  .input {
+    $i: &;
+
+    &--view--default {
+      #{$i}__control {
+        height: 100%;
+        padding: 13px 20px 13px 20px;
+        &::placeholder {
+          font-size: 12px;
+        }
+      }
+    }
+
+    &--has-icon {
+      min-width: 248px;
+      padding: 0 15px;
+      #{$i}__control {
+        padding: 13px 20px 13px 0;
+      }
+    }
+
+    &__box {
+      height: 100%;
+    }
+  }
+}
+
+@include respond(768) {
+  .input {
+    $i: &;
+    &--view--default {
+      & #{$i}__control {
+        padding: 12px 15px 13px 15px;
+        min-width: 225px;
+      }
+    }
+
+    &--has-icon {
+      #{$i}__control {
+        padding: 10px 15px 11px 4px;
+      }
+
+      &--search {
+        #{$i}__btn--search {
+          width: 12px;
+          height: 15px;
+        }
+      }
+
+      &--location {
+        #{$i}__btn--location {
+          width: 13px;
+          height: 16px;
+        }
+      }
+    }
+    &__control {
+      font-size: 10px;
+      &::placeholder {
+        font-size: 10px;
+      }
+    }
+  }
+}

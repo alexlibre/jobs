@@ -1,0 +1,93 @@
+.v-card {
+    position: relative;
+    box-shadow: $box-shadow-default;
+    border-radius: 10px;
+    border: 1px solid $color-white;
+    background-color: $color-white;
+
+    &__link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+	&__top {
+        padding: 22px 105px 36px 20px;
+        border-bottom: 1px solid $color-control-border;
+    }
+    
+	&__title {
+        @include title;
+    }
+    
+	&__content {
+        display: flex;
+    }
+    
+	&__content-col {
+        flex: 0 0 28%;
+        padding: 20px 20px 38px 20px;
+        display: flex;
+        border-right: 1px solid $color-control-border;
+
+        &:last-child {
+            border-right: 0;
+        }
+
+        &:nth-child(2) {
+            justify-content: center;
+        }
+
+        &--lg {
+            flex: 0 0 44%;
+            justify-content: flex-end;
+        }
+    }
+    
+	&__views {
+        margin-right: 20px;
+    }
+    
+    &__views-num,
+    &__respons-num,
+    &__remain-num {
+        @include title;
+    }
+    
+    &__views-txt,
+    &__respons-txt,
+    &__remain-txt {
+        @include txt;
+    }
+    
+	// &__respons {
+
+    // }
+    
+	// &__respons-num {
+
+    // }
+    
+	// &__respons-txt {
+
+    // }
+    
+	// &__remain {
+
+    // }
+    
+	// &__remain-num {
+
+    // }
+    
+	&__remain-txt {
+
+		&--red {
+
+		}
+    }
+    
+	
+}

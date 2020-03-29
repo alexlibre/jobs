@@ -1,0 +1,24 @@
+@include respond(1280) {
+  .e-balance {
+    &__num {
+      font-size: 21px;
+    }
+  }
+}
+
+@include respond(768) {
+  .e-balance {
+    &__left {
+      margin-right: 36px;
+    }
+
+    &__num {
+      margin-bottom: 0;
+      font-size: 17px;
+    }
+
+    &__txt {
+      font-size: 10px;
+    }
+  }
+}

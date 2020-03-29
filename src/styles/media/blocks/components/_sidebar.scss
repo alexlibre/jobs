@@ -1,0 +1,7 @@
+@include respond(1280) {
+  .sidebar {
+    &__item {
+      padding: 0;
+    }
+  }
+}

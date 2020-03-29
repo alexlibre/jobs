@@ -1,0 +1,53 @@
+extends ../layout-emp
+
+block title
+
+    title Employ letter templates
+
+block content
+    .content__inner--gray
+
+        .inner-page.inner-page--no-padding
+            .inner-page__sidebar.inner-page__sidebar--lg.inner-page__sidebar--mob
+                .sidebar
+                    .sidebar__item
+                        .e-balance
+                            .e-balance__left
+                                .e-balance__num 2500
+                                .e-balance__txt Balance (Thb)
+                            .e-balance__right
+                                button.button.button--view--primary.e-balance__btn Pay
+                    .sidebar__item
+                        .sidebar__item-row
+                            .e-vacancy
+                                .e-vacancy__num 12
+                                .e-vacancy__txt Vacancies
+                                a(href="#").e-vacancy__go
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 10 17"><g><g><path fill="none" stroke="#f80021" stroke-miterlimit="50" d="M1 .5v0l7.836 7.836v0L1 16.172v0"/></g></g></svg>
+
+                        .sidebar__item-row
+                            .e-days
+                                .e-days__left
+                                    .e-days__num 23
+                                    .e-days__txt Days remained
+                                .e-days__right
+                                    .button.button--view--ternary.e-days__btn Extend
+                    .sidebar__item
+                        include ../components/sidebar-menu
+            button.button.button--view--primary.inner-page__btn.inner-page__btn--disable.js-btn-mob Menu
+            .inner-page__content.inner-page__content--lg.inner-page__content--md
+                .inner-page__content-inner
+                    .inner-page__left.inner-page__left--lg
+                        .resume.resume--template
+                            .resume__block
+                                .resume__block-top
+                                    .resume__title TestTemplate-1
+                                    .resume__edit
+                                        span.resume__edit-txt Edit
+                                    .resume__delete.js-del-temp
+                                        span.resume__delete-txt Delete
+                                p.resume__block-txt
+                                    |Thai city on the east coast of the Gulf of Siam, known for its beaches. Back in the 1960s, it was a quiet fishing village, and now attracts thousands of tourists thanks to resort hotels, high-rise residential buildings, shopping centers, bars with pop shows and clubs open around the clock. Not far from the city on the hillside is the temple of Phra Yai with a gold statue of Buddha 18 meters high. Pattaya has several golf courses with a unique landscape, with a wonderful view of the bay.
+
+                            .resume__btn
+                                button.button.button--view--primary Add template

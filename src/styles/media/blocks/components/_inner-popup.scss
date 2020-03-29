@@ -1,0 +1,16 @@
+@include respond(1280) {
+  .inner-popup {
+    &__closer {
+
+    }
+  }
+}
+
+@include respond(1280) {
+  .inner-popup {
+    &__closer {
+        top: 25px;
+        right: 30px;
+    }
+  }
+}

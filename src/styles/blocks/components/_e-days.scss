@@ -1,0 +1,19 @@
+.e-days {
+    display: flex;
+
+    &__left {
+        margin-right: 12px;
+    }
+
+    &__num {
+        @include title;
+    }
+
+    &__txt {
+        @include txt;
+    }
+
+    &__right {}
+
+    &__btn {}
+}

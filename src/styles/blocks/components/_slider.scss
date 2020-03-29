@@ -1,0 +1,52 @@
+.slider {
+  &--full {
+    width: 100%;
+  }
+  &__track {
+
+  }
+  &__item {
+    
+    & img {
+        width: 100%;
+    }
+  }
+  &__controls {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__counter {
+    font-size: 35px;
+    line-height: 43px;
+    color: $color-base;
+    font-weight: 300;
+    min-width: 72px;
+    text-align: right;
+  }
+  &__prev {
+    cursor: pointer;
+    padding: $size-xs;
+    margin-right: $size-xs;
+    & svg path {
+      stroke: #362D4C;
+    }
+    transition: stroke .4s ease-in-out;
+    &:hover > svg path {
+      stroke: $color-accent
+    }
+  }
+  &__next {
+    cursor: pointer;
+    padding: $size-xs;
+    margin-left: $size-xs;
+    & svg path {
+      stroke: #362D4C;
+    }
+    transition: stroke .4s ease-in-out;
+    &:hover > svg path {
+      stroke: $color-accent
+    }
+  }
+}

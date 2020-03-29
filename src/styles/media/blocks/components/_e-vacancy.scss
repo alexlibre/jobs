@@ -1,0 +1,24 @@
+@include respond(1280) {
+  .e-vacancy {
+    &__num {
+      font-size: 21px;
+    }
+
+    &__go {
+      bottom: -4px;
+      left: 80px;
+    }
+  }
+}
+
+@include respond(768) {
+  .e-vacancy {
+    &__num {
+      font-size: 17px;
+    }
+
+    &__txt {
+      font-size: 10px;
+    }
+  }
+}

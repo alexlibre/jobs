@@ -1,0 +1,47 @@
+.side-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  &__item {
+    margin-bottom: $size-m;
+    max-width: 185px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  &__title {
+    &:hover {
+      color: $color-active;
+      border-color: rgba($color-active, 0.1);
+    }
+  }
+  &__collapse {
+    list-style-type: none;
+    padding: 15px 0 0 0;
+    margin: 0;
+    display: block;
+    &.is-collapsed {
+      display: none;
+    }
+  }
+  &__inner-item {
+    margin-bottom: $size-2xs;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  &__inner-link {
+    color: $color-base;
+    &.is-active {
+      color: $color-active;
+    }
+  }
+}
+
+/*
+ul.side-nav
+li.side-nav__item
+a.link.link--big.link--collapse My resume
+ul.side-nav__collapse
+li.side-nav__inner-item
+a.side-nav__inner-link.link.link--medium Job Spotter Account*/

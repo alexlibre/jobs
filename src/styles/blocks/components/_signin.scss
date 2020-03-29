@@ -1,0 +1,56 @@
+.sign-in {
+  overflow: visible;
+  &__popup,
+  &__recover-pwd,
+  &__recover-res {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+    display: none;
+    width: 530px;
+    transform: translateY(100%);
+    background: #fff;
+    padding: 10px 0 20px;
+    box-shadow: $box-shadow-default;
+
+    &.is-visible {
+      display: block;
+    }
+  }
+  &__btn {
+    transition: all 0.4s ease-in-out;
+  }
+  &__btn svg path {
+    fill: $color-active;
+    transition: all 0.4s ease-in-out;
+  }
+
+  &-popup {
+    &__block {
+      padding: 30px 50px;
+      &--has-border {
+        border-bottom: 1px solid $bg-bright-gray;
+      }
+    }
+    &__submit {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+    }
+
+    &__policy {
+      max-width: 270px;
+      margin-left: 20px;
+    }
+
+    &__social {
+      display: flex;
+    }
+  }
+
+  &__btn svg path {
+    fill: $color-active;
+    transition: all 0.4s ease-in-out;
+  }
+}

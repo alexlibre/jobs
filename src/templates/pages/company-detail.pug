@@ -1,0 +1,104 @@
+extends ../layout-emp
+include ../items/cat-card
+block title
+    title Company page detail
+
+block content
+    .container-full
+        .page__content
+            .container
+                .page__inner
+                    .company
+                        .company__header
+                            .company__logo
+                                picture
+                                    source(srcset='../assets/images/content/logo@2x.png 2x, ../assets/images/content/logo.png 1x')
+                                    img(src='../assets/images/content/logo.png', alt="7-Eleven")
+                            .company__title
+                                h3.company__name 7-Eleven
+                                h6.company__vacancies-num 241 vacancies
+
+                        .company__content
+                            .company__content-block
+                                .company__content-block-col
+                                    h3.company__about.indent-b--s About company
+                                    .company__about-text.text.text--medium
+                                        p UNIQLO is a brand of Fast Retailing Co., Ltd., a leading global Japanese retail holding company that designs, manufactures and sells clothing under seven main brands: Comptoir des Cotonniers, GU, Helmut Lang, J Brand, Princesse tam.tam, Theory, and UNIQLO. With global sales of approximately 1.14 trillion yen for the 2013 fiscal year ending August 31, 2013 (US $11.62 billion, calculated in yen using the end of August 2013 rate of $1 = 98.36 yen), Fast Retailing is one of the world’s largest apparel retail companies, and UNIQLO is Japan’s leading specialty retailer.
+
+                                        p UNIQLO continues to open large-scale stores in some of the world's most important cities and locations, as part of its ongoing efforts to solidify its status as a truly global brand. Today the company has a total of more than 1,200 stores in 14 markets worldwide including Japan, China, France, Hong Kong, Indonesia, Malaysia, Philippines, Russia, Singapore, South Korea, Taiwan, Thailand, U.K. and U.S. In addition, Grameen UNIQLO, a social business established in Bangladesh in September 2010, opened its two first stores in Dhaka in July 2013. UNIQLO operates an integrated business model under which it designs, manufactures, markets and sells high-quality, casual apparel. The company believes that truly great clothes should be supremely comfortable, feature universal designs, are of high quality and offer a superb fit to everyone who wears them.
+                                .company__content-block-col
+                                    aside.company__facts.text.text--medium
+                                        h6 Position Overview:
+                                        p The Sales Associate is the customer service specialist of the store. They are responsible for exceeding customer expectations by listening to customer needs, finding products that meet their needs, providing in depth product information about the goods they are interested in and closing the sale.
+                                        h6 Key Responsibilities:
+                                        ul.list.list--no-marked
+                                            li Meet and exceed sales goals
+                                            li Maintain brand and operational standards (visual, cleanliness, etc.)
+                                            li Manage customer needs and exceed expectations by utilizing the UNIQLO service standard, following the UNIQLO Fundamental Principles and saying the 6 standard phrases.
+                            .company__content-block
+                                .company__content-block-col
+
+                                    h3.indent-t--m.indent-b--s How much does UNIQLO pay their employees?
+
+                                    p UNIQLO is a brand of Fast Retailing Co., Ltd., a leading global Japanese retail holding company that designs, manufactures and sells clothing under seven main brands: Comptoir des Cotonniers, GU, Helmut Lang, J Brand, Princesse tam.tam, Theory, and UNIQLO. With global sales of approximately 1.14 trillion yen for the 2013 fiscal year ending August 31, 2013 (US $11.62 billion, calculated in yen using the end of August 2013 rate of $1 = 98.36 yen), Fast Retailing is one of the world’s largest apparel retail companies, and UNIQLO is Japan’s leading specialty retailer.
+
+                                    p UNIQLO continues to open large-scale stores in some of the world's most important cities and locations, as part of its ongoing efforts to solidify its status as a truly global brand. Today the company has a total of more than 1,200 stores in 14 markets worldwide including Japan, China, France, Hong Kong, Indonesia, Malaysia, Philippines, Russia, Singapore, South Korea, Taiwan, Thailand, U.K. and U.S. In addition, Grameen UNIQLO, a social business established in Bangladesh in September 2010, opened its two first stores in Dhaka in July 2013. UNIQLO operates an integrated business model under which it designs, manufactures, markets and sells high-quality, casual apparel. The company believes that truly great clothes should be supremely comfortable, feature universal designs, are of high quality and offer a superb fit to everyone who wears them.
+                                .company__content-block-col
+                            
+    .container
+        .block.block--vacancies-slider
+            .block__head
+                h5.block__title 37 Vacancies
+                a.icon-plus.icon-plus--vertical-align--center.link.link--medium(href='vacancies.html')
+                    .icon-plus__icon.indent-r--s
+                        <svg viewBox="0 0 46 46" width="46px" height="46px" class="progress">
+                        <circle r="20" cx="23" cy="23" stroke="#EDEDED" fill="transparent"></circle>
+                        <circle class="prc" r="20" cx="23" cy="23" stroke="#D9001D" rotate="90deg" fill="transparent" stroke-dashoffset="125" stroke-dasharray="125"></circle>
+                        </svg>
+                    .icon-plus__block View all
+
+            .js-company-slider.carousel.slide
+                .active.carousel-item
+                    .catalog.catalog--50-50
+                        .catalog__item
+                            +cat-card({
+                                name: 'พนักงานฝ่ายผลิต',
+                                time: '3 days',
+                                location: 'UNIQLO, Phuket',
+                                desc: 'Monitoring and renewal of. Identifying additional needs and advising on new Veeam products. Formation of commercial offers ands',
+                                salaryLocal: '26 000 THb',
+                                salaryUsd: '816 Usd',
+                                occup: 'Shift work'
+                            }, 'seeker')
+                        .catalog__item
+                            +cat-card({
+                                name: 'พนักงานฝ่ายผลิต',
+                                time: '3 days',
+                                location: 'UNIQLO, Phuket',
+                                desc: 'Monitoring and renewal of contracts with existing customers. Identifying additional needs and advising on products. Formation of commercial offers and',
+                                salaryLocal: '26 000 THb',
+                                salaryUsd: '816 Usd',
+                                occup: 'Shift work'
+                            }, 'seeker')
+                .carousel-item
+                    .catalog.catalog--50-50
+                        .catalog__item
+                            +cat-card({
+                                name: 'พนักงานฝ่ายผลิต',
+                                time: '3 days',
+                                location: 'UNIQLO, Phuket',
+                                desc: 'Needs and advising on new Veeam products. Formation of commercial offers and',
+                                salaryLocal: '26 000 THb',
+                                salaryUsd: '816 Usd',
+                                occup: 'Shift work'
+                            }, 'seeker')
+                        .catalog__item
+                            +cat-card({
+                                name: 'พนักงานฝ่ายผลิต',
+                                time: '3 days',
+                                location: 'UNIQLO, Phuket',
+                                desc: 'Monitoring existing customers. Identifying additional needs and advising on new Veeam products. Formation of commercial offers and',
+                                salaryLocal: '26 000 THb',
+                                salaryUsd: '816 Usd',
+                                occup: 'Shift work'
+                            }, 'seeker')

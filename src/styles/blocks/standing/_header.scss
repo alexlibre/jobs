@@ -1,0 +1,118 @@
+.header {
+  border-bottom: 1px solid $bg-light-gray;
+  &--transparent {
+    background-color: transparent;
+    // &.nav-up {
+    //     background-color: transparent;
+    // }
+    // &.nav-down {
+    //     background-color: transparent;
+    // }
+  }
+  &--fixed-to-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 105;
+    transform: translateY(0);
+    background-color: $bg-light-gray;
+    transition: transform 0.4s ease-in-out;
+    // &.nav-down {
+    //     background-color: $bg-light-gray;
+    // }
+    &.nav-up {
+      transform: translateY(-100%);
+      background-color: $bg-light-gray;
+    }
+  }
+  &--bg-white {
+    background-color: $color-white;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    height: 80px;
+  }
+  &__nav {
+    margin-left: 61px;
+  }
+  &__nav-link {
+    color: $color-ghost;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    &:after {
+      content: "/";
+      display: inline-block;
+      padding: 0 3px;
+    }
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  &__sub {
+    color: $color-ghost;
+    font-weight: bold;
+    font-size: 12px;
+    margin-left: 13px;
+  }
+  &__info {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  &__employ {
+    margin-right: 37px;
+  }
+  &__sign-in {
+    position: relative;
+    margin-right: 37px;
+    align-self: stretch;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    &:hover {
+      background-color: #fff;
+    }
+    &.is-active {
+      background: #fff;
+      & .sign-in__btn svg path {
+        fill: $color-ghost !important;
+      }
+      & .sign-in__btn {
+        color: $color-ghost !important;
+      }
+    }
+  }
+  &__phone {
+    font-size: 20px;
+    color: $color-dark-grey;
+    text-decoration: none;
+    transition: color 0.3s;
+    &:hover {
+      color: $color-active;
+    }
+    &--desktop {
+      display: inline-block;
+    }
+    &--mob {
+      display: none;
+      color: $color-base;
+    }
+  }
+  &__menu {
+    display: none;
+  }
+}
